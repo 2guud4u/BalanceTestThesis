@@ -1,0 +1,2 @@
+config_path: /code/jjiang23/pathml/aim2_balanceV2/models/encoders/MY_MAMP/pretrain_mamp_t120_layer8+5_mask90.yaml
+checkpoint_path: /code/jjiang23/pathml/aim2_balanceV2/models/encoders/MAMP/checkpoints/ntu120_xset.pth
