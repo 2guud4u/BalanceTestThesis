@@ -14,7 +14,13 @@ from pathlib import Path
 from typing import Union, Optional, Tuple
 import sys
 import os
-from ....data.skeletonMapping import convertBatchVideoMPtoNTU, convertBatchVideoMBtoNTU
+# Add parent directories to path for imports
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.join(current_dir, '..', '..', '..')
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+from data.skeletonMapping import convertBatchVideoMPtoNTU, convertBatchVideoMBtoNTU
 # Add MAMP directory to path so model_mamp can be imported
 MAMP_DIR = os.path.join(os.path.dirname(__file__), '..', 'MAMP')
 if MAMP_DIR not in sys.path:
@@ -179,6 +185,7 @@ class MAMPEncoder(nn.Module):
             # output: (B, T, 25, 3)
             x = convertBatchVideoMPtoNTU(x)
         elif self.skeleton_type == "motionBert":
+            print("Converting MotionBert skeleton to NTU format...")
             x = convertBatchVideoMBtoNTU(x)
 
         elif self.skeleton_type == "ntu":

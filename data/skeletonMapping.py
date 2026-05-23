@@ -249,6 +249,21 @@ def convertVideoMBtoNTU(video_mb_kps):
         video_ntu_kps[t] = convertMBtoNTU(video_mb_kps[t])
     return video_ntu_kps
 
+def convertBatchVideoMBtoNTU(batch_video_mb_kps):
+    """
+    Convert a batch of video sequences of MotionBert keypoints to NTU skeleton format.
+
+    Args:
+        batch_video_mb_kps: (B, T, J, D) array/tensor
+
+    Returns:
+        batch_video_ntu_kps: (B, T, 25, 3) NTU skeleton format (same type as input)
+    """
+    B, T, _, _ = batch_video_mb_kps.shape
+    batch_video_ntu_kps = _zeros_like_shape(shape=(B, T, 25, 3), like=batch_video_mb_kps)
+    for b in range(B):
+        batch_video_ntu_kps[b] = convertVideoMBtoNTU(batch_video_mb_kps[b])
+    return batch_video_ntu_kps
 if __name__ == "__main__":
     from data.PoseDataset import load_video_h5
     
