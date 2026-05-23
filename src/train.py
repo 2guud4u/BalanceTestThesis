@@ -15,7 +15,7 @@ import sys
 sys.path.append("..")
 
 from data.PoseDataset import PoseDataset
-
+from Trainer import Trainer
 
 # =========================================================
 # Dynamic import from file path
@@ -220,14 +220,15 @@ for split_name, split_files in splits.items():
     # -----------------------------------------------------
     # Initialize trainer/model
     # -----------------------------------------------------
-    encoder = initialize_encoder(e_cfg)
-    segementor = initialize_segementor(s_cfg, e_cfg)
+    encoder = initialize_encoder(d_cfg,e_cfg)
+    segmentor = initialize_segementor(s_cfg, e_cfg)
     
-    trainer = initialize_model(
-        d_cfg,
-        e_cfg,
-        t_cfg,
-        class_weights,
+    trainer = Trainer(
+        encoder=encoder,
+        segmentor=segmentor,
+        early_stop_patience=t_cfg["early_stop_patience"],
+        early_stop_min_delta=t_cfg["early_stop_min_delta"],
+        early_stop_monitor=t_cfg["early_stop_monitor"],
     )
 
     # -----------------------------------------------------
