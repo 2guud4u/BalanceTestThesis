@@ -37,7 +37,6 @@ ENV/
 
 # Results and outputs
 results/
-models/
 outputs/
 logs/
 lightning_logs/
