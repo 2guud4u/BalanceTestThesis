@@ -1,20 +1,20 @@
-from models.segmentors.MSTCNplus import MS_TCN2
+import sys
+import os
+
+# Add GCN model directory to path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../../models/encoders/GCN"))
+
+from models.encoders.GCN.MS_GCN_ENCODER import MSGCNEncoder
 
 
-def initialize_segmentor(s_cfg, encoder):
-    """
-    Args:
-        s_cfg:   segmentor config dict (from segmentor YAML)
-        encoder: instantiated encoder object — used to read encoder.out_dim
-                 so the TCN input size matches the encoder's output dimension
-    """
-    segmentor = MS_TCN2(
-        s_cfg["num_layers_PG"],
-        s_cfg["num_layers_R"],
-        s_cfg["num_R"],
-        s_cfg["num_f_maps"],
-        encoder.out_dim,
-        s_cfg["num_classes"],
+def initialize_encoder(d_cfg, e_cfg):
+    encoder = MSGCNEncoder(
+        graph_args=e_cfg["graph_args"],
+        num_joints=e_cfg["num_joints"],
+        in_channels=e_cfg["in_channels"],
+        filters=e_cfg["filters"],
+        dil=e_cfg["dil"],
     )
-    print(f"✓ MS-TCN2 segmentor initialized (in_dim={encoder.out_dim}, classes={s_cfg['num_classes']})")
-    return segmentor
+    print("✓ MS-GCN encoder loaded successfully")
+    print(f"  Joints: {e_cfg['num_joints']}, in_channels: {e_cfg['in_channels']}, out_dim: {encoder.out_dim}")
+    return encoder

@@ -7,7 +7,7 @@ sys.path.insert(0, "../models/encoders/MAMP")
 from models.encoders.MY_MAMP.encoder import MAMPFeatureEncoder
 
 
-def initialize_model(d_cfg, e_cfg):
+def initialize_encoder(d_cfg, e_cfg):
 
     mamp = MAMPFeatureEncoder(
         d_cfg["h5_key"],
