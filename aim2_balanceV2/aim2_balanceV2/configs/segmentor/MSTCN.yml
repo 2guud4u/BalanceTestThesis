@@ -1,0 +1,5 @@
+num_layers_PG: 11
+num_layers_R: 10
+num_R: 3
+num_f_maps: 64
+num_classes: 2

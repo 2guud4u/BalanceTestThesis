@@ -1,0 +1,30 @@
+dataloader_config:
+  window_size: 120
+  stride: 60
+  h5_key: camera_mp_cropped_iou
+  augment: True
+  normalize: False
+  split_ratio: 0.8
+
+encoder_config:
+  config_path: /code/jjiang23/pathml/aim2_balanceV2/models/encoders/MY_MAMP/pretrain_mamp_t120_layer8+5_mask90.yaml
+  checkpoint_path: /code/jjiang23/pathml/aim2_balanceV2/models/encoders/MAMP/checkpoints/ntu120_xset.pth
+
+segmentor_config:
+  num_layers_PG: 11
+  num_layers_R: 10
+  num_R: 3
+  num_f_maps: 64
+
+save_dir: /code/jjiang23/pathml/aim2_balanceV2/results/CAMMP_MAMP_MSTCN/
+
+trainer_config:
+  epochs: 100
+  batch_size: 16
+  lr: 5e-4  
+  weight_decay: 0.00
+  early_stop_patience: 20
+  early_stop_min_delta: 0.001
+  device: cuda
+  lambda_smooth: 0.1
+  time_alignment: upsample_preds
