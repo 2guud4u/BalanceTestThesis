@@ -125,19 +125,27 @@ config = {
 
 
 # =========================================================
-# Load initializer
+# Load encoder and segmentor initializers from their YMLs
 # =========================================================
-init_model_path = t_cfg.get("init_model_path")
+init_encoder_path = e_cfg.get("init_encoder_path")
+init_segmentor_path = s_cfg.get("init_segmentor_path")
 
-if not init_model_path:
-    raise ValueError("init_model_path not found in trainer_config")
+if not init_encoder_path:
+    raise ValueError("init_encoder_path not found in encoder config")
+if not init_segmentor_path:
+    raise ValueError("init_segmentor_path not found in segmentor config")
 
-init_model_path = os.path.abspath(init_model_path)
+init_encoder_path = os.path.abspath(init_encoder_path)
+init_segmentor_path = os.path.abspath(init_segmentor_path)
 
-print(f"Loading initializer from: {init_model_path}")
+print(f"Loading encoder initializer from: {init_encoder_path}")
+print(f"Loading segmentor initializer from: {init_segmentor_path}")
 
-initializer_module = load_module_from_path(init_model_path)
-initialize_model = getattr(initializer_module, "initialize_model")
+encoder_init_module = load_module_from_path(init_encoder_path)
+segmentor_init_module = load_module_from_path(init_segmentor_path)
+
+initialize_encoder = getattr(encoder_init_module, "initialize_encoder")
+initialize_segmentor = getattr(segmentor_init_module, "initialize_segmentor")
 
 
 # =========================================================
@@ -218,11 +226,13 @@ for split_name, split_files in splits.items():
     print(f"Class weights: {class_weights}")
 
     # -----------------------------------------------------
-    # Initialize trainer/model
+    # Initialize encoder, segmentor, and trainer
+    # Encoder is created first; segmentor receives the encoder
+    # object so it can read encoder.out_dim for its input size.
     # -----------------------------------------------------
-    encoder = initialize_encoder(d_cfg,e_cfg)
-    segmentor = initialize_segementor(s_cfg, e_cfg)
-    
+    encoder = initialize_encoder(d_cfg, e_cfg)
+    segmentor = initialize_segmentor(s_cfg, encoder)
+
     trainer = Trainer(
         encoder=encoder,
         segmentor=segmentor,
