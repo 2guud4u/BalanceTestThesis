@@ -1,2 +1,3 @@
 config_path: /code/jjiang23/pathml/aim2_balanceV2/models/encoders/MY_SKELETONMAE/pretrain_mae_t120_layer8+5_mask90.yaml
 checkpoint_path: /code/jjiang23/pathml/aim2_balanceV2/models/encoders/MAMP/checkpoints/mae-checkpoint.pth
+init_encoder_path: /code/jjiang23/BalanceTestThesis/initializers/encoder/MAE.py
