@@ -231,7 +231,13 @@ for split_name, split_files in splits.items():
     # object so it can read encoder.out_dim for its input size.
     # -----------------------------------------------------
     encoder = initialize_encoder(d_cfg, e_cfg)
-    segmentor = initialize_segmentor(s_cfg, encoder)
+    segmentor = initialize_segmentor(
+        s_cfg,
+        encoder,
+        class_weights=class_weights,
+        lambda_smooth=t_cfg.get("lambda_smooth", 0.15),
+        time_alignment=t_cfg.get("time_alignment", "downsample_labels"),
+    )
 
     trainer = Trainer(
         encoder=encoder,
@@ -261,7 +267,6 @@ for split_name, split_files in splits.items():
         batch_size=t_cfg["batch_size"],
         learning_rate=float(t_cfg["lr"]),
         device=t_cfg["device"],
-        lambda_smooth=t_cfg["lambda_smooth"],
     )
 
     print(f"✓ Training completed for split: {split_name}")
