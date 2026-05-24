@@ -1,29 +1,34 @@
 """
-Encoder-only feature extraction for skeleton data using pretrained MAMP models.
+Encoder-only feature extraction for skeleton data using pretrained MAE/SkeletonMAE models.
 
 Usage:
-    extractor = EncoderFeatureExtractor(checkpoint_path, config_path, device='cuda')
-    features = extractor.extract_features(skeleton_data)  # (B,C,T,V,M) -> (B, L, hidden_dim)
+    extractor = MAEFeatureEncoder(skeleton_type, checkpoint_path, config_path)
+    features = extractor(skeleton_data)  # (B, T, J*3) -> (B, D, T_patches)
 """
 
-import argparse
-import yaml
-import torch
-import numpy as np
-from pathlib import Path
-from typing import Union, Optional, Tuple
-import sys
+import contextlib
 import os
+import sys
+from typing import Union, Optional
+
+import numpy as np
+import torch
+import torch.nn as nn
+import yaml
+
+# Add project root to path for imports
 current_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.join(current_dir, '..', '..', '..')
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 from data.skeletonMapping import convertBatchVideoMPtoNTU, convertBatchVideoMBtoNTU
-# Add MAMP directory to path so model_mamp can be imported
+
+# Add MAMP directory to path so model modules can be imported
 MAMP_DIR = os.path.join(os.path.dirname(__file__), '..', 'MAMP')
 if MAMP_DIR not in sys.path:
     sys.path.insert(0, MAMP_DIR)
+
 
 def import_class(name):
     """Import a class from a string path"""
@@ -34,18 +39,9 @@ def import_class(name):
     return mod
 
 
-import contextlib
-from typing import Union, Optional
-
-import numpy as np
-import torch
-import torch.nn as nn
-import yaml
-
-
 class MAEFeatureEncoder(nn.Module):
     """
-    Wrap a pretrained MAMP model so it returns patch-level features for MS-TCN++.
+    Wrap a pretrained MAE/SkeletonMAE model so it returns patch-level features for MS-TCN++.
 
     Input:
         x: (B, T, V, 3)  # one person, one skeleton sequence
@@ -100,7 +96,7 @@ class MAEFeatureEncoder(nn.Module):
                 p.requires_grad = False
             self.model.eval()
 
-        print(f"Loaded MAMP checkpoint from: {checkpoint_path}")
+        print(f"Loaded MAE checkpoint from: {checkpoint_path}")
         print(f"Model class: {config['model']}")
         print(f"temporal_patch_size: {self.temporal_patch_size}")
         print(f"out_dim: {self.out_dim}")
@@ -155,11 +151,10 @@ class MAEFeatureEncoder(nn.Module):
         if self.skeleton_type == "camera_mp_cropped_iou" or self.skeleton_type == "world_mp_cropped_iou":
             if J != 33:
                 raise ValueError(f"For skeleton_type='mp', expected 33 joints, got {J}")
-            # Must exist in your codebase:
-            # input:  (B, T, 33, 3)
-            # output: (B, T, 25, 3)
             x = convertBatchVideoMPtoNTU(x)
-        if self.skeleton_type == "motionBert_cropped_iou":
+        elif self.skeleton_type == "motionBert_cropped_iou":
+            if J != 22:
+                raise ValueError(f"skeleton_type='motionBert_cropped_iou': expected 22 joints, got {J}")
             x = convertBatchVideoMBtoNTU(x)
         elif self.skeleton_type == "ntu":
             if J != 25:

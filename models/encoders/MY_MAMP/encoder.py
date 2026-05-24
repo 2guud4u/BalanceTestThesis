@@ -2,29 +2,33 @@
 Encoder-only feature extraction for skeleton data using pretrained MAMP models.
 
 Usage:
-    extractor = EncoderFeatureExtractor(checkpoint_path, config_path, device='cuda')
-    features = extractor.extract_features(skeleton_data)  # (B,C,T,V,M) -> (B, L, hidden_dim)
+    extractor = MAMPEncoder(skeleton_type, checkpoint_path, config_path)
+    features = extractor(skeleton_data)  # (B, T, J*3) -> (B, D, T_patches)
 """
 
-import argparse
-import yaml
-import torch
-import numpy as np
-from pathlib import Path
-from typing import Union, Optional, Tuple
-import sys
+import contextlib
 import os
-# Add parent directories to path for imports
+import sys
+from typing import Union, Optional
+
+import numpy as np
+import torch
+import torch.nn as nn
+import yaml
+
+# Add project root to path for imports
 current_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.join(current_dir, '..', '..', '..')
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 from data.skeletonMapping import convertBatchVideoMPtoNTU, convertBatchVideoMBtoNTU
+
 # Add MAMP directory to path so model_mamp can be imported
 MAMP_DIR = os.path.join(os.path.dirname(__file__), '..', 'MAMP')
 if MAMP_DIR not in sys.path:
     sys.path.insert(0, MAMP_DIR)
+
 
 def import_class(name):
     """Import a class from a string path"""
@@ -33,15 +37,6 @@ def import_class(name):
     for comp in components[1:]:
         mod = getattr(mod, comp)
     return mod
-
-
-import contextlib
-from typing import Union, Optional
-
-import numpy as np
-import torch
-import torch.nn as nn
-import yaml
 
 
 class MAMPEncoder(nn.Module):
