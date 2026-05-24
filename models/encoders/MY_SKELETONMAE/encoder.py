@@ -153,8 +153,8 @@ class MAEFeatureEncoder(nn.Module):
                 raise ValueError(f"For skeleton_type='mp', expected 33 joints, got {J}")
             x = convertBatchVideoMPtoNTU(x)
         elif self.skeleton_type == "motionBert_cropped_iou":
-            if J != 22:
-                raise ValueError(f"skeleton_type='motionBert_cropped_iou': expected 22 joints, got {J}")
+            if J != 17:
+                raise ValueError(f"skeleton_type='motionBert_cropped_iou': expected 17 joints, got {J}")
             x = convertBatchVideoMBtoNTU(x)
         elif self.skeleton_type == "ntu":
             if J != 25:
