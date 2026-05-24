@@ -14,7 +14,12 @@ from pathlib import Path
 from typing import Union, Optional, Tuple
 import sys
 import os
-from ....data.skeletonMapping import convertBatchVideoMPtoNTU, convertBatchVideoMBtoNTU
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.join(current_dir, '..', '..', '..')
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+from data.skeletonMapping import convertBatchVideoMPtoNTU, convertBatchVideoMBtoNTU
 # Add MAMP directory to path so model_mamp can be imported
 MAMP_DIR = os.path.join(os.path.dirname(__file__), '..', 'MAMP')
 if MAMP_DIR not in sys.path:
@@ -155,11 +160,6 @@ class MAEFeatureEncoder(nn.Module):
             # output: (B, T, 25, 3)
             x = convertBatchVideoMPtoNTU(x)
         if self.skeleton_type == "motionBert_cropped_iou":
-            if J != 22:
-                raise ValueError(f"For skeleton_type='motionBert', expected 22 joints, got {J}")
-            # Must exist in your codebase:
-            # input:  (B, T, 22, 3)
-            # output: (B, T, 25, 3)
             x = convertBatchVideoMBtoNTU(x)
         elif self.skeleton_type == "ntu":
             if J != 25:

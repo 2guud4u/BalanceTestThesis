@@ -68,6 +68,32 @@ class Trainer:
         if not getattr(Trainer, "_stdout_sink_added", False):
             logger.add(sys.stdout, colorize=True, format="{message}")
             Trainer._stdout_sink_added = True
+    def _early_stop_step(self, val_metric):
+        """
+        Monitor validation metric. Returns True if training should stop.
+        Supports both 'val_loss' (lower is better) and 'val_f1' (higher is better).
+        """
+        if val_metric is None:
+            return False
+
+        higher_is_better = self.early_stop_monitor == "val_f1"
+
+        if higher_is_better:
+            improved = self._best_val is None or val_metric > (
+                self._best_val + self.early_stop_min_delta
+            )
+        else:
+            improved = self._best_val is None or val_metric < (
+                self._best_val - self.early_stop_min_delta
+            )
+
+        if improved:
+            self._best_val = val_metric
+            self._patience_counter = 0
+            return False
+
+        self._patience_counter += 1
+        return self._patience_counter >= self.early_stop_patience
 
     def train(
         self,

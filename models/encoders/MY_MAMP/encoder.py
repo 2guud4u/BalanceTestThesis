@@ -450,7 +450,8 @@ class MAMPFeatureEncoder(nn.Module):
             # input:  (B, T, 33, 3)
             # output: (B, T, 25, 3)
             x = convertBatchVideoMPtoNTU(x)
-
+        if self.skeleton_type == "motionBert_cropped_iou":
+            x = convertBatchVideoMBtoNTU(x)
         elif self.skeleton_type == "ntu":
             if J != 25:
                 raise ValueError(f"For skeleton_type='ntu', expected 25 joints, got {J}")

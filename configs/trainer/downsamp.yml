@@ -7,3 +7,4 @@ early_stop_min_delta: 0.001
 device: cuda
 lambda_smooth: 0.1
 time_alignment: downsample_labels
+early_stop_monitor: val_f1
