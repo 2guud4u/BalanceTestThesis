@@ -9,8 +9,8 @@ from models.encoders.GCN.MS_GCN_ENCODER import MSGCNEncoder
 
 def initialize_encoder(d_cfg, e_cfg):
     encoder = MSGCNEncoder(
-        graph_args=e_cfg["graph_args"],
-        num_joints=e_cfg["num_joints"],
+        graph_args=d_cfg["graph_args"],
+        num_joints=d_cfg["num_joints"],
         in_channels=e_cfg["in_channels"],
         filters=e_cfg["filters"],
         dil=e_cfg["dil"],
