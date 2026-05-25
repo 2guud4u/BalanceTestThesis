@@ -1,7 +1,7 @@
 import sys
 
 sys.path.insert(0, "..")
-from models.segmentors.MSTCNplus import MS_TCN2
+from models.segmentors.biLSTM import BiLSTM
 from initializers.segementor._base import SegmentorWithLoss
 
 
@@ -20,13 +20,12 @@ def initialize_segmentor(
         lambda_smooth:  smoothing loss coefficient (from trainer config)
         time_alignment: 'upsample_preds' or 'downsample_labels' (from trainer config)
     """
-    model = MS_TCN2(
-        s_cfg["num_layers_PG"],
-        s_cfg["num_layers_R"],
-        s_cfg["num_R"],
-        s_cfg["num_f_maps"],
-        encoder.out_dim,
-        s_cfg["num_classes"],
+    model = BiLSTM(
+        dim=encoder.out_dim,
+        num_classes=s_cfg["num_classes"],
+        hidden_size=s_cfg["hidden_size"],
+        num_layers=s_cfg["num_layers"],
+        dropout=s_cfg["dropout"],
     )
 
     segmentor = SegmentorWithLoss(
@@ -38,9 +37,11 @@ def initialize_segmentor(
     )
 
     print(
-        f"✓ MS-TCN2 segmentor initialized "
+        f"✓ BiLSTM segmentor initialized "
         f"(in_dim={encoder.out_dim}, classes={s_cfg['num_classes']}, "
-        f"lambda_smooth={lambda_smooth}, alignment={time_alignment})"
+        f"hidden={s_cfg['hidden_size']}, layers={s_cfg['num_layers']}, "
+        f"dropout={s_cfg['dropout']}, lambda_smooth={lambda_smooth}, "
+        f"alignment={time_alignment})"
     )
     if class_weights is not None:
         print(f"  Class weights: {class_weights.tolist()}")
