@@ -16,7 +16,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 # Add MS-GCN to path so its internal imports resolve
-_msgcn_dir = os.path.join(os.path.dirname(__file__), "MS-GCN")
+_msgcn_dir = os.path.join(os.path.dirname(__file__), "MS-GCNN")
 if _msgcn_dir not in sys.path:
     sys.path.insert(0, _msgcn_dir)
 
