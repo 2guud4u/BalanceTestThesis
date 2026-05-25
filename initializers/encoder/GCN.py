@@ -16,5 +16,5 @@ def initialize_encoder(d_cfg, e_cfg):
         dil=e_cfg["dil"],
     )
     print("✓ MS-GCN encoder loaded successfully")
-    print(f"  Joints: {e_cfg['num_joints']}, in_channels: {e_cfg['in_channels']}, out_dim: {encoder.out_dim}")
+    print(f"  Joints: {d_cfg['num_joints']}, in_channels: {e_cfg['in_channels']}, out_dim: {encoder.out_dim}")
     return encoder

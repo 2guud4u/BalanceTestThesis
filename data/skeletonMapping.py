@@ -34,6 +34,33 @@ MPStringsToKP = {
     "leftWrist": 15,
     "rightWrist": 16
 }
+ntu_to_MP_Mapping = {
+    0: "hipMid",
+    1: "spineMid",
+    2: "neck",
+    3: "nose",
+    4: "leftShoulder",
+    5: "leftElbow",
+    6: "leftWrist",
+    7: "leftWrist",
+    8: "rightShoulder",
+    9: "rightElbow",
+    10: "rightWrist",
+    11: "rightWrist",
+    12: "leftHip",
+    13: "leftKnee",
+    14: "leftAnkle",
+    15: "leftToe",
+    16: "rightHip",
+    17: "rightKnee",
+    18: "rightAnkle",
+    19: "rightToe",
+    20: "shoulderMid",
+    21: "leftHandMid",
+    22: "leftThumb",
+    23: "rightHandMid",
+    24: "rightThumb"
+}
 def getMidPoint(kp1, kp2):
     return ( kp1 + kp2) / 2
     
@@ -65,33 +92,6 @@ def getCalculatedMPKPs(mp_kps):
     
     return mp_part_to_kp
 
-ntu_to_MP_Mapping = {
-    0: "hipMid",
-    1: "spineMid",
-    2: "neck",
-    3: "nose",
-    4: "leftShoulder",
-    5: "leftElbow",
-    6: "leftWrist",
-    7: "leftWrist",
-    8: "rightShoulder",
-    9: "rightElbow",
-    10: "rightWrist",
-    11: "rightWrist",
-    12: "leftHip",
-    13: "leftKnee",
-    14: "leftAnkle",
-    15: "leftToe",
-    16: "rightHip",
-    17: "rightKnee",
-    18: "rightAnkle",
-    19: "rightToe",
-    20: "shoulderMid",
-    21: "leftHandMid",
-    22: "leftThumb",
-    23: "rightHandMid",
-    24: "rightThumb"
-}
 MBStringsToKP = {
     "nose": 10,
     "neck": 9,
@@ -113,12 +113,15 @@ MBStringsToKP = {
 }
 
 def getCalculatedMBKPs(mp_kps):
-    mp_part_to_kp = {}
+    mb_part_to_kp = {}
     for kpName, kpIdx in MBStringsToKP.items():
-        mp_part_to_kp[kpName] = mp_kps[kpIdx]
-    return mp_part_to_kp
+        mb_part_to_kp[kpName] = mp_kps[kpIdx]
+        
+    mb_part_to_kp["leftWrist"] = getMidPoint(mb_part_to_kp["leftHand"], mb_part_to_kp["leftElbow"])
+    mb_part_to_kp["rightWrist"] = getMidPoint(mb_part_to_kp["rightHand"], mb_part_to_kp["rightElbow"])
+    return mb_part_to_kp
 
-ntu_to_MP_Mapping = {
+ntu_to_MB_Mapping = {
     0: "hipMid",
     1: "spineMid",
     2: "neck",
@@ -126,24 +129,24 @@ ntu_to_MP_Mapping = {
     4: "leftShoulder",
     5: "leftElbow",
     6: "leftWrist",
-    7: "leftWrist",
+    7: "leftHand",
     8: "rightShoulder",
     9: "rightElbow",
     10: "rightWrist",
-    11: "rightWrist",
+    11: "rightHand",
     12: "leftHip",
     13: "leftKnee",
     14: "leftAnkle",
-    15: "leftToe",
+    15: "leftAnkle",
     16: "rightHip",
     17: "rightKnee",
     18: "rightAnkle",
-    19: "rightToe",
+    19: "rightAnkle",
     20: "shoulderMid",
-    21: "leftHandMid",
-    22: "leftThumb",
-    23: "rightHandMid",
-    24: "rightThumb"
+    21: "leftHand",
+    22: "leftHand",
+    23: "rightHand",
+    24: "rightHand"
 }
 
 def _is_torch(x) -> bool:
@@ -228,7 +231,7 @@ def convertMBtoNTU(mb_kps):
     mb_part_to_kp = getCalculatedMBKPs(mb_kps)
 
     # Map each NTU joint to its corresponding MotionBert keypoint
-    for ntu_idx, mp_name in ntu_to_MP_Mapping.items():
+    for ntu_idx, mp_name in ntu_to_MB_Mapping.items():
         if mp_name in mb_part_to_kp:
             ntu_kps[ntu_idx] = mb_part_to_kp[mp_name]
 
