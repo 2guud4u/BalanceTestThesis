@@ -1,118 +1,177 @@
 import os
 import argparse
-import numpy as np
-from glob import glob
-from tqdm import tqdm
-import math
-
+import json
+import yaml
+import importlib.util
 
 import torch
-import torch.nn as nn
-import torch.nn.functional as F
-from torch.utils.data import Dataset, DataLoader
-# go back one level to import
 import sys
-sys.path.append('..')
-from data.PoseDataset import PoseDataset
-import sys
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-from torch import optim
-import copy
-import numpy as np
-from data.keypoint_constants import MEDIAPIPE_33, MEDIAPIPE_22, MOTIONBERT
 
-# Training parameters
-# WINDOW_SIZE = 256
-# STRIDE = 128
-WINDOW_SIZE = 120
-STRIDE = 60
-IN_CH = 3
-NUM_CLASSES = 2 
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-EPOCHS = 1000
-BATCH_SIZE = 32
-LR = 0.0005
-FEATURE_H5_KEY = "camera_mp_cropped_iou"  # Key in HDF5 files for features
-KP_CONFIG = MEDIAPIPE_33  # Keypoint configuration to use (MEDIAPIPE_33, MEDIAPIPE_22, or MOTIONBERT)
-SKELETON_TYPE = "mp"  # "mp" for MediaPipe, "mb" for MotionBERT
+sys.path.append("..")
 
-with open('/code/jjiang23/pathml/aim2_balance/processed_files/all_h5_files.txt', 'r') as f:
-    h5_files = [line.strip() for line in f.readlines()]
-
-np.random.shuffle(h5_files)
-
-split = int(0.8 * len(h5_files))
-train_files = h5_files[:split]
-val_files   = h5_files[split:]
-
-train_ds = PoseDataset(train_files,window_size=WINDOW_SIZE, featureH5Key=FEATURE_H5_KEY, kpConfig=KP_CONFIG,stride=STRIDE )
-val_ds   = PoseDataset(val_files,window_size=WINDOW_SIZE,featureH5Key=FEATURE_H5_KEY, kpConfig=KP_CONFIG,stride=STRIDE, augment=False)
-
-#test out MAMP feature extractor
-import sys
-from pathlib import Path
-
-# Add MAMP to path before importing
-sys.path.insert(0, '../models/encoders/MAMP')
-
-from models.encoders.MY_MAMP.encoder import MAMPEncoder
-
-try:
-    mamp = MAMPEncoder(
-        SKELETON_TYPE,
-        '../models/encoders/MAMP/checkpoints/ntu120_xset.pth',
-        '../models/encoders/MY_MAMP/pretrain_mamp_t120_layer8+5_mask90.yaml',
-        map_location=DEVICE
-    )
-    print("✓ MAMP encoder loaded successfully")
-    print(f"  Config: {mamp.config['model']}")
-    print(f"  Model parameters: {sum(p.numel() for p in mamp.model.parameters())}")
-except Exception as e:
-    print(f"✗ Error loading MAMP encoder: {e}")
-    import traceback
-    traceback.print_exc()
-from scripts.Trainers import MSTCN2_Trainer
-from datetime import datetime
-
-current_datetime = datetime.now()
-
-# ========== TRAIN WITH MSTCN2_Trainer ==========
-# Create trainer with MAMP encoder + MS_TCN2 segmentor
-# MAMP output dimension is 256 (from config)
-MAMP_OUTPUT_DIM = 256
+from Trainer import Trainer
+from scripts.Evaler import evaluate_folds
 
 
-trainer = MSTCN2_Trainer(
-    encoderModel=mamp,  # Use MAMP_ENCODER wrapper (has __call__)
-    num_layers_PG=11,           # PG = Prediction Generation
-    num_layers_R=10,            # R = Refinement
-    num_R=3,                   # Number of refinement stages
-    num_f_maps=64,             # Feature maps in MS_TCN2
-    dim=MAMP_OUTPUT_DIM,       # MAMP output dimension (256)
-    num_classes=NUM_CLASSES,
-    dataset="balance",
-    split="train",
-    early_stop_patience=25,
-    early_stop_min_delta=0.05,
-    lambda_smooth=0.005,
+# =========================================================
+# Dynamic import from file path
+# =========================================================
+def load_module_from_path(file_path):
+    """Load a Python module from an absolute file path."""
+    spec = importlib.util.spec_from_file_location("initializer_module", file_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+# =========================================================
+# Parse command line arguments
+# =========================================================
+parser = argparse.ArgumentParser(
+    description="Generic skeleton action segmentation evaluator"
 )
 
-print(f"✓ Trainer initialized with MAMP encoder (output dim: {MAMP_OUTPUT_DIM}) + MS_TCN2")
-
-# Train the model
-save_dir = f"models/mamp_mstcn_{current_datetime.strftime('%Y%m%d_%H%M%S')}"
-os.makedirs(save_dir, exist_ok=True)
-
-trainer.train(
-    save_dir=save_dir,
-    batch_gen=train_ds,
-    num_epochs=EPOCHS,
-    batch_size=BATCH_SIZE,
-    learning_rate=LR,
-    device=DEVICE,
-    val_batch_gen=val_ds
+parser.add_argument(
+    "--encoder",
+    type=str,
+    required=True,
+    help="Path to encoder config YAML file",
 )
 
-print(f"✓ Training completed! Models saved to {save_dir}")
+parser.add_argument(
+    "--data",
+    type=str,
+    required=True,
+    help="Path to dataloader config YAML file",
+)
+
+parser.add_argument(
+    "--trainer",
+    type=str,
+    default="../configs/trainer/downsamp.yml",
+    help="Path to trainer config YAML file",
+)
+
+parser.add_argument(
+    "--segmentor",
+    type=str,
+    required=True,
+    help="Path to segmentor config YAML file",
+)
+
+parser.add_argument(
+    "--splits",
+    type=str,
+    default="/code/jjiang23/pathml/aim2_balanceV2/data/splits.json",
+    help="Path to splits JSON file",
+)
+
+parser.add_argument(
+    "--results_dir",
+    type=str,
+    required=True,
+    help="Path to directory containing trained fold checkpoints (output of train.py)",
+)
+
+args = parser.parse_args()
+
+
+# =========================================================
+# Resolve config paths
+# =========================================================
+encoder_cfg_path = os.path.abspath(args.encoder)
+data_cfg_path = os.path.abspath(args.data)
+trainer_cfg_path = os.path.abspath(args.trainer)
+segmentor_cfg_path = os.path.abspath(args.segmentor)
+splits_path = os.path.abspath(args.splits)
+results_dir = os.path.abspath(args.results_dir)
+
+print(f"Loading encoder config from:   {encoder_cfg_path}")
+print(f"Loading data config from:      {data_cfg_path}")
+print(f"Loading trainer config from:   {trainer_cfg_path}")
+print(f"Loading segmentor config from: {segmentor_cfg_path}")
+print(f"Evaluating checkpoints from:   {results_dir}")
+
+
+# =========================================================
+# Load YAML configs
+# =========================================================
+with open(encoder_cfg_path, "r") as f:
+    e_cfg = yaml.safe_load(f)
+
+with open(data_cfg_path, "r") as f:
+    d_cfg = yaml.safe_load(f)
+
+with open(trainer_cfg_path, "r") as f:
+    t_cfg = yaml.safe_load(f)
+
+with open(segmentor_cfg_path, "r") as f:
+    s_cfg = yaml.safe_load(f)
+
+
+# =========================================================
+# Load encoder and segmentor initializers from their YMLs
+# =========================================================
+init_encoder_path = e_cfg.get("init_encoder_path")
+init_segmentor_path = s_cfg.get("init_segmentor_path")
+
+if not init_encoder_path:
+    raise ValueError("init_encoder_path not found in encoder config")
+if not init_segmentor_path:
+    raise ValueError("init_segmentor_path not found in segmentor config")
+
+init_encoder_path = os.path.abspath(init_encoder_path)
+init_segmentor_path = os.path.abspath(init_segmentor_path)
+
+print(f"Loading encoder initializer from:   {init_encoder_path}")
+print(f"Loading segmentor initializer from: {init_segmentor_path}")
+
+encoder_init_module = load_module_from_path(init_encoder_path)
+segmentor_init_module = load_module_from_path(init_segmentor_path)
+
+initialize_encoder = getattr(encoder_init_module, "initialize_encoder")
+initialize_segmentor = getattr(segmentor_init_module, "initialize_segmentor")
+
+
+# =========================================================
+# Load splits
+# =========================================================
+with open(splits_path, "r") as f:
+    splits = json.load(f)
+
+
+# =========================================================
+# Initialize encoder and segmentor (architecture only —
+# weights are loaded per-fold inside evaluate_folds)
+# =========================================================
+encoder = initialize_encoder(d_cfg, e_cfg)
+segmentor = initialize_segmentor(
+    s_cfg,
+    encoder,
+    class_weights=None,  # not needed for eval
+    lambda_smooth=t_cfg.get("lambda_smooth", 0.15),
+    time_alignment=t_cfg.get("time_alignment", "downsample_labels"),
+)
+
+trainer = Trainer(
+    encoder=encoder,
+    segmentor=segmentor,
+    early_stop_patience=t_cfg["early_stop_patience"],
+    early_stop_min_delta=t_cfg["early_stop_min_delta"],
+    early_stop_monitor=t_cfg["early_stop_monitor"],
+)
+
+
+# =========================================================
+# Evaluate all folds
+# =========================================================
+evaluate_folds(
+    trainer=trainer,
+    splits=splits,
+    d_cfg=d_cfg,
+    t_cfg=t_cfg,
+    save_dir=results_dir,
+    device=t_cfg["device"],
+)
+
+print(f"\n✓ Evaluation complete. Results saved to: {results_dir}")

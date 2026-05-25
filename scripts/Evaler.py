@@ -20,8 +20,8 @@ def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device):
         val_files = split_files["val"]
 
         fold_dir = os.path.join(save_dir, split_name)
-        encoder_ckpt_path = os.path.join(fold_dir, "best_encoder.model")
-        model_ckpt_path = os.path.join(fold_dir, "best.model")
+        encoder_ckpt_path = os.path.join(fold_dir, "best_encoder.pt")
+        model_ckpt_path = os.path.join(fold_dir, "best_segmentor.pt")
 
         if not (os.path.exists(encoder_ckpt_path) and os.path.exists(model_ckpt_path)):
             print(f"⚠ Skipping {split_name}: checkpoints not found in {fold_dir}")
@@ -30,9 +30,9 @@ def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device):
         print(f"\n{'='*70}\nFold: {split_name}  ({len(val_files)} val videos)\n{'='*70}")
 
         trainer.encoder.load_state_dict(torch.load(encoder_ckpt_path, map_location=device))
-        trainer.model.load_state_dict(torch.load(model_ckpt_path, map_location=device))
+        trainer.segmentor.load_state_dict(torch.load(model_ckpt_path, map_location=device))
         trainer.encoder.to(device).eval()
-        trainer.model.to(device).eval()
+        trainer.segmentor.to(device).eval()
         print(f"✓ Loaded {model_ckpt_path}")
         print(f"✓ Loaded {encoder_ckpt_path}")
 
@@ -41,7 +41,7 @@ def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device):
 
         for video in tqdm(val_files, desc=f"[{split_name}] predicting"):
             gt_labels, pred_labels, _ = predict_video(
-                video, trainer.encoder, trainer.model, d_cfg, device, stride_override=1
+                video, trainer.encoder, trainer.segmentor, d_cfg, device, stride_override=1
             )
             T = min(len(pred_labels), len(gt_labels))
             pred_labels_per_video.append(np.asarray(pred_labels[:T]))
