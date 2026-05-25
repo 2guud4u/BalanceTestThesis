@@ -4,7 +4,6 @@ import json
 import yaml
 import importlib.util
 
-import torch
 import sys
 
 sys.path.append("..")
@@ -28,89 +27,48 @@ def load_module_from_path(file_path):
 # Parse command line arguments
 # =========================================================
 parser = argparse.ArgumentParser(
-    description="Generic skeleton action segmentation evaluator"
-)
-
-parser.add_argument(
-    "--encoder",
-    type=str,
-    required=True,
-    help="Path to encoder config YAML file",
-)
-
-parser.add_argument(
-    "--data",
-    type=str,
-    required=True,
-    help="Path to dataloader config YAML file",
-)
-
-parser.add_argument(
-    "--trainer",
-    type=str,
-    default="../configs/trainer/downsamp.yml",
-    help="Path to trainer config YAML file",
-)
-
-parser.add_argument(
-    "--segmentor",
-    type=str,
-    required=True,
-    help="Path to segmentor config YAML file",
-)
-
-parser.add_argument(
-    "--splits",
-    type=str,
-    default="/code/jjiang23/pathml/aim2_balanceV2/data/splits.json",
-    help="Path to splits JSON file",
+    description="Evaluate a trained skeleton action segmentation model"
 )
 
 parser.add_argument(
     "--results_dir",
     type=str,
     required=True,
-    help="Path to directory containing trained fold checkpoints (output of train.py)",
+    help="Path to a completed train.py output directory (must contain config.yml)",
 )
 
 args = parser.parse_args()
 
-
-# =========================================================
-# Resolve config paths
-# =========================================================
-encoder_cfg_path = os.path.abspath(args.encoder)
-data_cfg_path = os.path.abspath(args.data)
-trainer_cfg_path = os.path.abspath(args.trainer)
-segmentor_cfg_path = os.path.abspath(args.segmentor)
-splits_path = os.path.abspath(args.splits)
 results_dir = os.path.abspath(args.results_dir)
 
-print(f"Loading encoder config from:   {encoder_cfg_path}")
-print(f"Loading data config from:      {data_cfg_path}")
-print(f"Loading trainer config from:   {trainer_cfg_path}")
-print(f"Loading segmentor config from: {segmentor_cfg_path}")
-print(f"Evaluating checkpoints from:   {results_dir}")
+
+# =========================================================
+# Load merged config saved by train.py
+# =========================================================
+config_path = os.path.join(results_dir, "config.yml")
+
+if not os.path.exists(config_path):
+    raise FileNotFoundError(
+        f"config.yml not found in {results_dir}. "
+        "Make sure --results_dir points to the root output directory of a train.py run."
+    )
+
+with open(config_path, "r") as f:
+    config = yaml.safe_load(f)
+
+e_cfg = config["encoder"]
+d_cfg = config["data"]
+t_cfg = config["trainer"]
+s_cfg = config["segmentor"]
+splits_path = config["paths"]["splits_path"]
+
+print(f"Loaded config from: {config_path}")
+print(f"Evaluating checkpoints in: {results_dir}")
 
 
 # =========================================================
-# Load YAML configs
-# =========================================================
-with open(encoder_cfg_path, "r") as f:
-    e_cfg = yaml.safe_load(f)
-
-with open(data_cfg_path, "r") as f:
-    d_cfg = yaml.safe_load(f)
-
-with open(trainer_cfg_path, "r") as f:
-    t_cfg = yaml.safe_load(f)
-
-with open(segmentor_cfg_path, "r") as f:
-    s_cfg = yaml.safe_load(f)
-
-
-# =========================================================
-# Load encoder and segmentor initializers from their YMLs
+# Load encoder and segmentor initializers from their paths
+# (stored in the merged config)
 # =========================================================
 init_encoder_path = e_cfg.get("init_encoder_path")
 init_segmentor_path = s_cfg.get("init_segmentor_path")
