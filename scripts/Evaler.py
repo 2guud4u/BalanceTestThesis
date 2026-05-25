@@ -12,7 +12,7 @@ from utils.eval.metric_utils import compute_averaged_video_metrics, predict_vide
 # -------------------------------------------------------------------
 # Per-fold evaluation
 # -------------------------------------------------------------------
-def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device):
+def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device, stride_override=30):
     per_fold_results = {}
     fold_metric_dicts = []
 
@@ -46,7 +46,7 @@ def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device):
 
         for video in tqdm(val_files, desc=f"[{split_name}] predicting"):
             gt_labels, pred_labels, _ = predict_video(
-                video, trainer.encoder, trainer.segmentor, d_cfg, device, stride_override=1
+                video, trainer.encoder, trainer.segmentor, d_cfg, device, stride_override=stride_override
             )
             T = min(len(pred_labels), len(gt_labels))
             pred_labels_per_video.append(np.asarray(pred_labels[:T]))
