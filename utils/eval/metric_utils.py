@@ -54,6 +54,29 @@ def normalized_edit_distance(s1, s2):
     """Normalized edit distance as similarity % (0-100, higher is better)."""
     return levenshtein(s1, s2, norm=True)
 
+def collapse_labels(labels, ignore_index=-100):
+    """
+    Collapse a frame-level label sequence into its segment sequence by
+    removing consecutive duplicates and ignoring padding frames.
+
+    e.g. [0,0,1,1,1,0,0] -> [0, 1, 0]
+
+    This is what the MS-TCN paper uses for its 'Edit' metric:
+    computing edit distance on the segment sequence (typically 3-20 elements)
+    instead of the full frame sequence (thousands of elements) makes the
+    computation instantaneous and the metric more meaningful.
+    """
+    labels = np.asarray(labels)
+    collapsed = []
+    prev = None
+    for v in labels:
+        if v == ignore_index:
+            continue
+        if v != prev:
+            collapsed.append(int(v))
+            prev = v
+    return collapsed
+
 def extract_segments(labels, class_id=1, ignore_index=-100):
     """
     labels: 1D array-like of ints (T,)
@@ -314,12 +337,14 @@ def compute_averaged_video_metrics(pred_labels, gt_labels, class_id=1,
             vid_metrics[f"fp_iou_{thr}"] = fp
             vid_metrics[f"fn_iou_{thr}"] = fn
 
-        # Edit distance per video (over valid frames only)
+        # Edit distance on collapsed segment sequence (MS-TCN convention).
+        # Segment sequences are typically 3-20 elements vs. thousands of frames,
+        # making this O(k^2) instead of O(T^2).
         valid = g != ignore_index
-        g_valid = g[valid].tolist()
-        p_valid = p[valid].tolist()
-        vid_metrics["edit_distance_frames"] = edit_distance(g_valid, p_valid)
-        vid_metrics["edit_distance_normalized"] = normalized_edit_distance(g_valid, p_valid)
+        g_seg = collapse_labels(g, ignore_index=ignore_index)
+        p_seg = collapse_labels(p, ignore_index=ignore_index)
+        vid_metrics["edit_distance_segments"] = edit_distance(g_seg, p_seg)
+        vid_metrics["edit_distance_normalized"] = normalized_edit_distance(g_seg, p_seg)
 
         # Frame-level accuracy on valid frames
         if valid.sum() > 0:
@@ -361,7 +386,7 @@ def compute_averaged_video_metrics(pred_labels, gt_labels, class_id=1,
         averaged[f"recall_iou_{thr}"] = _avg(f"recall_iou_{thr}")
         averaged[f"f1_iou_{thr}"] = _avg(f"f1_iou_{thr}")
 
-    averaged["edit_distance_frames"] = _avg("edit_distance_frames")
+    averaged["edit_distance_segments"] = _avg("edit_distance_segments")
     averaged["edit_distance_normalized"] = _avg("edit_distance_normalized")
     averaged["frame_accuracy"] = _avg("frame_accuracy")
     averaged["mean_abs_start_error_seconds"] = _avg("mean_abs_start_error_seconds")
