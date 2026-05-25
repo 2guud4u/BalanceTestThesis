@@ -30,7 +30,12 @@ def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device, stride_overr
         print(f"\n{'='*70}\nFold: {split_name}  ({len(val_files)} val videos)\n{'='*70}")
 
         trainer.encoder.load_state_dict(torch.load(encoder_ckpt_path, map_location=device))
-        trainer.segmentor.load_state_dict(torch.load(model_ckpt_path, map_location=device))
+        # strict=False: checkpoint contains class_weights / ce.weight buffers saved during
+        # training; those are absent when segmentor is constructed with class_weights=None
+        # for eval. They are only used by compute_loss, which is never called here.
+        trainer.segmentor.load_state_dict(
+            torch.load(model_ckpt_path, map_location=device), strict=False
+        )
         trainer.encoder.to(device).eval()
         trainer.segmentor.to(device).eval()
         print(f"✓ Loaded {model_ckpt_path}")
