@@ -438,7 +438,7 @@ class MAMPFeatureEncoder(nn.Module):
         J = C_flat // 3
         x = x.view(B, T, J, 3)
 
-        if self.skeleton_type == "camera_mp_cropped_iou":
+        if self.skeleton_type == "camera_mp_cropped_iou" or self.skeleton_type == "world_mp_cropped_iou":
             if J != 33:
                 raise ValueError(f"For skeleton_type='mp', expected 33 joints, got {J}")
             x = convertBatchVideoMPtoNTU(x)

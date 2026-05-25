@@ -17,14 +17,13 @@ sys.path.append("..")
 from data.PoseDataset import PoseDataset
 from Trainer import Trainer
 
+
 # =========================================================
 # Dynamic import from file path
 # =========================================================
 def load_module_from_path(file_path):
     """Load a Python module from an absolute file path."""
-    spec = importlib.util.spec_from_file_location(
-        "initializer_module", file_path
-    )
+    spec = importlib.util.spec_from_file_location("initializer_module", file_path)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
@@ -154,7 +153,7 @@ initialize_segmentor = getattr(segmentor_init_module, "initialize_segmentor")
 current_datetime = datetime.now()
 
 save_dir_parts = [
-    "/code/jjiang23/pathml/aim2_balanceV2/results",
+    "/code/jjiang23/BalanceTestThesis/results",
     os.path.splitext(os.path.basename(args.encoder))[0],
     os.path.splitext(os.path.basename(args.data))[0],
     os.path.splitext(os.path.basename(args.trainer))[0],
@@ -191,7 +190,6 @@ with open(splits_path, "r") as f:
 # Train each split
 # =========================================================
 for split_name, split_files in splits.items():
-
     print(f"\n========== Training Split: {split_name} ==========")
 
     train_files = split_files["train"]
@@ -219,9 +217,7 @@ for split_name, split_files in splits.items():
     # -----------------------------------------------------
     # Compute class weights
     # -----------------------------------------------------
-    class_weights = train_ds.compute_class_weights(
-        device=t_cfg["device"]
-    )
+    class_weights = train_ds.compute_class_weights(device=t_cfg["device"])
 
     print(f"Class weights: {class_weights}")
 
