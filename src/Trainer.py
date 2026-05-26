@@ -126,7 +126,12 @@ class Trainer:
             for p in list(self.encoder.parameters()) + list(self.segmentor.parameters())
             if p.requires_grad
         ]
-        optimizer = optim.Adam(
+        # AdamW (decoupled weight decay) instead of Adam.
+        # Plain Adam folds weight_decay into the gradient before the adaptive-LR
+        # rescaling, which made weight_decay=0.01 collapse training (loss rose,
+        # predictions converged to majority class). AdamW applies decay directly
+        # to the parameter update, so the value matches its intended meaning.
+        optimizer = optim.AdamW(
             trainable_params, lr=learning_rate, weight_decay=weight_decay
         )
 

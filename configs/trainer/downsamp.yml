@@ -2,7 +2,7 @@
 epochs: 100
 batch_size: 16
 lr: 5e-4
-weight_decay: 0.01          # now respected by train.py
+weight_decay: 0.0001        # plain Adam; 0.01 caused weight collapse
 early_stop_patience: 20
 early_stop_min_delta: 0.001
 device: cuda

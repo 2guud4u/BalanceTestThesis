@@ -188,10 +188,10 @@ class MAMPEncoder(nn.Module):
             if J != 33:
                 raise ValueError(f"For skeleton_type='mp', expected 33 joints, got {J}")
             x = convertBatchVideoMPtoNTU(x)            # (B, T, 25, 3)
-        elif self.skeleton_type == "motionBert":
-            print("Converting MotionBert skeleton to NTU format...")
-            x = convertBatchVideoMBtoNTU(x)
-
+        elif self.skeleton_type == "motionBert_cropped_iou":
+            if J != 17:
+                raise ValueError(f"skeleton_type='motionBert_cropped_iou': expected 17 joints, got {J}")
+            x = convertBatchVideoMBtoNTU(x)            # (B, T, 25, 3)
         elif self.skeleton_type == "ntu":
             if J != 25:
                 raise ValueError(f"For skeleton_type='ntu', expected 25 joints, got {J}")
