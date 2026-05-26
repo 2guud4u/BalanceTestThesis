@@ -262,6 +262,7 @@ for split_name, split_files in splits.items():
         num_epochs=t_cfg["epochs"],
         batch_size=t_cfg["batch_size"],
         learning_rate=float(t_cfg["lr"]),
+        weight_decay=float(t_cfg.get("weight_decay", 0.0)),
         device=t_cfg["device"],
     )
 
