@@ -384,3 +384,62 @@ if __name__ == "__main__":
             f"x[{float(k[..., 0].min()):.3f},{float(k[..., 0].max()):.3f}] "
             f"y[{float(k[..., 1].min()):.3f},{float(k[..., 1].max()):.3f}] "
             f"z[{float(k[..., 2].min()):.3f},{float(k[..., 2].max()):.3f}]")
+    import numpy as np
+
+    npz = np.load("/data2/pathml/MAMP/ntu120/NTU120_XSub.npz")
+    x = npz["x_train"][:100].astype(np.float32)
+    print("flat shape:", x.shape)
+
+    # Try the most common MAMP/MS-G3D flatten order: (N, T, M, V, C)
+    x5 = x.reshape(100, 300, 2, 25, 3)
+
+    # Use body 0 (body 1 is often all-zero for single-person actions)
+    body0 = x5[:, :, 0, :, :]                                   # (N, T, V=25, C=3)
+    print("body0 shape:", body0.shape, "range:", body0.min(), body0.max())
+
+    # Filter zero-padded frames (NTU pads short sequences with zeros)
+    valid = (body0.reshape(100, 300, -1).any(axis=-1))          # (N, T)
+    print("avg valid frames per sample:", valid.sum(axis=1).mean())
+
+    # Spine bone length on valid frames only
+    spine_lens = []
+    for n in range(100):
+        v = valid[n]
+        if v.sum() < 5:
+            continue
+        bone = body0[n, v, 20, :] - body0[n, v, 1, :]           # (T_valid, 3)
+        spine_lens.append(np.linalg.norm(bone, axis=-1).mean())
+    spine_lens = np.array(spine_lens)
+    print(f"NTU120 spine length:  mean={spine_lens.mean():.4f}  "
+        f"median={np.median(spine_lens):.4f}  "
+        f"std={spine_lens.std():.4f}  n={len(spine_lens)}")
+
+    # Y-axis convention check (first valid frame of first sample)
+    n = 0
+    t0 = np.argmax(valid[n])
+    print(f"sample 0, frame {t0}:  "
+        f"head_y={body0[n, t0, 3, 1]:.3f}  "
+        f"hip_y={body0[n, t0, 0, 1]:.3f}  "
+        f"toe_y={body0[n, t0, 15, 1]:.3f}")
+    # --- Verify scale normalization against new NTU120 reference ---
+    from ..models.encoders.MY_MAMP.encoder import _scale_normalize_to_ntu, NTU_REF_SPINE_LEN
+
+    print(f"\n--- Post-scale verification (target spine = {NTU_REF_SPINE_LEN}) ---")
+    for name, ntu_kps in [("MB", ntu_from_mb), ("world_mp", ntu_from_mpw)]:
+        # Add batch dim, scale, drop batch dim
+        if hasattr(ntu_kps, "unsqueeze"):
+            b = ntu_kps.unsqueeze(0)
+        else:
+            b = ntu_kps[None]
+        b = _scale_normalize_to_ntu(b)[0]
+
+        spine = b[:, 20, :] - b[:, 1, :]
+        if hasattr(spine, "norm"):
+            slen = float(spine.norm(dim=-1).mean())
+        else:
+            slen = float(((spine ** 2).sum(-1) ** 0.5).mean())
+
+        print(f"{name}  post-scale spine: {slen:.4f}   "
+            f"head_y: {float(b[0, 3, 1]):+.3f}   "
+            f"hip_y: {float(b[0, 0, 1]):+.3f}   "
+            f"toe_y: {float(b[0, 15, 1]):+.3f}")
