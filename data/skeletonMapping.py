@@ -159,6 +159,40 @@ def _zeros_like_shape(*, shape, like):
         return torch.zeros(shape, dtype=like.dtype, device=like.device)
     return np.zeros(shape, dtype=getattr(like, "dtype", None) or np.float32)
 
+
+# NTU-convention reference: average spineMid (joint 1) → shoulderMid (joint 20) bone length.
+# Used to rescale MotionBert (~0.17) and world MediaPipe (~0.25) inputs into the
+# range MAMP/MAE were pretrained on. Measured directly from NTU120_XSub.npz:
+#   spine mean=0.1958, median=0.1968, std=0.0100 (n=100 samples, body 0, valid frames).
+# MAMP pretraining did translation only (no scale normalization), so this matches the
+# raw Kinect meter scale the encoder saw during pretraining.
+NTU_REF_SPINE_LEN = 0.196
+
+
+def scale_normalize_to_ntu(x, ntu_ref_bone_len: float = NTU_REF_SPINE_LEN):
+    """
+    Rescale (B, T, 25, 3) NTU-layout skeleton so the mean spineMid (joint 1) →
+    shoulderMid (joint 20) bone length matches NTU. One scalar per sample;
+    preserves geometry. Works for both torch.Tensor and numpy.ndarray.
+    """
+    bone = x[:, :, 20, :] - x[:, :, 1, :]                         # (B, T, 3)
+    if _is_torch(bone):
+        lengths = bone.norm(dim=-1)                               # (B, T)
+        valid = (lengths > 1e-6).float()
+        scale = (lengths * valid).sum(dim=1) / valid.sum(dim=1).clamp(min=1)
+        scale = scale.clamp(min=1e-6)
+        factor = (ntu_ref_bone_len / scale).view(-1, 1, 1, 1)
+    else:
+        lengths = ((bone ** 2).sum(-1)) ** 0.5
+        valid = (lengths > 1e-6).astype(lengths.dtype)
+        denom = valid.sum(axis=1)
+        denom[denom < 1] = 1
+        scale = (lengths * valid).sum(axis=1) / denom
+        scale = scale.clip(min=1e-6)
+        factor = (ntu_ref_bone_len / scale).reshape(-1, 1, 1, 1)
+    return x * factor
+
+
 def convertMPtoNTU(mp_kps):
     """
     Convert MediaPipe keypoints to NTU skeleton format.

@@ -22,38 +22,11 @@ project_root = os.path.join(current_dir, '..', '..', '..')
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
-from data.skeletonMapping import convertBatchVideoMPtoNTU, convertBatchVideoMBtoNTU, _is_torch
-
-# NTU-convention reference: average spineMid (joint 1) → shoulderMid (joint 20) bone length.
-# Used to rescale MotionBert (~0.17) and world MediaPipe (~0.25) inputs into the
-# range MAMP was pretrained on. Measured directly from NTU120_XSub.npz:
-#   spine mean=0.1958, median=0.1968, std=0.0100 (n=100 samples, body 0, valid frames).
-# MAMP pretraining did translation only (no scale normalization), so this matches the
-# raw Kinect meter scale the encoder saw during pretraining.
-NTU_REF_SPINE_LEN = 0.196
-
-
-def _scale_normalize_to_ntu(x, ntu_ref_bone_len: float = NTU_REF_SPINE_LEN):
-    """
-    Rescale (B, T, 25, 3) skeleton so the mean spineMid→shoulderMid bone length
-    matches NTU. One scalar per sample; preserves geometry.
-    """
-    bone = x[:, :, 20, :] - x[:, :, 1, :]                         # (B, T, 3)
-    if _is_torch(bone):
-        lengths = bone.norm(dim=-1)                               # (B, T)
-        valid = (lengths > 1e-6).float()
-        scale = (lengths * valid).sum(dim=1) / valid.sum(dim=1).clamp(min=1)
-        scale = scale.clamp(min=1e-6)
-        factor = (ntu_ref_bone_len / scale).view(-1, 1, 1, 1)
-    else:
-        lengths = ((bone ** 2).sum(-1)) ** 0.5
-        valid = (lengths > 1e-6).astype(lengths.dtype)
-        denom = valid.sum(axis=1)
-        denom[denom < 1] = 1
-        scale = (lengths * valid).sum(axis=1) / denom
-        scale = scale.clip(min=1e-6)
-        factor = (ntu_ref_bone_len / scale).reshape(-1, 1, 1, 1)
-    return x * factor
+from data.skeletonMapping import (
+    convertBatchVideoMPtoNTU,
+    convertBatchVideoMBtoNTU,
+    scale_normalize_to_ntu,
+)
 
 # Add MAMP directory to path so model_mamp can be imported
 MAMP_DIR = os.path.join(os.path.dirname(__file__), '..', 'MAMP')
@@ -227,7 +200,7 @@ class MAMPEncoder(nn.Module):
 
         # Rescale non-NTU sources into MAMP's pretraining scale.
         if self.skeleton_type != "ntu":
-            x = _scale_normalize_to_ntu(x)
+            x = scale_normalize_to_ntu(x)
 
         x = self._seq_translate_single_body(x)      # (B, T, 25, 3)
         x = x.permute(0, 3, 1, 2).contiguous()      # (B, 3, T, 25)
@@ -500,7 +473,7 @@ class MAMPFeatureEncoder(nn.Module):
 
         # Rescale non-NTU sources into MAMP's pretraining scale.
         if self.skeleton_type != "ntu":
-            x = _scale_normalize_to_ntu(x)
+            x = scale_normalize_to_ntu(x)
 
         x = self._seq_translate_single_body(x)      # (B, T, 25, 3)
         return x

@@ -22,8 +22,11 @@ project_root = os.path.join(current_dir, '..', '..', '..')
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
-from data.skeletonMapping import convertBatchVideoMPtoNTU, convertBatchVideoMBtoNTU
-from models.encoders.MY_MAMP.encoder import _scale_normalize_to_ntu
+from data.skeletonMapping import (
+    convertBatchVideoMPtoNTU,
+    convertBatchVideoMBtoNTU,
+    scale_normalize_to_ntu,
+)
 
 # Add MAMP directory to path so model modules can be imported
 MAMP_DIR = os.path.join(os.path.dirname(__file__), '..', 'MAMP')
@@ -171,7 +174,7 @@ class MAEFeatureEncoder(nn.Module):
 
         # Rescale non-NTU sources into MAE's pretraining scale.
         if self.skeleton_type != "ntu":
-            x = _scale_normalize_to_ntu(x)
+            x = scale_normalize_to_ntu(x)
 
         x = self._seq_translate_single_body(x)      # (B, T, 25, 3)
         return x
