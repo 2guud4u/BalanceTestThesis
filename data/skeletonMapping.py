@@ -291,19 +291,27 @@ def convertVideoMBtoNTU(video_mb_kps):
     """
     T = video_mb_kps.shape[0]
 
-    # MotionBert outputs y-down (head at negative y, feet at positive y).
-    # NTU/MAMP expects y-up. Flip y once per video before per-frame mapping.
+    # MotionBert outputs in H36M canonical coordinates: x = lateral, y = depth,
+    # z = vertical (head at +z, feet at -z). NTU expects y-up. Remap axes:
+    #   NTU_x =  MB_x
+    #   NTU_y =  MB_z   (vertical -> vertical)
+    #   NTU_z = -MB_y   (negate to preserve right-handedness)
+    # Detected empirically: raw MB had head_y=+0.091, toe_y=-0.102 (range 0.19),
+    # while spine bone alone was 0.174 -- meaning y is NOT the body axis.
+    # The body's true vertical extent (~0.7-0.9) lives along z.
     if _is_torch(video_mb_kps):
-        video_mb_kps = video_mb_kps.clone()
+        remapped = torch.empty_like(video_mb_kps)
     else:
-        video_mb_kps = video_mb_kps.copy()
-    video_mb_kps[..., 1] = -video_mb_kps[..., 1]
+        remapped = np.empty_like(video_mb_kps)
+    remapped[..., 0] = video_mb_kps[..., 0]
+    remapped[..., 1] = video_mb_kps[..., 2]
+    remapped[..., 2] = -video_mb_kps[..., 1]
+    video_mb_kps = remapped
 
     video_ntu_kps = _zeros_like_shape(shape=(T, 25, 3), like=video_mb_kps)
     for t in range(T):
         video_ntu_kps[t] = convertMBtoNTU(video_mb_kps[t])
-    
-    
+
     return video_ntu_kps
 
 def convertBatchVideoMBtoNTU(batch_video_mb_kps):
