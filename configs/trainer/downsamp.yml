@@ -1,10 +1,10 @@
 epochs: 100
 batch_size: 16
 lr: 5e-4  
-weight_decay: 0.00
+weight_decay: 0.01
 early_stop_patience: 20
 early_stop_min_delta: 0.001
 device: cuda
-lambda_smooth: 0.1
+lambda_smooth: 0.01
 time_alignment: downsample_labels
 early_stop_monitor: val_f1

@@ -107,7 +107,7 @@ segmentor = initialize_segmentor(
     s_cfg,
     encoder,
     class_weights=None,  # not needed for eval
-    lambda_smooth=t_cfg.get("lambda_smooth", 0.15),
+    lambda_smooth=t_cfg.get("lambda_smooth", 0.01),
     time_alignment=t_cfg.get("time_alignment", "downsample_labels"),
 )
 

@@ -234,7 +234,7 @@ def convertMBtoNTU(mb_kps):
     for ntu_idx, mp_name in ntu_to_MB_Mapping.items():
         if mp_name in mb_part_to_kp:
             ntu_kps[ntu_idx] = mb_part_to_kp[mp_name]
-
+    
     return ntu_kps
 def convertVideoMBtoNTU(video_mb_kps):
     """
@@ -250,6 +250,8 @@ def convertVideoMBtoNTU(video_mb_kps):
     video_ntu_kps = _zeros_like_shape(shape=(T, 25, 3), like=video_mb_kps)
     for t in range(T):
         video_ntu_kps[t] = convertMBtoNTU(video_mb_kps[t])
+    
+    
     return video_ntu_kps
 
 def convertBatchVideoMBtoNTU(batch_video_mb_kps):
@@ -268,8 +270,65 @@ def convertBatchVideoMBtoNTU(batch_video_mb_kps):
         batch_video_ntu_kps[b] = convertVideoMBtoNTU(batch_video_mb_kps[b])
     return batch_video_ntu_kps
 if __name__ == "__main__":
-    from data.PoseDataset import load_video_h5
-    
+    from PoseDataset import load_video_h5
+
     with open('/code/jjiang23/pathml/aim2_balance/processed_files/all_h5_files.txt', 'r') as f:
         h5_files = [line.strip() for line in f.readlines()]
-    keypoints = load_video_h5(h5_files[1], "camera_mp_cropped_iou", allPhases=False)[0]  # (T, J, D)
+
+    # Load one MB video and convert once
+    mb_kps = load_video_h5(h5_files[1], "motionBert_cropped_iou", allPhases=False)[0]  # (T, 17, 3)
+    ntu_from_mb = convertVideoMBtoNTU(mb_kps)                                          # (T, 25, 3)
+
+    # Scale + range
+    spine = (ntu_from_mb[:, 20, :] - ntu_from_mb[:, 1, :])
+    spine_len = spine.norm(dim=-1).mean() if hasattr(spine, "norm") \
+                else ((spine ** 2).sum(-1) ** 0.5).mean()
+    print("MB→NTU range:", ntu_from_mb.min().item(), ntu_from_mb.max().item(),
+          " spine bone (mean):", float(spine_len))
+
+    # Orientation: y direction
+    print("head_y (joint 3):", float(ntu_from_mb[0, 3, 1]),
+          " hip_y  (joint 0):", float(ntu_from_mb[0, 0, 1]),
+          " toe_y  (joint 15):", float(ntu_from_mb[0, 15, 1]))
+
+    # Optional: try to load an NTU reference from the same h5
+    for key in ["ntu_cropped_iou", "kinect_iou", "ntu"]:
+        try:
+            ntu_kps = load_video_h5(h5_files[1], key, allPhases=False)[0]
+            spine = (ntu_kps[:, 20, :] - ntu_kps[:, 1, :])
+            spine_len = spine.norm(dim=-1).mean() if hasattr(spine, "norm") \
+                        else ((spine ** 2).sum(-1) ** 0.5).mean()
+            print(f"NTU key '{key}' range:", ntu_kps.min().item(), ntu_kps.max().item(),
+                  " spine bone:", float(spine_len))
+            break
+        except Exception as e:
+            print(f"key {key!r} not available: {e}")
+            
+        # --- world_mp ---
+    mp_w = load_video_h5(h5_files[1], "world_mp_cropped_iou", allPhases=False)[0]   # (T, 33, 3)
+    ntu_from_mpw = convertVideoMPtoNTU(mp_w)
+    spine_w = ntu_from_mpw[:, 20, :] - ntu_from_mpw[:, 1, :]
+    slen_w = spine_w.norm(dim=-1).mean() if hasattr(spine_w, "norm") else ((spine_w**2).sum(-1)**0.5).mean()
+    print("world_mp→NTU  range:", ntu_from_mpw.min().item(), ntu_from_mpw.max().item(),
+        " spine:", float(slen_w))
+    print("  head_y:", float(ntu_from_mpw[0, 3, 1]),
+        " hip_y:",  float(ntu_from_mpw[0, 0, 1]),
+        " toe_y:",  float(ntu_from_mpw[0, 15, 1]))
+
+    # --- camera_mp ---
+    mp_c = load_video_h5(h5_files[1], "camera_mp_cropped_iou", allPhases=False)[0]
+    ntu_from_mpc = convertVideoMPtoNTU(mp_c)
+    spine_c = ntu_from_mpc[:, 20, :] - ntu_from_mpc[:, 1, :]
+    slen_c = spine_c.norm(dim=-1).mean() if hasattr(spine_c, "norm") else ((spine_c**2).sum(-1)**0.5).mean()
+    print("camera_mp→NTU range:", ntu_from_mpc.min().item(), ntu_from_mpc.max().item(),
+        " spine:", float(slen_c))
+    print("  head_y:", float(ntu_from_mpc[0, 3, 1]),
+        " hip_y:",  float(ntu_from_mpc[0, 0, 1]),
+        " toe_y:",  float(ntu_from_mpc[0, 15, 1]))
+
+    # --- per-axis spread (for camera_mp this will reveal the anisotropic-scale problem) ---
+    for name, k in [("world_mp", ntu_from_mpw), ("camera_mp", ntu_from_mpc)]:
+        print(f"{name}  axis ranges: "
+            f"x[{float(k[..., 0].min()):.3f},{float(k[..., 0].max()):.3f}] "
+            f"y[{float(k[..., 1].min()):.3f},{float(k[..., 1].max()):.3f}] "
+            f"z[{float(k[..., 2].min()):.3f},{float(k[..., 2].max()):.3f}]")
