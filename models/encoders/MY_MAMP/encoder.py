@@ -22,7 +22,35 @@ project_root = os.path.join(current_dir, '..', '..', '..')
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
-from data.skeletonMapping import convertBatchVideoMPtoNTU, convertBatchVideoMBtoNTU
+from data.skeletonMapping import convertBatchVideoMPtoNTU, convertBatchVideoMBtoNTU, _is_torch
+
+# NTU-convention reference: average spineMid (joint 1) → shoulderMid (joint 20) bone length.
+# Used to rescale MotionBert (~0.17) and MediaPipe (~0.05–0.10) inputs into the
+# range MAMP was pretrained on. Measured from H36M/NTU literature.
+NTU_REF_SPINE_LEN = 0.30
+
+
+def _scale_normalize_to_ntu(x, ntu_ref_bone_len: float = NTU_REF_SPINE_LEN):
+    """
+    Rescale (B, T, 25, 3) skeleton so the mean spineMid→shoulderMid bone length
+    matches NTU. One scalar per sample; preserves geometry.
+    """
+    bone = x[:, :, 20, :] - x[:, :, 1, :]                         # (B, T, 3)
+    if _is_torch(bone):
+        lengths = bone.norm(dim=-1)                               # (B, T)
+        valid = (lengths > 1e-6).float()
+        scale = (lengths * valid).sum(dim=1) / valid.sum(dim=1).clamp(min=1)
+        scale = scale.clamp(min=1e-6)
+        factor = (ntu_ref_bone_len / scale).view(-1, 1, 1, 1)
+    else:
+        lengths = ((bone ** 2).sum(-1)) ** 0.5
+        valid = (lengths > 1e-6).astype(lengths.dtype)
+        denom = valid.sum(axis=1)
+        denom[denom < 1] = 1
+        scale = (lengths * valid).sum(axis=1) / denom
+        scale = scale.clip(min=1e-6)
+        factor = (ntu_ref_bone_len / scale).reshape(-1, 1, 1, 1)
+    return x * factor
 
 # Add MAMP directory to path so model_mamp can be imported
 MAMP_DIR = os.path.join(os.path.dirname(__file__), '..', 'MAMP')
@@ -172,13 +200,18 @@ class MAMPEncoder(nn.Module):
         J = C_flat // 3
         x = x.view(B, T, J, 3)
         
-        if self.skeleton_type == "camera_mp_cropped_iou" or self.skeleton_type == "world_mp_cropped_iou":
+        if self.skeleton_type == "camera_mp_cropped_iou":
+            raise ValueError(
+                "camera_mp_cropped_iou is image-normalized 2D + uncorrelated pseudo-depth "
+                "(x,y in [0,1] image fractions; z in a different unit ~4x larger). "
+                "It is NOT a Euclidean 3D skeleton and is incompatible with NTU-pretrained "
+                "MAMP/MAE encoders. Use world_mp_cropped_iou or motionBert_cropped_iou "
+                "with this encoder, or pass camera_mp to MS-GCN instead."
+            )
+        elif self.skeleton_type == "world_mp_cropped_iou":
             if J != 33:
                 raise ValueError(f"For skeleton_type='mp', expected 33 joints, got {J}")
-            # Must exist in your codebase:
-            # input:  (B, T, 33, 3)
-            # output: (B, T, 25, 3)
-            x = convertBatchVideoMPtoNTU(x)
+            x = convertBatchVideoMPtoNTU(x)            # (B, T, 25, 3)
         elif self.skeleton_type == "motionBert":
             print("Converting MotionBert skeleton to NTU format...")
             x = convertBatchVideoMBtoNTU(x)
@@ -188,6 +221,10 @@ class MAMPEncoder(nn.Module):
                 raise ValueError(f"For skeleton_type='ntu', expected 25 joints, got {J}")
         else:
             raise ValueError(f"Unsupported skeleton_type: {self.skeleton_type}")
+
+        # Rescale non-NTU sources into MAMP's pretraining scale.
+        if self.skeleton_type != "ntu":
+            x = _scale_normalize_to_ntu(x)
 
         x = self._seq_translate_single_body(x)      # (B, T, 25, 3)
         x = x.permute(0, 3, 1, 2).contiguous()      # (B, 3, T, 25)
@@ -438,7 +475,13 @@ class MAMPFeatureEncoder(nn.Module):
         J = C_flat // 3
         x = x.view(B, T, J, 3)
 
-        if self.skeleton_type == "camera_mp_cropped_iou" or self.skeleton_type == "world_mp_cropped_iou":
+        if self.skeleton_type == "camera_mp_cropped_iou":
+            raise ValueError(
+                "camera_mp_cropped_iou is image-normalized 2D + uncorrelated pseudo-depth "
+                "and is not compatible with NTU-pretrained MAMP/MAE encoders. "
+                "Use world_mp_cropped_iou or motionBert_cropped_iou here."
+            )
+        elif self.skeleton_type == "world_mp_cropped_iou":
             if J != 33:
                 raise ValueError(f"For skeleton_type='mp', expected 33 joints, got {J}")
             x = convertBatchVideoMPtoNTU(x)
@@ -451,6 +494,10 @@ class MAMPFeatureEncoder(nn.Module):
                 raise ValueError(f"For skeleton_type='ntu', expected 25 joints, got {J}")
         else:
             raise ValueError(f"Unsupported skeleton_type: {self.skeleton_type}")
+
+        # Rescale non-NTU sources into MAMP's pretraining scale.
+        if self.skeleton_type != "ntu":
+            x = _scale_normalize_to_ntu(x)
 
         x = self._seq_translate_single_body(x)      # (B, T, 25, 3)
         return x

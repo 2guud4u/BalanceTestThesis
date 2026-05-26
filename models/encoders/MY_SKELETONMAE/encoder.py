@@ -23,6 +23,7 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 from data.skeletonMapping import convertBatchVideoMPtoNTU, convertBatchVideoMBtoNTU
+from models.encoders.MY_MAMP.encoder import _scale_normalize_to_ntu
 
 # Add MAMP directory to path so model modules can be imported
 MAMP_DIR = os.path.join(os.path.dirname(__file__), '..', 'MAMP')
@@ -148,7 +149,13 @@ class MAEFeatureEncoder(nn.Module):
         J = C_flat // 3
         x = x.view(B, T, J, 3)
 
-        if self.skeleton_type == "camera_mp_cropped_iou" or self.skeleton_type == "world_mp_cropped_iou":
+        if self.skeleton_type == "camera_mp_cropped_iou":
+            raise ValueError(
+                "camera_mp_cropped_iou is image-normalized 2D + uncorrelated pseudo-depth "
+                "and is not compatible with NTU-pretrained MAMP/MAE encoders. "
+                "Use world_mp_cropped_iou or motionBert_cropped_iou here."
+            )
+        elif self.skeleton_type == "world_mp_cropped_iou":
             if J != 33:
                 raise ValueError(f"For skeleton_type='mp', expected 33 joints, got {J}")
             x = convertBatchVideoMPtoNTU(x)
@@ -161,6 +168,10 @@ class MAEFeatureEncoder(nn.Module):
                 raise ValueError(f"For skeleton_type='ntu', expected 25 joints, got {J}")
         else:
             raise ValueError(f"Unsupported skeleton_type: {self.skeleton_type}")
+
+        # Rescale non-NTU sources into MAE's pretraining scale.
+        if self.skeleton_type != "ntu":
+            x = _scale_normalize_to_ntu(x)
 
         x = self._seq_translate_single_body(x)      # (B, T, 25, 3)
         return x
