@@ -25,9 +25,12 @@ if project_root not in sys.path:
 from data.skeletonMapping import convertBatchVideoMPtoNTU, convertBatchVideoMBtoNTU, _is_torch
 
 # NTU-convention reference: average spineMid (joint 1) → shoulderMid (joint 20) bone length.
-# Used to rescale MotionBert (~0.17) and MediaPipe (~0.05–0.10) inputs into the
-# range MAMP was pretrained on. Measured from H36M/NTU literature.
-NTU_REF_SPINE_LEN = 0.30
+# Used to rescale MotionBert (~0.17) and world MediaPipe (~0.25) inputs into the
+# range MAMP was pretrained on. Measured directly from NTU120_XSub.npz:
+#   spine mean=0.1958, median=0.1968, std=0.0100 (n=100 samples, body 0, valid frames).
+# MAMP pretraining did translation only (no scale normalization), so this matches the
+# raw Kinect meter scale the encoder saw during pretraining.
+NTU_REF_SPINE_LEN = 0.196
 
 
 def _scale_normalize_to_ntu(x, ntu_ref_bone_len: float = NTU_REF_SPINE_LEN):
