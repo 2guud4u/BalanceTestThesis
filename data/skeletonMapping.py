@@ -193,6 +193,15 @@ def convertVideoMPtoNTU(video_mp_kps):
         video_ntu_kps: (T, 25, 3) NTU skeleton format (same type as input)
     """
     T = video_mp_kps.shape[0]
+
+    # MediaPipe outputs y-down (head at negative y in world coords; small y at top
+    # of image in camera coords). NTU/MAMP expects y-up. Flip once per video.
+    if _is_torch(video_mp_kps):
+        video_mp_kps = video_mp_kps.clone()
+    else:
+        video_mp_kps = video_mp_kps.copy()
+    video_mp_kps[..., 1] = -video_mp_kps[..., 1]
+
     video_ntu_kps = _zeros_like_shape(shape=(T, 25, 3), like=video_mp_kps)
     for t in range(T):
         video_ntu_kps[t] = convertMPtoNTU(video_mp_kps[t])
@@ -247,6 +256,15 @@ def convertVideoMBtoNTU(video_mb_kps):
         video_ntu_kps: (T, 25, 3) NTU skeleton format (same type as input)
     """
     T = video_mb_kps.shape[0]
+
+    # MotionBert outputs y-down (head at negative y, feet at positive y).
+    # NTU/MAMP expects y-up. Flip y once per video before per-frame mapping.
+    if _is_torch(video_mb_kps):
+        video_mb_kps = video_mb_kps.clone()
+    else:
+        video_mb_kps = video_mb_kps.copy()
+    video_mb_kps[..., 1] = -video_mb_kps[..., 1]
+
     video_ntu_kps = _zeros_like_shape(shape=(T, 25, 3), like=video_mb_kps)
     for t in range(T):
         video_ntu_kps[t] = convertMBtoNTU(video_mb_kps[t])
