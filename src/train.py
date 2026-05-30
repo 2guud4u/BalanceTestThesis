@@ -39,8 +39,11 @@ parser = argparse.ArgumentParser(
 parser.add_argument(
     "--encoder",
     type=str,
-    required=True,
-    help="Path to encoder config YAML file",
+    required=False,
+    default=None,
+    help="Path to encoder config YAML file. If omitted, an identity "
+         "(passthrough) encoder is used — raw features go directly to "
+         "the segmentor.",
 )
 
 parser.add_argument(
@@ -77,13 +80,16 @@ args = parser.parse_args()
 # =========================================================
 # Resolve config paths
 # =========================================================
-encoder_cfg_path = os.path.abspath(args.encoder)
+encoder_cfg_path = os.path.abspath(args.encoder) if args.encoder else None
 data_cfg_path = os.path.abspath(args.data)
 trainer_cfg_path = os.path.abspath(args.trainer)
 segmentor_cfg_path = os.path.abspath(args.segmentor)
 splits_path = os.path.abspath(args.splits)
 
-print(f"Loading encoder config from: {encoder_cfg_path}")
+if encoder_cfg_path:
+    print(f"Loading encoder config from: {encoder_cfg_path}")
+else:
+    print("No encoder config provided — using identity (passthrough) encoder")
 print(f"Loading data config from: {data_cfg_path}")
 print(f"Loading trainer config from: {trainer_cfg_path}")
 print(f"Loading segmentor config from: {segmentor_cfg_path}")
@@ -92,8 +98,11 @@ print(f"Loading segmentor config from: {segmentor_cfg_path}")
 # =========================================================
 # Load YAML configs
 # =========================================================
-with open(encoder_cfg_path, "r") as f:
-    e_cfg = yaml.safe_load(f)
+if encoder_cfg_path:
+    with open(encoder_cfg_path, "r") as f:
+        e_cfg = yaml.safe_load(f)
+else:
+    e_cfg = None
 
 with open(data_cfg_path, "r") as f:
     d_cfg = yaml.safe_load(f)
@@ -126,24 +135,31 @@ config = {
 # =========================================================
 # Load encoder and segmentor initializers from their YMLs
 # =========================================================
-init_encoder_path = e_cfg.get("init_encoder_path")
-init_segmentor_path = s_cfg.get("init_segmentor_path")
+if e_cfg is not None:
+    init_encoder_path = e_cfg.get("init_encoder_path")
+    if not init_encoder_path:
+        raise ValueError("init_encoder_path not found in encoder config")
+    init_encoder_path = os.path.abspath(init_encoder_path)
+    print(f"Loading encoder initializer from: {init_encoder_path}")
+    encoder_init_module = load_module_from_path(init_encoder_path)
+    initialize_encoder = getattr(encoder_init_module, "initialize_encoder")
+else:
+    # No encoder config → use the identity (passthrough) encoder
+    _identity_init_path = os.path.abspath(
+        os.path.join(os.path.dirname(__file__), "..", "initializers", "encoder", "Identity.py")
+    )
+    print(f"Loading identity encoder initializer from: {_identity_init_path}")
+    encoder_init_module = load_module_from_path(_identity_init_path)
+    initialize_encoder = getattr(encoder_init_module, "initialize_encoder")
 
-if not init_encoder_path:
-    raise ValueError("init_encoder_path not found in encoder config")
+init_segmentor_path = s_cfg.get("init_segmentor_path")
 if not init_segmentor_path:
     raise ValueError("init_segmentor_path not found in segmentor config")
 
-init_encoder_path = os.path.abspath(init_encoder_path)
 init_segmentor_path = os.path.abspath(init_segmentor_path)
-
-print(f"Loading encoder initializer from: {init_encoder_path}")
 print(f"Loading segmentor initializer from: {init_segmentor_path}")
 
-encoder_init_module = load_module_from_path(init_encoder_path)
 segmentor_init_module = load_module_from_path(init_segmentor_path)
-
-initialize_encoder = getattr(encoder_init_module, "initialize_encoder")
 initialize_segmentor = getattr(segmentor_init_module, "initialize_segmentor")
 
 
@@ -152,9 +168,15 @@ initialize_segmentor = getattr(segmentor_init_module, "initialize_segmentor")
 # =========================================================
 current_datetime = datetime.now()
 
+encoder_name = (
+    os.path.splitext(os.path.basename(args.encoder))[0]
+    if args.encoder
+    else "Identity"
+)
+
 save_dir_parts = [
     "/code/jjiang23/BalanceTestThesis/results",
-    os.path.splitext(os.path.basename(args.encoder))[0],
+    encoder_name,
     os.path.splitext(os.path.basename(args.data))[0],
     os.path.splitext(os.path.basename(args.trainer))[0],
     os.path.splitext(os.path.basename(args.segmentor))[0],
