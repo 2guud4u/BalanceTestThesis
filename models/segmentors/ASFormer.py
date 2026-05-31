@@ -315,10 +315,10 @@ class Decoder(nn.Module):
 
 
 class MyTransformer(nn.Module):
-    def __init__(self, num_decoders, num_layers, r1, r2, num_f_maps, input_dim, num_classes, channel_masking_rate):
+    def __init__(self, num_decoders, num_layers, r1, r2, num_f_maps, input_dim, num_classes, channel_masking_rate, att_type='sliding_att'):
         super(MyTransformer, self).__init__()
-        self.encoder = Encoder(num_layers, r1, r2, num_f_maps, input_dim, num_classes, channel_masking_rate, att_type='sliding_att', alpha=1)
-        self.decoders = nn.ModuleList([copy.deepcopy(Decoder(num_layers, r1, r2, num_f_maps, num_classes, num_classes, att_type='sliding_att', alpha=exponential_descrease(s))) for s in range(num_decoders)]) # num_decoders
+        self.encoder = Encoder(num_layers, r1, r2, num_f_maps, input_dim, num_classes, channel_masking_rate, att_type=att_type, alpha=1)
+        self.decoders = nn.ModuleList([copy.deepcopy(Decoder(num_layers, r1, r2, num_f_maps, num_classes, num_classes, att_type=att_type, alpha=exponential_descrease(s))) for s in range(num_decoders)]) # num_decoders
 
 
     def forward(self, x, mask):
@@ -355,6 +355,9 @@ class ASFormer(nn.Module):
         r1:                   query/key reduction ratio.
         r2:                   value reduction ratio.
         channel_masking_rate: channel dropout rate in encoder (0.0 to disable).
+        att_type:             attention type — 'block_att' (any batch size),
+                              'sliding_att' (batch_size=1 only), or 'normal_att'
+                              (full O(T^2) attention).
     """
 
     def __init__(
@@ -367,6 +370,7 @@ class ASFormer(nn.Module):
         r1=2,
         r2=2,
         channel_masking_rate=0.3,
+        att_type='block_att',
     ):
         super().__init__()
         self.transformer = MyTransformer(
@@ -378,6 +382,7 @@ class ASFormer(nn.Module):
             input_dim=dim,
             num_classes=num_classes,
             channel_masking_rate=channel_masking_rate,
+            att_type=att_type,
         )
 
     def forward(self, x):

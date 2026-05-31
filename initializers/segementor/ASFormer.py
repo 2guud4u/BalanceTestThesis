@@ -29,6 +29,7 @@ def initialize_segmentor(
         r1=s_cfg.get("r1", 2),
         r2=s_cfg.get("r2", 2),
         channel_masking_rate=s_cfg.get("channel_masking_rate", 0.3),
+        att_type=s_cfg.get("att_type", "block_att"),
     )
 
     segmentor = SegmentorWithLoss(
@@ -48,6 +49,7 @@ def initialize_segmentor(
         f"num_f_maps={s_cfg.get('num_f_maps', 64)}, "
         f"layers={s_cfg.get('num_layers', 10)}, decoders={s_cfg.get('num_decoders', 3)}, "
         f"r1={s_cfg.get('r1', 2)}, r2={s_cfg.get('r2', 2)}, "
+        f"att_type={s_cfg.get('att_type', 'block_att')}, "
         f"channel_masking_rate={s_cfg.get('channel_masking_rate', 0.3)}, "
         f"lambda_smooth={lambda_smooth}, alignment={time_alignment})"
     )
