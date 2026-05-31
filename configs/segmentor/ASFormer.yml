@@ -1,0 +1,8 @@
+num_classes: 2
+num_f_maps: 64
+num_layers: 10
+num_decoders: 3
+r1: 2
+r2: 2
+channel_masking_rate: 0.3
+init_segmentor_path: /code/jjiang23/BalanceTestThesis/initializers/segementor/ASFormer.py
