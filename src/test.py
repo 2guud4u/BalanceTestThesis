@@ -70,24 +70,31 @@ print(f"Evaluating checkpoints in: {results_dir}")
 # Load encoder and segmentor initializers from their paths
 # (stored in the merged config)
 # =========================================================
-init_encoder_path = e_cfg.get("init_encoder_path")
-init_segmentor_path = s_cfg.get("init_segmentor_path")
+if e_cfg is not None:
+    init_encoder_path = e_cfg.get("init_encoder_path")
+    if not init_encoder_path:
+        raise ValueError("init_encoder_path not found in encoder config")
+    init_encoder_path = os.path.abspath(init_encoder_path)
+    print(f"Loading encoder initializer from:   {init_encoder_path}")
+    encoder_init_module = load_module_from_path(init_encoder_path)
+    initialize_encoder = getattr(encoder_init_module, "initialize_encoder")
+else:
+    # No encoder config → use the identity (passthrough) encoder
+    _identity_init_path = os.path.abspath(
+        os.path.join(os.path.dirname(__file__), "..", "initializers", "encoder", "Identity.py")
+    )
+    print(f"Loading identity encoder initializer from: {_identity_init_path}")
+    encoder_init_module = load_module_from_path(_identity_init_path)
+    initialize_encoder = getattr(encoder_init_module, "initialize_encoder")
 
-if not init_encoder_path:
-    raise ValueError("init_encoder_path not found in encoder config")
+init_segmentor_path = s_cfg.get("init_segmentor_path")
 if not init_segmentor_path:
     raise ValueError("init_segmentor_path not found in segmentor config")
 
-init_encoder_path = os.path.abspath(init_encoder_path)
 init_segmentor_path = os.path.abspath(init_segmentor_path)
-
-print(f"Loading encoder initializer from:   {init_encoder_path}")
 print(f"Loading segmentor initializer from: {init_segmentor_path}")
 
-encoder_init_module = load_module_from_path(init_encoder_path)
 segmentor_init_module = load_module_from_path(init_segmentor_path)
-
-initialize_encoder = getattr(encoder_init_module, "initialize_encoder")
 initialize_segmentor = getattr(segmentor_init_module, "initialize_segmentor")
 
 
