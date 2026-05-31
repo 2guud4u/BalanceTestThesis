@@ -138,7 +138,7 @@ class AttLayer(nn.Module):
         output, attentions = self.att_helper.scalar_dot_att(q, k, v, padding_mask)
         output = self.conv_out(F.relu(output))
 
-        output = output.reshape(m_batchsize, nb, c3, self.bl).permute(0, 2, 1, 3).reshape(m_batchsize, c3, nb * self.bl)
+        output = output.reshape(m_batchsize, nb, -1, self.bl).permute(0, 2, 1, 3).reshape(m_batchsize, -1, nb * self.bl)
         output = output[:, :, 0:L]
         return output * mask[:, 0:1, :]
 
