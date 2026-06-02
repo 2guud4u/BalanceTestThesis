@@ -4,10 +4,34 @@ import json
 import yaml
 import numpy as np
 import torch
+from collections import defaultdict
 from datetime import datetime
 from tqdm import tqdm
 
 from utils.eval.metric_utils import compute_averaged_video_metrics, predict_video, average_across_folds
+
+
+# -------------------------------------------------------------------
+# Institution extraction
+# -------------------------------------------------------------------
+def get_institution(video_path):
+    """
+    Extract institution name from a video path.
+
+    Tries two strategies:
+      1. Look for a 'heavy/' segment and return the folder right after it.
+         e.g. .../heavy/uwisc/UWisc_5036_Balance.h5 → 'uwisc'
+      2. Fall back to the parent directory name.
+         e.g. /data/uwisc/video.h5 → 'uwisc'
+    """
+    parts = video_path.replace("\\", "/").split("/")
+    try:
+        idx = parts.index("heavy")
+        return parts[idx + 1]
+    except (ValueError, IndexError):
+        # Fallback: parent directory
+        return os.path.basename(os.path.dirname(video_path))
+
 
 # -------------------------------------------------------------------
 # Per-fold evaluation
@@ -15,6 +39,9 @@ from utils.eval.metric_utils import compute_averaged_video_metrics, predict_vide
 def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device, stride_override=30):
     per_fold_results = {}
     fold_metric_dicts = []
+
+    # Collect predictions across all folds for institution-level analysis
+    all_video_results = []  # list of (video_path, gt_labels, pred_labels)
 
     for split_name, split_files in splits.items():
         val_files = split_files["val"]
@@ -49,8 +76,11 @@ def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device, stride_overr
                 video, trainer.encoder, trainer.segmentor, d_cfg, device, stride_override=stride_override
             )
             T = min(len(pred_labels), len(gt_labels))
-            pred_labels_per_video.append(np.asarray(pred_labels[:T]))
-            gt_labels_per_video.append(np.asarray(gt_labels[:T]))
+            gt_arr = np.asarray(gt_labels[:T])
+            pred_arr = np.asarray(pred_labels[:T])
+            pred_labels_per_video.append(pred_arr)
+            gt_labels_per_video.append(gt_arr)
+            all_video_results.append((video, gt_arr, pred_arr))
 
         # NOTE: signature is (pred_labels, gt_labels, ...) — order matters.
         metrics = compute_averaged_video_metrics(
@@ -91,9 +121,8 @@ def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device, stride_overr
         fold_metric_dicts.append(metrics)
 
     # -------------------------------------------------------------------
-    # Cross-fold summary
+    # Cross-fold summary (overall)
     # -------------------------------------------------------------------
-
 
     cross_fold = average_across_folds(fold_metric_dicts)
 
@@ -104,6 +133,77 @@ def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device, stride_overr
         else:
             print(f"  {k}: {v['mean']:.4f} ± {v['std']:.4f}  (n={v['n_folds']})")
 
+    # -------------------------------------------------------------------
+    # Overall metrics (pooled across all folds)
+    # -------------------------------------------------------------------
+    if all_video_results:
+        all_gt = [r[1] for r in all_video_results]
+        all_pred = [r[2] for r in all_video_results]
+
+        overall_metrics = compute_averaged_video_metrics(
+            pred_labels=all_pred,
+            gt_labels=all_gt,
+            class_id=t_cfg.get("eval_class_id", 1),
+            iou_thresholds=tuple(t_cfg.get("iou_thresholds", (0.1, 0.25, 0.5))),
+            fps=t_cfg.get("fps", 30),
+            ignore_index=t_cfg.get("ignore_index", -100),
+        )
+
+        print(f"\n{'='*70}\nOverall metrics (n={overall_metrics['num_videos']} videos)\n{'='*70}")
+        for k, v in overall_metrics.items():
+            if k in ("per_video", "num_videos"):
+                continue
+            if isinstance(v, float):
+                print(f"  {k}: {v:.4f}")
+            else:
+                print(f"  {k}: {v}")
+    else:
+        overall_metrics = {}
+
+    # -------------------------------------------------------------------
+    # Per-institution metrics
+    # -------------------------------------------------------------------
+    institution_metrics = {}
+
+    if all_video_results:
+        # Group videos by institution
+        by_institution = defaultdict(lambda: {"gt": [], "pred": [], "paths": []})
+        for video_path, gt_arr, pred_arr in all_video_results:
+            inst = get_institution(video_path)
+            by_institution[inst]["gt"].append(gt_arr)
+            by_institution[inst]["pred"].append(pred_arr)
+            by_institution[inst]["paths"].append(video_path)
+
+        for inst in sorted(by_institution.keys()):
+            data = by_institution[inst]
+            n_vids = len(data["gt"])
+
+            inst_metrics = compute_averaged_video_metrics(
+                pred_labels=data["pred"],
+                gt_labels=data["gt"],
+                class_id=t_cfg.get("eval_class_id", 1),
+                iou_thresholds=tuple(t_cfg.get("iou_thresholds", (0.1, 0.25, 0.5))),
+                fps=t_cfg.get("fps", 30),
+                ignore_index=t_cfg.get("ignore_index", -100),
+            )
+
+            print(f"\n{'='*70}\nInstitution: {inst}  (n={n_vids} videos)\n{'='*70}")
+            for k, v in inst_metrics.items():
+                if k in ("per_video", "num_videos"):
+                    continue
+                if isinstance(v, float):
+                    print(f"  {k}: {v:.4f}")
+                else:
+                    print(f"  {k}: {v}")
+
+            institution_metrics[inst] = {
+                "num_videos": n_vids,
+                "metrics": inst_metrics,
+            }
+
+    # -------------------------------------------------------------------
+    # Save everything
+    # -------------------------------------------------------------------
     out_path = os.path.join(save_dir, "eval_metrics.json")
     with open(out_path, "w") as f:
         json.dump(
@@ -113,9 +213,11 @@ def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device, stride_overr
                 "folds_evaluated": list(per_fold_results.keys()),
                 "per_fold": per_fold_results,
                 "cross_fold_summary": cross_fold,
+                "overall": overall_metrics,
+                "per_institution": institution_metrics,
             },
             f,
             indent=2,
             default=float,
         )
-    print(f"\n✓ Saved cross-fold metrics to {out_path}")
+    print(f"\n✓ Saved all metrics to {out_path}")
