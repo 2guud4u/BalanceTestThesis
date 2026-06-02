@@ -1,10 +1,8 @@
 import numpy as np
 import torch
-from data.PoseDataset import load_video_h5
-import torch
 import torch.nn.functional as F
-import numpy as np
 from pathlib import Path
+from data.PoseDataset import load_video_h5
 def levenshtein(p, y, norm=False):
     """
     Compute Levenshtein (edit) distance between two sequences.
@@ -38,7 +36,8 @@ def levenshtein(p, y, norm=False):
 
     if norm:
         # Normalized: 0-100 scale (higher is better, similarity %)
-        score = (1 - D[-1, -1] / max(m_row, n_col)) * 100
+        max_len = max(m_row, n_col)
+        score = (1 - D[-1, -1] / max_len) * 100 if max_len > 0 else 100.0
     else:
         # Raw edit distance (lower is better)
         score = D[-1, -1]
@@ -258,8 +257,11 @@ def compute_segmentation_metrics(gt_labels, pred_labels, class_id=1, iou_thresho
     # convert frames -> seconds if fps provided
     def frames_to_seconds_dict(d):
         if d["mean"] is None:
-            return {k: None if v is None else None for k,v in d.items()}
-        return {k: (d[k] / fps if d[k] is not None else None) for k in d}
+            return {k: None for k in d}
+        return {
+            k: (d[k] / fps if k != "count" and d[k] is not None else d[k])
+            for k in d
+        }
 
     results["start_error_frames"] = res_start
     results["end_error_frames"] = res_end
@@ -327,12 +329,21 @@ def compute_averaged_video_metrics(pred_labels, gt_labels, class_id=1,
             tp = len(matches)
             fp = len(unmatched_pred)
             fn = len(unmatched_gt)
-            precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
-            recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
-            f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0.0
-            vid_metrics[f"precision_iou_{thr}"] = precision
-            vid_metrics[f"recall_iou_{thr}"] = recall
-            vid_metrics[f"f1_iou_{thr}"] = f1
+
+            # True negative: no GT segments and no predicted segments → perfect
+            # for this video. Use None so _avg() skips it rather than dragging
+            # the macro-average down with a misleading 0.
+            if tp == 0 and fp == 0 and fn == 0:
+                vid_metrics[f"precision_iou_{thr}"] = None
+                vid_metrics[f"recall_iou_{thr}"] = None
+                vid_metrics[f"f1_iou_{thr}"] = None
+            else:
+                precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+                recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
+                f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0.0
+                vid_metrics[f"precision_iou_{thr}"] = precision
+                vid_metrics[f"recall_iou_{thr}"] = recall
+                vid_metrics[f"f1_iou_{thr}"] = f1
             vid_metrics[f"tp_iou_{thr}"] = tp
             vid_metrics[f"fp_iou_{thr}"] = fp
             vid_metrics[f"fn_iou_{thr}"] = fn
@@ -458,8 +469,14 @@ def average_across_folds(fold_metrics):
     if not fold_metrics:
         return {}
     skip = {"per_video", "num_videos"}
-    keys = [k for k, v in fold_metrics[0].items()
-            if k not in skip and isinstance(v, (int, float)) and v is not None]
+    # Collect keys from ALL folds (not just fold 0) so metrics that are
+    # None in one fold but valid in others are not silently dropped.
+    all_keys = set()
+    for m in fold_metrics:
+        for k, v in m.items():
+            if k not in skip and isinstance(v, (int, float)):
+                all_keys.add(k)
+    keys = sorted(all_keys)
     summary = {}
     for k in keys:
         vals = [m[k] for m in fold_metrics if m.get(k) is not None]
@@ -484,7 +501,7 @@ def predict_video(h5_path, encoder, model, d_cfg, device="gpu", stride_override=
         pred_labels: (T,) int array — predicted class per frame
         pred_probs:  (T, C) float array — averaged softmax probabilities
     """
-    window_size = window_size = d_cfg["window_size"] 
+    window_size = d_cfg["window_size"]
     stride      = stride_override if stride_override is not None else d_cfg["stride"]
     h5_key      = d_cfg["h5_key"]
 

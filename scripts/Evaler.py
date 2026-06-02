@@ -86,7 +86,7 @@ def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device, stride_overr
         metrics = compute_averaged_video_metrics(
             pred_labels=pred_labels_per_video,
             gt_labels=gt_labels_per_video,
-            class_id=t_cfg.get("eval_class_id", 1),
+            class_id=t_cfg.get("eval_class_id", 0),
             iou_thresholds=tuple(t_cfg.get("iou_thresholds", (0.1, 0.25, 0.5))),
             fps=t_cfg.get("fps", 30),
             ignore_index=t_cfg.get("ignore_index", -100),
@@ -143,7 +143,7 @@ def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device, stride_overr
         overall_metrics = compute_averaged_video_metrics(
             pred_labels=all_pred,
             gt_labels=all_gt,
-            class_id=t_cfg.get("eval_class_id", 1),
+            class_id=t_cfg.get("eval_class_id", 0),
             iou_thresholds=tuple(t_cfg.get("iou_thresholds", (0.1, 0.25, 0.5))),
             fps=t_cfg.get("fps", 30),
             ignore_index=t_cfg.get("ignore_index", -100),
@@ -181,7 +181,7 @@ def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device, stride_overr
             inst_metrics = compute_averaged_video_metrics(
                 pred_labels=data["pred"],
                 gt_labels=data["gt"],
-                class_id=t_cfg.get("eval_class_id", 1),
+                class_id=t_cfg.get("eval_class_id", 0),
                 iou_thresholds=tuple(t_cfg.get("iou_thresholds", (0.1, 0.25, 0.5))),
                 fps=t_cfg.get("fps", 30),
                 ignore_index=t_cfg.get("ignore_index", -100),
