@@ -1,0 +1,3 @@
+num_layers_PG: 6   # was 11 — max dilation 32, fits in 120 frames
+num_layers_R: 6    # was 10 — same reasoning
+num_R: 2           # was 3 — fewer stages needed for binary
