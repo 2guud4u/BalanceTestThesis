@@ -1,5 +1,5 @@
 # configs/trainer/downsamp.yml
-epochs: 100
+epochs: 1000
 batch_size: 16
 lr: 5e-4
 weight_decay: 0.0001        # plain Adam; 0.01 caused weight collapse

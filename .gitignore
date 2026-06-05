@@ -35,7 +35,6 @@ ENV/
 *.swo
 
 # Results and outputs
-results/
 outputs/
 logs/
 lightning_logs/

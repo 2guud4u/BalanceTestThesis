@@ -1,0 +1,41 @@
+2026-05-30 02:18:09 | INFO |   ↳ Saved best (val_f1=0.2683)
+2026-05-30 02:18:09 | INFO | [epoch 1] loss=2.7859  acc=0.5934  f1=0.5803  | val_loss=2.9421  val_acc=0.3668  val_f1=0.2683
+2026-05-30 02:18:30 | INFO | [epoch 2] loss=2.7120  acc=0.5522  f1=0.5487  | val_loss=2.8941  val_acc=0.3668  val_f1=0.2683
+2026-05-30 02:18:51 | INFO | [epoch 3] loss=2.6891  acc=0.5285  f1=0.5273  | val_loss=2.7847  val_acc=0.3668  val_f1=0.2683
+2026-05-30 02:19:12 | INFO | [epoch 4] loss=2.6607  acc=0.5203  f1=0.5194  | val_loss=2.9563  val_acc=0.3668  val_f1=0.2683
+2026-05-30 02:19:33 | INFO | [epoch 5] loss=2.6568  acc=0.5194  f1=0.5194  | val_loss=2.9443  val_acc=0.3668  val_f1=0.2683
+2026-05-30 02:19:54 | INFO | [epoch 6] loss=2.6280  acc=0.5267  f1=0.5259  | val_loss=2.7092  val_acc=0.3668  val_f1=0.2683
+2026-05-30 02:20:15 | INFO | [epoch 7] loss=2.5959  acc=0.5471  f1=0.5463  | val_loss=2.9573  val_acc=0.3668  val_f1=0.2683
+2026-05-30 02:20:36 | INFO | [epoch 8] loss=2.5859  acc=0.5617  f1=0.5523  | val_loss=3.1869  val_acc=0.3668  val_f1=0.2683
+2026-05-30 02:20:57 | INFO | [epoch 9] loss=2.5758  acc=0.5558  f1=0.5510  | val_loss=2.8114  val_acc=0.3668  val_f1=0.2683
+2026-05-30 02:21:18 | INFO |   ↳ Saved best (val_f1=0.5385)
+2026-05-30 02:21:18 | INFO | [epoch 10] loss=2.5540  acc=0.6068  f1=0.5941  | val_loss=3.0429  val_acc=0.5507  val_f1=0.5385
+2026-05-30 02:21:39 | INFO |   ↳ Saved best (val_f1=0.6919)
+2026-05-30 02:21:39 | INFO | [epoch 11] loss=2.4625  acc=0.6793  f1=0.6598  | val_loss=2.6128  val_acc=0.6939  val_f1=0.6919
+2026-05-30 02:22:00 | INFO |   ↳ Saved best (val_f1=0.6978)
+2026-05-30 02:22:00 | INFO | [epoch 12] loss=2.4254  acc=0.7075  f1=0.6847  | val_loss=2.4975  val_acc=0.7119  val_f1=0.6978
+2026-05-30 02:22:21 | INFO | [epoch 13] loss=2.4146  acc=0.7028  f1=0.6802  | val_loss=3.1371  val_acc=0.6236  val_f1=0.5752
+2026-05-30 02:22:42 | INFO | [epoch 14] loss=2.3256  acc=0.7261  f1=0.7093  | val_loss=2.6716  val_acc=0.6817  val_f1=0.6793
+2026-05-30 02:23:04 | INFO |   ↳ Saved best (val_f1=0.7168)
+2026-05-30 02:23:04 | INFO | [epoch 15] loss=2.3009  acc=0.7319  f1=0.7163  | val_loss=2.4981  val_acc=0.7217  val_f1=0.7168
+2026-05-30 02:23:25 | INFO | [epoch 16] loss=2.2687  acc=0.7327  f1=0.7167  | val_loss=2.8268  val_acc=0.6795  val_f1=0.6677
+2026-05-30 02:23:46 | INFO | [epoch 17] loss=2.3228  acc=0.7329  f1=0.7155  | val_loss=3.0548  val_acc=0.6458  val_f1=0.6413
+2026-05-30 02:24:07 | INFO | [epoch 18] loss=2.2577  acc=0.7189  f1=0.7085  | val_loss=2.6676  val_acc=0.6953  val_f1=0.6922
+2026-05-30 02:24:28 | INFO | [epoch 19] loss=2.2610  acc=0.7287  f1=0.7164  | val_loss=2.8467  val_acc=0.6682  val_f1=0.6674
+2026-05-30 02:24:49 | INFO | [epoch 20] loss=2.3362  acc=0.7257  f1=0.7092  | val_loss=2.8339  val_acc=0.7006  val_f1=0.6941
+2026-05-30 02:25:10 | INFO | [epoch 21] loss=2.2373  acc=0.7341  f1=0.7197  | val_loss=2.8296  val_acc=0.6933  val_f1=0.6907
+2026-05-30 02:25:31 | INFO | [epoch 22] loss=2.2119  acc=0.7441  f1=0.7313  | val_loss=3.0513  val_acc=0.6798  val_f1=0.6759
+2026-05-30 02:25:52 | INFO | [epoch 23] loss=2.2027  acc=0.7381  f1=0.7264  | val_loss=2.6800  val_acc=0.6978  val_f1=0.6953
+2026-05-30 02:26:13 | INFO | [epoch 24] loss=2.1680  acc=0.7453  f1=0.7352  | val_loss=2.6205  val_acc=0.7047  val_f1=0.7015
+2026-05-30 02:26:34 | INFO | [epoch 25] loss=2.1530  acc=0.7458  f1=0.7356  | val_loss=2.7836  val_acc=0.6802  val_f1=0.6789
+2026-05-30 02:26:55 | INFO | [epoch 26] loss=2.1697  acc=0.7382  f1=0.7290  | val_loss=2.7716  val_acc=0.6807  val_f1=0.6794
+2026-05-30 02:27:16 | INFO | [epoch 27] loss=2.1279  acc=0.7523  f1=0.7414  | val_loss=2.7931  val_acc=0.6862  val_f1=0.6839
+2026-05-30 02:27:37 | INFO | [epoch 28] loss=2.1211  acc=0.7513  f1=0.7405  | val_loss=2.7467  val_acc=0.6805  val_f1=0.6792
+2026-05-30 02:27:58 | INFO | [epoch 29] loss=2.0895  acc=0.7494  f1=0.7396  | val_loss=2.8898  val_acc=0.6718  val_f1=0.6712
+2026-05-30 02:28:19 | INFO | [epoch 30] loss=2.0900  acc=0.7448  f1=0.7349  | val_loss=2.9495  val_acc=0.6756  val_f1=0.6745
+2026-05-30 02:28:40 | INFO | [epoch 31] loss=2.1061  acc=0.7467  f1=0.7363  | val_loss=2.6212  val_acc=0.6799  val_f1=0.6787
+2026-05-30 02:29:01 | INFO | [epoch 32] loss=2.0877  acc=0.7461  f1=0.7350  | val_loss=2.7927  val_acc=0.6743  val_f1=0.6733
+2026-05-30 02:29:22 | INFO | [epoch 33] loss=2.0914  acc=0.7468  f1=0.7356  | val_loss=2.9111  val_acc=0.7002  val_f1=0.6978
+2026-05-30 02:29:43 | INFO | [epoch 34] loss=2.1145  acc=0.7360  f1=0.7261  | val_loss=2.5703  val_acc=0.6725  val_f1=0.6723
+2026-05-30 02:30:04 | INFO | [epoch 35] loss=2.0942  acc=0.7335  f1=0.7255  | val_loss=2.9109  val_acc=0.6716  val_f1=0.6714
+2026-05-30 02:30:04 | INFO | Early stop at epoch 35 (best=0.7168)
