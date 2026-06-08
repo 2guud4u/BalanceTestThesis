@@ -1,0 +1,39 @@
+encoder: null
+data:
+  window_size: 120
+  stride: 60
+  h5_key: camera_mp_cropped_iou
+  augment: true
+  normalize: false
+  split_ratio: 0.8
+  graph_args:
+    layout: mp
+    strategy: spatial
+  num_joints: 33
+trainer:
+  epochs: 1000
+  batch_size: 16
+  lr: 5e-4
+  weight_decay: 0.0001
+  early_stop_patience: 20
+  early_stop_min_delta: 0.001
+  device: cuda
+  lambda_smooth: 0.01
+  time_alignment: downsample_labels
+  early_stop_monitor: val_f1
+segmentor:
+  num_classes: 2
+  num_f_maps: 64
+  num_layers: 10
+  num_decoders: 3
+  r1: 2
+  r2: 2
+  channel_masking_rate: 0.3
+  att_type: block_att
+  init_segmentor_path: /code/jjiang23/BalanceTestThesis/initializers/segementor/ASFormer.py
+paths:
+  encoder_cfg_path: null
+  data_cfg_path: /code/jjiang23/pathml/aim2_balanceV2/configs/data/MPC.yml
+  trainer_cfg_path: /code/jjiang23/BalanceTestThesis/configs/trainer/downsamp.yml
+  segmentor_cfg_path: /code/jjiang23/BalanceTestThesis/configs/segmentor/ASFormer.yml
+  splits_path: /code/jjiang23/pathml/aim2_balanceV2/data/splits.json

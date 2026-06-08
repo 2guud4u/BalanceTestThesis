@@ -174,3 +174,17 @@ python3 train.py \
 
 
 
+# better mstcn config
+
+python3 train.py \
+    --data /code/jjiang23/pathml/aim2_balanceV2/configs/data/MB.yml \
+    --encoder /code/jjiang23/BalanceTestThesis/configs/encoder/MAMP.yml \
+    --segmentor /code/jjiang23/BalanceTestThesis/configs/segmentor/smallerMSTCN.yml \
+    --trainer /code/jjiang23/BalanceTestThesis/configs/trainer/downsamp.yml && \
+
+python3 train.py \
+    --data /code/jjiang23/pathml/aim2_balanceV2/configs/data/MB.yml \
+    --encoder /code/jjiang23/BalanceTestThesis/configs/encoder/MAMP.yml \
+    --segmentor /code/jjiang23/BalanceTestThesis/configs/segmentor/smallerMSTCN.yml \
+    --trainer /code/jjiang23/BalanceTestThesis/configs/trainer/upsample.yml 
+

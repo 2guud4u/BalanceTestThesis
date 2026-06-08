@@ -9,6 +9,7 @@
 /code/jjiang23/BalanceTestThesis/results/MAMP/MB/downsamp/biLSTM/20260530_024350
 /code/jjiang23/BalanceTestThesis/results/Identity/MB/downsamp/MSTCN/20260529_210021
 /code/jjiang23/BalanceTestThesis/results/Identity/MB/downsamp/biLSTM/20260601_151321
+/code/jjiang23/BalanceTestThesis/results/Identity/MB/downsamp/ASFormer/20260606_071555
 
 /code/jjiang23/BalanceTestThesis/results/GCN/MPW/downsamp/MSTCN/20260529_045300
 /code/jjiang23/BalanceTestThesis/results/GCN/MPW/downsamp/biLSTM/20260601_134340
@@ -20,13 +21,14 @@
 /code/jjiang23/BalanceTestThesis/results/MAMP/MPW/downsamp/biLSTM/20260530_113842
 /code/jjiang23/BalanceTestThesis/results/Identity/MPW/downsamp/MSTCN/20260530_012729
 /code/jjiang23/BalanceTestThesis/results/Identity/MPW/downsamp/biLSTM/20260601_163122
+/code/jjiang23/BalanceTestThesis/results/Identity/MPW/downsamp/ASFormer/20260606_141915
 
 /code/jjiang23/BalanceTestThesis/results/GCN/MPC/downsamp/ASFormer/20260605_064044
 /code/jjiang23/BalanceTestThesis/results/GCN/MPC/downsamp/MSTCN/20260529_033931
 /code/jjiang23/BalanceTestThesis/results/GCN/MPC/downsamp/biLSTM/20260601_122944
 /code/jjiang23/BalanceTestThesis/results/Identity/MPC/downsamp/MSTCN/20260529_230436
 /code/jjiang23/BalanceTestThesis/results/Identity/MPC/downsamp/biLSTM/20260601_154656
-
+/code/jjiang23/BalanceTestThesis/results/Identity/MPC/downsamp/ASFormer/20260606_071555
 
 
 
