@@ -7,5 +7,5 @@ early_stop_patience: 20
 early_stop_min_delta: 0.001
 device: cuda
 lambda_smooth: 0.01         # was 0.1 — collapse fix
-time_alignment: upsample_labels
+time_alignment: upsample_preds
 early_stop_monitor: val_f1

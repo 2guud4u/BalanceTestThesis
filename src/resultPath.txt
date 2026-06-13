@@ -31,6 +31,13 @@
 /code/jjiang23/BalanceTestThesis/results/Identity/MPC/downsamp/ASFormer/20260606_071555
 
 
+/code/jjiang23/BalanceTestThesis/results/MAMP/MB/downsamp/smallerMSTCN/20260607_165836
 
 python3 /code/jjiang23/BalanceTestThesis/scripts/metrics_to_row.py --results_dir 
 python3 /code/jjiang23/BalanceTestThesis/src/test.py --results_dir 
+python3 /code/jjiang23/BalanceTestThesis/scripts/metrics_to_row.py --type institution --results_dir 
+
+(MAMP) [jjiang23@elcapitan src]$ python3 /code/jjiang23/BalanceTestThesis/scripts/metrics_to_row.py --results_dir /code/jjiang23/BalanceTestThesis/results/MAMP/MB/upsample/smallerMSTCN/20260608_212836
+& 0.44 ± 0.09 & 0.37 ± 0.07 & 0.32 ± 0.06 & 47.42 ± 6.8 & 0.68 ± 0.02 & 2.66 ± 0.55 & 2.3 ± 0.21
+(MAMP) [jjiang23@elcapitan src]$ python3 /code/jjiang23/BalanceTestThesis/scripts/metrics_to_row.py --results_dir /code/jjiang23/BalanceTestThesis/results/MAMP/MB/downsamp/smallerMSTCN/20260607_165836
+& 0.45 ± 0.1 & 0.39 ± 0.07 & 0.33 ± 0.06 & 48.04 ± 10.17 & 0.68 ± 0.04 & 3.03 ± 0.94 & 2.19 ± 0.24
