@@ -505,7 +505,8 @@ def predict_video(h5_path, encoder, model, d_cfg, device="gpu", stride_override=
     stride      = stride_override if stride_override is not None else d_cfg["stride"]
     h5_key      = d_cfg["h5_key"]
 
-    kps, gt_labels = load_video_h5(h5_path, h5_key, allPhases=False)  # (T, J, D), (T,)
+    joint_indices = d_cfg.get("joint_indices")
+    kps, gt_labels = load_video_h5(h5_path, h5_key, allPhases=False, joint_indices=joint_indices)  # (T, J, D), (T,)
     T_total = kps.shape[0]
     J = kps.shape[1]
     D = kps.shape[2]

@@ -20,8 +20,7 @@ kpFeaturekeys ={
     
     }
 
-#todo keypoint pruneing param
-def load_video_h5(h5_path,featureH5Key,allPhases=False):
+def load_video_h5(h5_path, featureH5Key, allPhases=False, joint_indices=None):
     with h5py.File(h5_path, 'r') as f:
         if featureH5Key == "camera_mp_cropped_iou" or featureH5Key == "world_mp_cropped_iou":
             keypoints = f[featureH5Key][:][:,0][:,:,:3]   # (T, J, D)
@@ -36,7 +35,13 @@ def load_video_h5(h5_path,featureH5Key,allPhases=False):
     #turn all nonphases to 1 and all phases to 0
     if not allPhases:
         labels = np.where(labels==4, 1, 0)
-    #remove first 10 kp to not have face
+    # Optional joint subset selection
+    if joint_indices is not None:
+        assert max(joint_indices) < keypoints.shape[1], (
+            f"joint_indices max={max(joint_indices)} >= num_joints={keypoints.shape[1]} "
+            f"for h5_key={featureH5Key}. Check your config."
+        )
+        keypoints = keypoints[:, joint_indices, :]   # (T, len(joint_indices), D)
     return keypoints, labels
 
 class PoseDataset(Dataset):
@@ -47,15 +52,16 @@ class PoseDataset(Dataset):
       - next_batch(batch_size) -> (batch_input, batch_target, mask)
       - reset()
     """
-    def __init__(self, meta, featureH5Key, window_size=256, stride=128,augment=True):
+    def __init__(self, meta, featureH5Key, window_size=256, stride=128, augment=True, joint_indices=None):
         self.window_size = window_size
         self.stride = stride
         self.augment = augment
+        self.joint_indices = joint_indices
         self.items = []
         self.num_classes = 2
-        
+
         for h5_path in meta:
-            kps, labels = load_video_h5(h5_path, featureH5Key)  # (T, J, D), (T,)
+            kps, labels = load_video_h5(h5_path, featureH5Key, joint_indices=joint_indices)  # (T, J, D), (T,)
             T = kps.shape[0]
             if T == 0:
                 continue

@@ -1,0 +1,15 @@
+# Bottom-half (lower body) skeleton config for MediaPipe World keypoints.
+# Compatible with Identity encoder ONLY — joint_indices reindexes to 10 joints,
+# breaking any GCN/MAMP adjacency matrix that assumes 33-joint layout.
+#
+# MediaPipe indices 23-32:
+#   23,24 = hips  25,26 = knees  27,28 = ankles
+#   29,30 = heels  31,32 = foot index
+window_size: 120
+stride: 60
+h5_key: world_mp_cropped_iou
+augment: True
+normalize: False
+split_ratio: 0.8
+num_joints: 10
+joint_indices: [23, 24, 25, 26, 27, 28, 29, 30, 31, 32]

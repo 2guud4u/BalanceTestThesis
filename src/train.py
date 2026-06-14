@@ -226,6 +226,7 @@ for split_name, split_files in splits.items():
         featureH5Key=d_cfg["h5_key"],
         stride=d_cfg["stride"],
         augment=True,
+        joint_indices=d_cfg.get("joint_indices"),
     )
 
     val_ds = PoseDataset(
@@ -234,6 +235,7 @@ for split_name, split_files in splits.items():
         featureH5Key=d_cfg["h5_key"],
         stride=d_cfg["stride"],
         augment=False,
+        joint_indices=d_cfg.get("joint_indices"),
     )
 
     # -----------------------------------------------------
