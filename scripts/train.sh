@@ -188,3 +188,16 @@ python3 train.py \
     --segmentor /code/jjiang23/BalanceTestThesis/configs/segmentor/smallerMSTCN.yml \
     --trainer /code/jjiang23/BalanceTestThesis/configs/trainer/upsample.yml 
 
+# bottom half vs top half
+
+python3 train.py \
+    --data /code/jjiang23/BalanceTestThesis/configs/data/MPWBottomHalf.yml \
+    --segmentor /code/jjiang23/BalanceTestThesis/configs/segmentor/ASFormer.yml \
+    --trainer /code/jjiang23/BalanceTestThesis/configs/trainer/downsamp.yml && \
+
+python3 train.py \
+    --data /code/jjiang23/BalanceTestThesis/configs/data/MPWTopHalf.yml \
+    --segmentor /code/jjiang23/BalanceTestThesis/configs/segmentor/ASFormer.yml \
+    --trainer /code/jjiang23/BalanceTestThesis/configs/trainer/downsamp.yml
+
+
