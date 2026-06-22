@@ -152,10 +152,13 @@ SEGMENTOR_SUGGESTERS = {
 
 def suggest_trainer(trial, base_t_cfg):
     t_cfg = copy.deepcopy(base_t_cfg)
-    t_cfg["lr"]            = trial.suggest_float("lr",            1e-4, 5e-3, log=True)
-    t_cfg["weight_decay"]  = trial.suggest_float("weight_decay",  1e-6, 1e-2, log=True)
-    t_cfg["lambda_smooth"] = trial.suggest_float("lambda_smooth", 0.0,  0.3)
-    t_cfg["batch_size"]    = trial.suggest_categorical("batch_size", [8, 16, 32])
+    t_cfg["lr"]             = trial.suggest_float("lr",            1e-4, 5e-3, log=True)
+    t_cfg["weight_decay"]   = trial.suggest_float("weight_decay",  1e-6, 1e-2, log=True)
+    t_cfg["lambda_smooth"]  = trial.suggest_float("lambda_smooth", 0.0,  0.3)
+    t_cfg["batch_size"]     = trial.suggest_categorical("batch_size", [8, 16, 32])
+    t_cfg["time_alignment"] = trial.suggest_categorical(
+        "time_alignment", ["downsample_labels", "upsample_preds"]
+    )
     return t_cfg
 
 
@@ -308,7 +311,7 @@ def save_best_configs(study, segmentor_type, out_dir, base_t_cfg):
         "asformer": ["num_f_maps", "num_layers", "num_decoders", "r1", "r2",
                      "channel_masking_rate"],
     }[segmentor_type]
-    trainer_keys = ["lr", "weight_decay", "lambda_smooth", "batch_size"]
+    trainer_keys = ["lr", "weight_decay", "lambda_smooth", "batch_size", "time_alignment"]
 
     s_cfg_out = {k: best.params[k] for k in seg_keys if k in best.params}
     s_cfg_out["num_classes"] = 2
