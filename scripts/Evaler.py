@@ -36,7 +36,19 @@ def get_institution(video_path):
 # -------------------------------------------------------------------
 # Per-fold evaluation
 # -------------------------------------------------------------------
-def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device, stride_override=30):
+def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device, stride_override=30,
+                   exclude_folds=None):
+    """
+    Evaluate all folds, optionally skipping contaminated folds.
+
+    Parameters
+    ----------
+    exclude_folds : set or list of str, optional
+        Fold names to skip. Typically fold_0 when it was used as the tuning
+        fold during hyperparameter search and its val set is therefore
+        contaminated for unbiased evaluation.
+    """
+    excluded = set(exclude_folds) if exclude_folds else set()
     per_fold_results = {}
     fold_metric_dicts = []
 
@@ -44,6 +56,10 @@ def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device, stride_overr
     all_video_results = []  # list of (video_path, gt_labels, pred_labels)
 
     for split_name, split_files in splits.items():
+        if split_name in excluded:
+            print(f"\n⚠ Skipping {split_name}: excluded (val set used for HP tuning)")
+            continue
+
         val_files = split_files["val"]
 
         fold_dir = os.path.join(save_dir, split_name)
@@ -211,6 +227,7 @@ def evaluate_folds(trainer, splits, d_cfg, t_cfg, save_dir, device, stride_overr
                 "save_dir": save_dir,
                 "evaluated_at": datetime.now().isoformat(timespec="seconds"),
                 "folds_evaluated": list(per_fold_results.keys()),
+                "folds_excluded": sorted(excluded),
                 "per_fold": per_fold_results,
                 "cross_fold_summary": cross_fold,
                 "overall": overall_metrics,

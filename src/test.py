@@ -37,6 +37,16 @@ parser.add_argument(
     help="Path to a completed train.py output directory (must contain config.yml)",
 )
 
+parser.add_argument(
+    "--exclude_folds",
+    type=str,
+    nargs="*",
+    default=None,
+    metavar="FOLD",
+    help="Fold name(s) to skip during evaluation, e.g. --exclude_folds fold_0. "
+         "If omitted, the value saved in config.yml by train.py is used automatically.",
+)
+
 args = parser.parse_args()
 
 results_dir = os.path.abspath(args.results_dir)
@@ -62,8 +72,17 @@ t_cfg = config["trainer"]
 s_cfg = config["segmentor"]
 splits_path = config["paths"]["splits_path"]
 
+# Resolve excluded folds: CLI takes priority; fall back to what train.py recorded.
+if args.exclude_folds is not None:
+    excluded_folds = set(args.exclude_folds)
+else:
+    excluded_folds = set(config.get("excluded_folds", []))
+
 print(f"Loaded config from: {config_path}")
 print(f"Evaluating checkpoints in: {results_dir}")
+if excluded_folds:
+    print(f"Excluding folds: {sorted(excluded_folds)}  "
+          f"(val sets used for HP tuning — contaminated)")
 
 
 # =========================================================
@@ -137,6 +156,7 @@ evaluate_folds(
     t_cfg=t_cfg,
     save_dir=results_dir,
     device=t_cfg["device"],
+    exclude_folds=excluded_folds,
 )
 
 print(f"\n✓ Evaluation complete. Results saved to: {results_dir}")
