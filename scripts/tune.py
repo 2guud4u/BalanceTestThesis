@@ -278,22 +278,35 @@ def make_objective(
     segmentor_type, d_cfg, e_cfg, base_t_cfg, splits, fold_name,
     encoder, n_epochs, device,
 ):
+    """
+    If fold_name is None, the objective averages val_f1 across ALL folds
+    (statistically clean: no fold is used for both HP selection and final eval).
+    If fold_name is set, only that single fold is used (faster but fold_name's
+    val set is then contaminated for final reporting).
+    """
     suggest_segmentor = SEGMENTOR_SUGGESTERS[segmentor_type]
 
     def objective(trial):
         s_cfg = suggest_segmentor(trial)
         t_cfg = suggest_trainer(trial, base_t_cfg)
 
-        fold = splits[fold_name]
-        val_f1 = run_fold(
-            d_cfg, e_cfg, s_cfg, t_cfg,
-            fold["train"], fold["val"],
-            encoder, n_epochs, device, trial=trial,
-        )
+        fold_names = list(splits.keys()) if fold_name is None else [fold_name]
+        scores = []
+        for i, fn in enumerate(fold_names):
+            fold = splits[fn]
+            # Only pass trial (for pruning) on the first fold to avoid
+            # conflicting intermediate reports across folds.
+            val_f1 = run_fold(
+                d_cfg, e_cfg, s_cfg, t_cfg,
+                fold["train"], fold["val"],
+                encoder, n_epochs, device,
+                trial=trial if i == 0 else None,
+            )
+            if val_f1 is None:
+                raise optuna.TrialPruned()
+            scores.append(val_f1)
 
-        if val_f1 is None:
-            raise optuna.TrialPruned()
-        return val_f1
+        return float(np.mean(scores))
 
     return objective
 
@@ -358,7 +371,11 @@ def parse_args():
     p.add_argument("--trainer",    default=os.path.join(PROJECT_ROOT, "configs", "trainer", "downsamp.yml"),
                    help="Base trainer config YAML (lr/wd/lambda_smooth will be overridden)")
     p.add_argument("--fold",       default="fold_0",
-                   help="Which fold to tune on (default: fold_0)")
+                   help="Which fold to use for HP search (default: fold_0). "
+                        "IMPORTANT: exclude this fold from final evaluation — its val set "
+                        "was used to select hyperparameters and is therefore contaminated. "
+                        "Pass 'all' to average across all folds (contaminates every fold; "
+                        "only valid when you have a separate held-out test set).")
     p.add_argument("--n_trials",   type=int, default=60,
                    help="Number of Optuna trials (default: 60)")
     p.add_argument("--n_epochs",   type=int, default=150,
@@ -389,9 +406,16 @@ def main():
     with open(os.path.abspath(args.splits)) as f:
         splits = json.load(f)
 
-    if args.fold not in splits:
-        raise ValueError(f"Fold '{args.fold}' not found in splits. "
+    tune_fold = None if args.fold == "all" else args.fold
+    if tune_fold is not None and tune_fold not in splits:
+        raise ValueError(f"Fold '{tune_fold}' not found in splits. "
                          f"Available: {list(splits.keys())}")
+    if tune_fold is None:
+        print(
+            "\nWARNING: --fold all contaminates every fold's val set. "
+            "Only use this mode if you have a separate held-out test set. "
+            "Without one, use --fold fold_0 and exclude fold_0 from final evaluation.\n"
+        )
 
     # ── Build encoder once — shared across all trials ────────────────────────
     if e_cfg is not None:
@@ -434,7 +458,7 @@ def main():
     print(f"\nStudy: {study_name}")
     print(f"  Segmentor : {args.segmentor}")
     print(f"  Data      : {args.data}")
-    print(f"  Fold      : {args.fold}")
+    print(f"  Fold      : {'all (averaged)' if tune_fold is None else tune_fold}")
     print(f"  Trials    : {args.n_trials}  (epochs/trial: {args.n_epochs})")
     print(f"  Output    : {out_dir}\n")
 
@@ -445,7 +469,7 @@ def main():
         e_cfg=e_cfg,
         base_t_cfg=base_t_cfg,
         splits=splits,
-        fold_name=args.fold,
+        fold_name=tune_fold,
         encoder=encoder,
         n_epochs=args.n_epochs,
         device=args.device,

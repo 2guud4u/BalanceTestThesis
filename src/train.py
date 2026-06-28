@@ -74,6 +74,16 @@ parser.add_argument(
     help="Path to splits JSON file",
 )
 
+parser.add_argument(
+    "--exclude_folds",
+    type=str,
+    nargs="+",
+    default=[],
+    metavar="FOLD",
+    help="Fold name(s) to skip during training, e.g. --exclude_folds fold_0. "
+         "Use this when fold_0 was the tuning fold and its val set is contaminated.",
+)
+
 args = parser.parse_args()
 
 
@@ -129,6 +139,7 @@ config = {
         "segmentor_cfg_path": segmentor_cfg_path,
         "splits_path": splits_path,
     },
+    "excluded_folds": args.exclude_folds,
 }
 
 
@@ -211,7 +222,15 @@ with open(splits_path, "r") as f:
 # =========================================================
 # Train each split
 # =========================================================
+excluded = set(args.exclude_folds)
+if excluded:
+    print(f"\nExcluding folds from training: {sorted(excluded)}")
+    print("(These folds' val sets were used for HP tuning and are contaminated.)\n")
+
 for split_name, split_files in splits.items():
+    if split_name in excluded:
+        print(f"\n========== Skipping Split: {split_name} (excluded) ==========")
+        continue
     print(f"\n========== Training Split: {split_name} ==========")
 
     train_files = split_files["train"]
