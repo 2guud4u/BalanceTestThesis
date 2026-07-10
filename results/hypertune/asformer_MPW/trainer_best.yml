@@ -1,0 +1,10 @@
+epochs: 1000
+batch_size: 32
+lr: 0.0002038185867361128
+weight_decay: 5.257723195774366e-05
+early_stop_patience: 10
+early_stop_min_delta: 0.001
+device: cuda
+lambda_smooth: 0.015576358312520043
+time_alignment: upsample_preds
+early_stop_monitor: val_f1

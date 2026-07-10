@@ -1,0 +1,37 @@
+2026-06-28 11:50:35 | INFO |   ↳ Saved best (val_f1=0.2837)
+2026-06-28 11:50:35 | INFO | [epoch 1] loss=0.6879  acc=0.6002  f1=0.5608  | val_loss=0.7068  val_acc=0.3801  val_f1=0.2837
+2026-06-28 11:50:37 | INFO |   ↳ Saved best (val_f1=0.3064)
+2026-06-28 11:50:37 | INFO | [epoch 2] loss=0.6873  acc=0.5792  f1=0.5628  | val_loss=0.7062  val_acc=0.3839  val_f1=0.3064
+2026-06-28 11:50:39 | INFO |   ↳ Saved best (val_f1=0.5352)
+2026-06-28 11:50:39 | INFO | [epoch 3] loss=0.6715  acc=0.5998  f1=0.5843  | val_loss=0.6719  val_acc=0.5357  val_f1=0.5352
+2026-06-28 11:50:41 | INFO |   ↳ Saved best (val_f1=0.5857)
+2026-06-28 11:50:41 | INFO | [epoch 4] loss=0.6484  acc=0.6235  f1=0.6097  | val_loss=0.6575  val_acc=0.5899  val_f1=0.5857
+2026-06-28 11:50:43 | INFO |   ↳ Saved best (val_f1=0.6284)
+2026-06-28 11:50:43 | INFO | [epoch 5] loss=0.6277  acc=0.6619  f1=0.6382  | val_loss=0.6389  val_acc=0.6395  val_f1=0.6284
+2026-06-28 11:50:45 | INFO |   ↳ Saved best (val_f1=0.6338)
+2026-06-28 11:50:45 | INFO | [epoch 6] loss=0.6221  acc=0.6642  f1=0.6429  | val_loss=0.6330  val_acc=0.6426  val_f1=0.6338
+2026-06-28 11:50:47 | INFO |   ↳ Saved best (val_f1=0.6527)
+2026-06-28 11:50:47 | INFO | [epoch 7] loss=0.6158  acc=0.6647  f1=0.6448  | val_loss=0.6294  val_acc=0.6616  val_f1=0.6527
+2026-06-28 11:50:49 | INFO |   ↳ Saved best (val_f1=0.6756)
+2026-06-28 11:50:49 | INFO | [epoch 8] loss=0.6088  acc=0.6742  f1=0.6555  | val_loss=0.6260  val_acc=0.6861  val_f1=0.6756
+2026-06-28 11:50:51 | INFO | [epoch 9] loss=0.6023  acc=0.6869  f1=0.6730  | val_loss=0.6282  val_acc=0.6603  val_f1=0.6591
+2026-06-28 11:50:53 | INFO | [epoch 10] loss=0.5922  acc=0.7062  f1=0.6962  | val_loss=0.6236  val_acc=0.6524  val_f1=0.6517
+2026-06-28 11:50:55 | INFO | [epoch 11] loss=0.5849  acc=0.6981  f1=0.6914  | val_loss=0.6389  val_acc=0.6235  val_f1=0.6235
+2026-06-28 11:50:57 | INFO | [epoch 12] loss=0.5776  acc=0.7036  f1=0.6974  | val_loss=0.6403  val_acc=0.6208  val_f1=0.6208
+2026-06-28 11:50:59 | INFO | [epoch 13] loss=0.5728  acc=0.7007  f1=0.6961  | val_loss=0.6287  val_acc=0.6223  val_f1=0.6223
+2026-06-28 11:51:01 | INFO | [epoch 14] loss=0.5666  acc=0.7065  f1=0.7020  | val_loss=0.6153  val_acc=0.6267  val_f1=0.6264
+2026-06-28 11:51:03 | INFO | [epoch 15] loss=0.5606  acc=0.7102  f1=0.7065  | val_loss=0.6151  val_acc=0.6229  val_f1=0.6227
+2026-06-28 11:51:05 | INFO | [epoch 16] loss=0.5603  acc=0.7072  f1=0.7041  | val_loss=0.6121  val_acc=0.6226  val_f1=0.6223
+2026-06-28 11:51:07 | INFO | [epoch 17] loss=0.5506  acc=0.7186  f1=0.7150  | val_loss=0.6032  val_acc=0.6417  val_f1=0.6416
+2026-06-28 11:51:09 | INFO | [epoch 18] loss=0.5486  acc=0.7187  f1=0.7153  | val_loss=0.6059  val_acc=0.6449  val_f1=0.6448
+2026-06-28 11:51:11 | INFO | [epoch 19] loss=0.5444  acc=0.7226  f1=0.7189  | val_loss=0.6219  val_acc=0.6268  val_f1=0.6266
+2026-06-28 11:51:13 | INFO | [epoch 20] loss=0.5504  acc=0.7188  f1=0.7143  | val_loss=0.6213  val_acc=0.6253  val_f1=0.6249
+2026-06-28 11:51:15 | INFO | [epoch 21] loss=0.5419  acc=0.7238  f1=0.7199  | val_loss=0.6181  val_acc=0.6502  val_f1=0.6500
+2026-06-28 11:51:17 | INFO | [epoch 22] loss=0.5377  acc=0.7238  f1=0.7199  | val_loss=0.6164  val_acc=0.6546  val_f1=0.6543
+2026-06-28 11:51:19 | INFO | [epoch 23] loss=0.5978  acc=0.6417  f1=0.6416  | val_loss=0.7013  val_acc=0.4345  val_f1=0.3783
+2026-06-28 11:51:22 | INFO | [epoch 24] loss=0.6213  acc=0.6091  f1=0.6086  | val_loss=0.6588  val_acc=0.4946  val_f1=0.4738
+2026-06-28 11:51:24 | INFO | [epoch 25] loss=0.5793  acc=0.6687  f1=0.6661  | val_loss=0.6258  val_acc=0.5948  val_f1=0.5924
+2026-06-28 11:51:26 | INFO | [epoch 26] loss=0.5638  acc=0.6930  f1=0.6904  | val_loss=0.6219  val_acc=0.6034  val_f1=0.6015
+2026-06-28 11:51:28 | INFO | [epoch 27] loss=0.5568  acc=0.6974  f1=0.6955  | val_loss=0.6137  val_acc=0.6148  val_f1=0.6125
+2026-06-28 11:51:30 | INFO | [epoch 28] loss=0.5544  acc=0.6991  f1=0.6968  | val_loss=0.6008  val_acc=0.6337  val_f1=0.6325
+2026-06-28 11:51:30 | INFO | Early stop at epoch 28 (best=0.6756)

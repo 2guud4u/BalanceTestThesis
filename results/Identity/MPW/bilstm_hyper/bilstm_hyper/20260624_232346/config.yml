@@ -1,0 +1,35 @@
+encoder: null
+data:
+  window_size: 120
+  stride: 60
+  h5_key: world_mp_cropped_iou
+  augment: true
+  normalize: false
+  split_ratio: 0.8
+  graph_args:
+    layout: mp
+    strategy: spatial
+  num_joints: 33
+trainer:
+  epochs: 1000
+  batch_size: 32
+  lr: 0.0002053173890108923
+  weight_decay: 1.3920002645653504e-05
+  early_stop_patience: 20
+  early_stop_min_delta: 0.001
+  device: cuda
+  lambda_smooth: 0.2454
+  time_alignment: downsample_labels
+  early_stop_monitor: val_f1
+segmentor:
+  hidden_size: 64
+  num_layers: 2
+  dropout: 0.44161
+  num_classes: 2
+  init_segmentor_path: /code/jjiang23/BalanceTestThesis/initializers/segementor/biLSTM.py
+paths:
+  encoder_cfg_path: null
+  data_cfg_path: /code/jjiang23/pathml/aim2_balanceV2/configs/data/MPW.yml
+  trainer_cfg_path: /code/jjiang23/BalanceTestThesis/configs/trainer/bilstm_hyper.yml
+  segmentor_cfg_path: /code/jjiang23/BalanceTestThesis/configs/segmentor/bilstm_hyper.yml
+  splits_path: /code/jjiang23/pathml/aim2_balanceV2/data/splits.json

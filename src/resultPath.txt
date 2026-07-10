@@ -47,3 +47,33 @@ python3 /code/jjiang23/BalanceTestThesis/scripts/metrics_to_row.py --type instit
 
 python3 /code/jjiang23/BalanceTestThesis/scripts/metrics_to_row.py --results_dir /code/jjiang23/BalanceTestThesis/results/Identity/MPWTopHalf/downsamp/ASFormer/20260613_201801
 & 0.57 ± 0.17 & 0.5 ± 0.16 & 0.4 ± 0.15 & 53.47 ± 11.98 & 0.7 ± 0.02 & 2.58 ± 0.31 & 2.24 ± 0.4
+
+# Identity + ASFormer
+python scripts/tune.py \
+    --segmentor asformer \
+    --data      configs/data/MPW.yml \
+    --splits    /code/jjiang23/pathml/aim2_balanceV2/data/splits.json \
+    --out_dir   results/hypertune/asformer_MPW \
+    --study_db  results/hypertune/asformer_MPW/study.db
+
+# Identity + BiLSTM
+python scripts/tune.py \
+    --segmentor bilstm \
+    --data      configs/data/MPW.yml \
+    --splits    /code/jjiang23/pathml/aim2_balanceV2/data/splits.json \
+    --out_dir   results/hypertune/bilstm_MPW \
+    --study_db  results/hypertune/bilstm_MPW/study.db
+
+
+(pathml) [jjiang23@elcapitan src]$ python3 /code/jjiang23/BalanceTestThesis/scripts/metrics_to_row.py --results_dir /code/jjiang23/BalanceTestThesis/results/Identity/MPW/bilstm_hyper/bilstm_hyper/20260628_114439
+& 0.51 ± 0.13 & 0.45 ± 0.16 & 0.38 ± 0.15 & 57.62 ± 10.51 & 0.71 ± 0.04 & 2.75 ± 0.34 & 3.02 ± 1.25
+(pathml) [jjiang23@elcapitan src]$ python3 /code/jjiang23/BalanceTestThesis/scripts/metrics_to_row.py --type institution --results_dir /code/jjiang23/BalanceTestThesis/results/Identity/MPW/bilstm_hyper/bilstm_hyper/20260628_114439
+CP & 0.72 & 0.7 & 0.69 & 71.65 & 0.83 & 0.65 & 1.14
+UWISC & 0.27 & 0.21 & 0.15 & 42.54 & 0.7 & 3.16 & 2.77
+VA & 0.48 & 0.41 & 0.29 & 55.71 & 0.64 & 4.1 & 4.04
+(pathml) [jjiang23@elcapitan src]$ 
+
+#top half 
+
+& 0.5 ± 0.13 & 0.44 ± 0.15 & 0.36 ± 0.15 & 56.36 ± 6.29 & 0.68 ± 0.06 & 2.36 ± 0.57 & 2.34 ± 0.56
+#bottom half

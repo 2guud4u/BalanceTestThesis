@@ -200,4 +200,30 @@ python3 train.py \
     --segmentor /code/jjiang23/BalanceTestThesis/configs/segmentor/ASFormer.yml \
     --trainer /code/jjiang23/BalanceTestThesis/configs/trainer/downsamp.yml
 
+python3 train.py \
+    --data /code/jjiang23/BalanceTestThesis/configs/data/MPWBottomHalf.yml \
+    --segmentor /code/jjiang23/BalanceTestThesis/configs/segmentor/biLSTM.yml \
+    --trainer /code/jjiang23/BalanceTestThesis/configs/trainer/downsamp.yml && \
+
+python3 train.py \
+    --data /code/jjiang23/BalanceTestThesis/configs/data/MPWTopHalf.yml \
+    --segmentor /code/jjiang23/BalanceTestThesis/configs/segmentor/biLSTM.yml \
+    --trainer /code/jjiang23/BalanceTestThesis/configs/trainer/downsamp.yml
+
+# hyper
+
+python3 train.py \
+    --data /code/jjiang23/pathml/aim2_balanceV2/configs/data/MPW.yml \
+    --segmentor /code/jjiang23/BalanceTestThesis/configs/segmentor/asf_hyper.yml \
+    --trainer /code/jjiang23/BalanceTestThesis/configs/trainer/asf_hyper.yml \
+    --exclude_folds fold_0
+
+python3 train.py \
+    --data /code/jjiang23/pathml/aim2_balanceV2/configs/data/MPW.yml \
+    --segmentor /code/jjiang23/BalanceTestThesis/configs/segmentor/bilstm_hyper.yml \
+    --trainer /code/jjiang23/BalanceTestThesis/configs/trainer/bilstm_hyper.yml \
+    --exclude_folds fold_0
+
+
+
 

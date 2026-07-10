@@ -1,0 +1,5 @@
+hidden_size: 64
+num_layers: 2
+num_classes: 2
+init_segmentor_path: /code/jjiang23/BalanceTestThesis/initializers/segementor/biLSTM.py
+dropout: 0.44161238011919646

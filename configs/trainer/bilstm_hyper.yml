@@ -1,0 +1,14 @@
+# configs/trainer/downsamp.ymlCompleted 120 trials
+# Best val_f1: 0.7582
+
+#Best trial #90  val_f1=0.7582
+epochs: 1000
+batch_size: 32
+lr: 0.0002053173890108923
+weight_decay: 1.3920002645653504e-05       # plain Adam; 0.01 caused weight collapse
+early_stop_patience: 20
+early_stop_min_delta: 0.001
+device: cuda
+lambda_smooth: 0.2454        # was 0.1 — collapse fix
+time_alignment: downsample_labels
+early_stop_monitor: val_f1
