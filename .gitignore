@@ -42,8 +42,6 @@ lightning_logs/
 # Data
 data/*.h5
 data/*.hdf5
-*.csv
-*.xlsx
 
 # OS
 .DS_Store

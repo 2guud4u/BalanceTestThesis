@@ -1,0 +1,577 @@
+Observation,file_path,Behavior,Time_Relative_sf,id
+T01_VA_FT_balc1_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T01_VA_FT_balc1_GS - Event Logs,Phase1_start,0.030407,T01
+T01_VA_FT_balc1_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T01_VA_FT_balc1_GS - Event Logs,Phase1_stop,10.03,T01
+T01_VA_FT_balc4_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T01_VA_FT_balc4_GS - Event Logs,Phase4_start,0.01,T01
+T01_VA_FT_balc4_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T01_VA_FT_balc4_GS - Event Logs,Phase4_stop,0.390172,T01
+T01_VA_FT_balc2_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T01_VA_FT_balc2_GS - Event Logs,Phase2_start,0.01,T01
+T01_VA_FT_balc2_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T01_VA_FT_balc2_GS - Event Logs,Phase2_stop,0.479862,T01
+T04_VA_FT_balc1_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T04_VA_FT_balc1_SB_2JP - Event Logs,Phase1_start,6.69999,T04
+T04_VA_FT_balc1_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T04_VA_FT_balc1_SB_2JP - Event Logs,Phase1_stop,16.7,T04
+T04_VA_FT_balc2_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T04_VA_FT_balc2_SB_2JP - Event Logs,Phase2_start,0.0,T04
+T04_VA_FT_balc2_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T04_VA_FT_balc2_SB_2JP - Event Logs,Phase2_stop,10.0,T04
+T02_VA_FT_balc2_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T02_VA_FT_balc2_SB - Event Logs,Phase2_start,4.13333,T02
+T02_VA_FT_balc2_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T02_VA_FT_balc2_SB - Event Logs,Phase2_stop,7.89999,T02
+T04_VA_FT_balc3_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T04_VA_FT_balc3_SB - Event Logs,Phase3_start,8.79999,T04
+T04_VA_FT_balc3_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T04_VA_FT_balc3_SB - Event Logs,Phase3_stop,18.8,T04
+T04_VA_FT_balc1_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T04_VA_FT_balc1_SB - Event Logs,Phase1_start,0.0,T04
+T04_VA_FT_balc1_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T04_VA_FT_balc1_SB - Event Logs,Phase1_stop,9.99999,T04
+T02_VA_FT_balc1_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T02_VA_FT_balc1_SB - Event Logs,Phase1_start,8.89999,T02
+T02_VA_FT_balc1_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T02_VA_FT_balc1_SB - Event Logs,Phase1_stop,18.9,T02
+T04_VA_FT_balc4_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T04_VA_FT_balc4_SB - Event Logs,Phase4_start,6.83333,T04
+T04_VA_FT_balc4_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T04_VA_FT_balc4_SB - Event Logs,Phase4_stop,8.13333,T04
+T03_VA_FT_balc4_SB_2JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T03_VA_FT_balc4_SB_2JP - Event Logs,Phase4_start,5.79999,T03
+T03_VA_FT_balc4_SB_2JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T03_VA_FT_balc4_SB_2JP - Event Logs,Phase4_stop,8.29999,T03
+T04_VA_FT_balc4_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T04_VA_FT_balc4_SB_2JP - Event Logs,Phase4_start,6.79999,T04
+T04_VA_FT_balc4_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T04_VA_FT_balc4_SB_2JP - Event Logs,Phase4_stop,8.16666,T04
+T04_VA_FT_balc2_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T04_VA_FT_balc2_SB - Event Logs,Phase2_start,0.0,T04
+T04_VA_FT_balc2_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T04_VA_FT_balc2_SB - Event Logs,Phase2_stop,9.99999,T04
+T05_VA_FT_balc2_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T05_VA_FT_balc2_JD - Event Logs,Phase2_start,4.86846,T05
+T05_VA_FT_balc2_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T05_VA_FT_balc2_JD - Event Logs,Phase2_stop,14.8666,T05
+T05_VA_FT_balc34_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T05_VA_FT_balc34_JD - Event Logs,Phase3_start,4.09999,T05
+T05_VA_FT_balc34_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T05_VA_FT_balc34_JD - Event Logs,Phase3_stop,12.8667,T05
+T05_VA_FT_balc34_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T05_VA_FT_balc34_JD - Event Logs,Phase4_start,33.4666,T05
+T05_VA_FT_balc34_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T05_VA_FT_balc34_JD - Event Logs,Phase4_stop,38.8666,T05
+T07_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T07_VA_FT_balc1234_SB - Event Logs,Phase1_start,0.0,T07
+T07_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T07_VA_FT_balc1234_SB - Event Logs,Phase1_stop,9.99999,T07
+T07_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T07_VA_FT_balc1234_SB - Event Logs,Phase2_start,22.0,T07
+T07_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T07_VA_FT_balc1234_SB - Event Logs,Phase2_stop,32.0,T07
+T07_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T07_VA_FT_balc1234_SB - Event Logs,Phase3_start,45.4,T07
+T07_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T07_VA_FT_balc1234_SB - Event Logs,Phase3_stop,55.3999,T07
+T07_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T07_VA_FT_balc1234_SB - Event Logs,Phase4_start,71.8999,T07
+T07_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T07_VA_FT_balc1234_SB - Event Logs,Phase4_stop,77.3666,T07
+T05_VA_FT_balc1_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T05_VA_FT_balc1_JD - Event Logs,Phase1_start,9.03332,T05
+T05_VA_FT_balc1_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T05_VA_FT_balc1_JD - Event Logs,Phase1_stop,19.03,T05
+T06_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T06_VA_FT_balc1234_SB - Event Logs,Phase1_start,5.16666,T06
+T06_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T06_VA_FT_balc1234_SB - Event Logs,Phase1_stop,15.1674,T06
+T06_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T06_VA_FT_balc1234_SB - Event Logs,Phase2_start,26.9333,T06
+T06_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T06_VA_FT_balc1234_SB - Event Logs,Phase2_stop,36.9333,T06
+T06_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T06_VA_FT_balc1234_SB - Event Logs,Phase3_start,59.4999,T06
+T06_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T06_VA_FT_balc1234_SB - Event Logs,Phase3_stop,60.6999,T06
+T06_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T06_VA_FT_balc1234_SB - Event Logs,Phase4_start,82.7333,T06
+T06_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T06_VA_FT_balc1234_SB - Event Logs,Phase4_stop,86.9333,T06
+T05_VA_FT_balc2_JD_2GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T05_VA_FT_balc2_JD_2GB - Event Logs,Phase2_start,5.29999,T05
+T05_VA_FT_balc2_JD_2GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T05_VA_FT_balc2_JD_2GB - Event Logs,Phase2_stop,15.3,T05
+T10_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T10_VA_FT_balc1234_GB - Event Logs,Phase1_start,10.3333,T10
+T10_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T10_VA_FT_balc1234_GB - Event Logs,Phase1_stop,21.0,T10
+T10_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T10_VA_FT_balc1234_GB - Event Logs,Phase2_start,31.8666,T10
+T10_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T10_VA_FT_balc1234_GB - Event Logs,Phase2_stop,42.2666,T10
+T10_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T10_VA_FT_balc1234_GB - Event Logs,Phase3_start,53.5666,T10
+T10_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T10_VA_FT_balc1234_GB - Event Logs,Phase3_stop,57.7666,T10
+T10_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T10_VA_FT_balc1234_GB - Event Logs,Phase4_start,85.0332,T10
+T10_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T10_VA_FT_balc1234_GB - Event Logs,Phase4_stop,90.9666,T10
+T10_VA_FT_balc4_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T10_VA_FT_balc4_GB - Event Logs,Phase4_start,10.4333,T10
+T10_VA_FT_balc4_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T10_VA_FT_balc4_GB - Event Logs,Phase4_stop,22.5,T10
+T08_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T08_VA_FT_balc1234_GB - Event Logs,Phase1_start,1.46666,T08
+T08_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T08_VA_FT_balc1234_GB - Event Logs,Phase1_stop,10.4667,T08
+T08_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T08_VA_FT_balc1234_GB - Event Logs,Phase2_start,34.1666,T08
+T08_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T08_VA_FT_balc1234_GB - Event Logs,Phase2_stop,44.1666,T08
+T08_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T08_VA_FT_balc1234_GB - Event Logs,Phase3_start,63.6333,T08
+T08_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T08_VA_FT_balc1234_GB - Event Logs,Phase3_stop,68.9999,T08
+T08_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T08_VA_FT_balc1234_GB - Event Logs,Phase4_start,86.0999,T08
+T08_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T08_VA_FT_balc1234_GB - Event Logs,Phase4_stop,98.1999,T08
+T11_VA_FT_balc1234_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS - Event Logs,Phase1_start,9.19,T11
+T11_VA_FT_balc1234_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS - Event Logs,Phase1_stop,19.0869,T11
+T11_VA_FT_balc1234_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS - Event Logs,Phase2_start,36.03,T11
+T11_VA_FT_balc1234_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS - Event Logs,Phase2_stop,46.0333,T11
+T11_VA_FT_balc1234_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS - Event Logs,Phase3_start,66.2277,T11
+T11_VA_FT_balc1234_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS - Event Logs,Phase3_stop,76.23,T11
+T11_VA_FT_balc1234_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS - Event Logs,Phase4_start,103.505,T11
+T11_VA_FT_balc1234_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS - Event Logs,Phase4_stop,108.267,T11
+T11_VA_FT_balc1234_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS - Event Logs,Phase4_start,119.733,T11
+T11_VA_FT_balc1234_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS - Event Logs,Phase4_stop,125.167,T11
+T11_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS_2SB - Event Logs,Phase1_start,0.0,T11
+T11_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS_2SB - Event Logs,Phase1_stop,9.99999,T11
+T11_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS_2SB - Event Logs,Phase2_start,33.1666,T11
+T11_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS_2SB - Event Logs,Phase2_stop,43.1749,T11
+T11_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS_2SB - Event Logs,Phase3_start,65.4333,T11
+T11_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS_2SB - Event Logs,Phase3_stop,75.4333,T11
+T11_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS_2SB - Event Logs,Phase4_start,103.8,T11
+T11_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS_2SB - Event Logs,Phase4_stop,108.267,T11
+T11_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS_2SB - Event Logs,Phase4_start,119.5,T11
+T11_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T11_VA_FT_balc1234_GS_2SB - Event Logs,Phase4_stop,126.5,T11
+T12_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T12_VA_FT_balc1234_EFA - Event Logs,Phase1_start,4.5,T12
+T12_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T12_VA_FT_balc1234_EFA - Event Logs,Phase1_stop,14.5,T12
+T12_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T12_VA_FT_balc1234_EFA - Event Logs,Phase2_start,23.5333,T12
+T12_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T12_VA_FT_balc1234_EFA - Event Logs,Phase2_stop,25.8333,T12
+T12_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T12_VA_FT_balc1234_EFA - Event Logs,Phase3_start,60.0333,T12
+T12_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T12_VA_FT_balc1234_EFA - Event Logs,Phase3_stop,61.2666,T12
+T12_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T12_VA_FT_balc1234_EFA - Event Logs,Phase4_start,104.259,T12
+T12_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T12_VA_FT_balc1234_EFA - Event Logs,Phase4_stop,104.5,T12
+T12_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T12_VA_FT_balc1234_EFA_2SB - Event Logs,Phase1_start,4.83333,T12
+T12_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T12_VA_FT_balc1234_EFA_2SB - Event Logs,Phase1_stop,14.8333,T12
+T12_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T12_VA_FT_balc1234_EFA_2SB - Event Logs,Phase2_start,23.5,T12
+T12_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T12_VA_FT_balc1234_EFA_2SB - Event Logs,Phase2_stop,25.9666,T12
+T12_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T12_VA_FT_balc1234_EFA_2SB - Event Logs,Phase3_start,60.0666,T12
+T12_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T12_VA_FT_balc1234_EFA_2SB - Event Logs,Phase3_stop,61.6999,T12
+T12_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T12_VA_FT_balc1234_EFA_2SB - Event Logs,Phase4_start,111.6,T12
+T12_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T12_VA_FT_balc1234_EFA_2SB - Event Logs,Phase4_stop,114.033,T12
+T13_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T13_VA_FT_balc1234_SB - Event Logs,Phase1_start,5.8,T13
+T13_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T13_VA_FT_balc1234_SB - Event Logs,Phase1_stop,15.8,T13
+T13_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T13_VA_FT_balc1234_SB - Event Logs,Phase2_start,44.2666,T13
+T13_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T13_VA_FT_balc1234_SB - Event Logs,Phase2_stop,54.2666,T13
+T13_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T13_VA_FT_balc1234_SB - Event Logs,Phase3_start,75.8666,T13
+T13_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T13_VA_FT_balc1234_SB - Event Logs,Phase3_stop,85.8666,T13
+T13_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T13_VA_FT_balc1234_SB - Event Logs,Phase4_start,111.7,T13
+T13_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T13_VA_FT_balc1234_SB - Event Logs,Phase4_stop,114.0,T13
+T14_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T14_VA_FT_balc1234_GB - Event Logs,Phase1_start,6.96666,T14
+T14_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T14_VA_FT_balc1234_GB - Event Logs,Phase1_stop,17.3333,T14
+T14_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T14_VA_FT_balc1234_GB - Event Logs,Phase2_start,25.7333,T14
+T14_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T14_VA_FT_balc1234_GB - Event Logs,Phase2_stop,36.5333,T14
+T14_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T14_VA_FT_balc1234_GB - Event Logs,Phase3_start,45.3333,T14
+T14_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T14_VA_FT_balc1234_GB - Event Logs,Phase3_stop,55.9666,T14
+T14_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T14_VA_FT_balc1234_GB - Event Logs,Phase4_start,64.1666,T14
+T14_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T14_VA_FT_balc1234_GB - Event Logs,Phase4_stop,74.4999,T14
+T15_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T15_VA_FT_balc1234_JP - Event Logs,Phase1_start,6.29999,T15
+T15_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T15_VA_FT_balc1234_JP - Event Logs,Phase1_stop,16.3,T15
+T15_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T15_VA_FT_balc1234_JP - Event Logs,Phase2_start,27.6666,T15
+T15_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T15_VA_FT_balc1234_JP - Event Logs,Phase2_stop,37.67,T15
+T15_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T15_VA_FT_balc1234_JP - Event Logs,Phase3_start,46.4333,T15
+T15_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T15_VA_FT_balc1234_JP - Event Logs,Phase3_stop,56.43,T15
+T15_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T15_VA_FT_balc1234_JP - Event Logs,Phase4_start,69.8333,T15
+T15_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T15_VA_FT_balc1234_JP - Event Logs,Phase4_stop,79.83,T15
+T18_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T18_VA_FT_balc1234_EFA - Event Logs,Phase1_start,6.23958,T18
+T18_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T18_VA_FT_balc1234_EFA - Event Logs,Phase1_stop,16.24,T18
+T18_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T18_VA_FT_balc1234_EFA - Event Logs,Phase2_start,27.294,T18
+T18_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T18_VA_FT_balc1234_EFA - Event Logs,Phase2_stop,37.29,T18
+T18_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T18_VA_FT_balc1234_EFA - Event Logs,Phase3_start,46.4465,T18
+T18_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T18_VA_FT_balc1234_EFA - Event Logs,Phase3_stop,56.45,T18
+T18_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T18_VA_FT_balc1234_EFA - Event Logs,Phase4_start,66.8669,T18
+T18_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T18_VA_FT_balc1234_EFA - Event Logs,Phase4_stop,76.87,T18
+T18_VA_FT_balc1234_EFA_2JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T18_VA_FT_balc1234_EFA_2JP - Event Logs,Phase1_start,6.50651,T18
+T18_VA_FT_balc1234_EFA_2JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T18_VA_FT_balc1234_EFA_2JP - Event Logs,Phase1_stop,16.51,T18
+T18_VA_FT_balc1234_EFA_2JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T18_VA_FT_balc1234_EFA_2JP - Event Logs,Phase2_start,27.5275,T18
+T18_VA_FT_balc1234_EFA_2JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T18_VA_FT_balc1234_EFA_2JP - Event Logs,Phase2_stop,37.53,T18
+T18_VA_FT_balc1234_EFA_2JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T18_VA_FT_balc1234_EFA_2JP - Event Logs,Phase3_start,46.7801,T18
+T18_VA_FT_balc1234_EFA_2JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T18_VA_FT_balc1234_EFA_2JP - Event Logs,Phase3_stop,56.78,T18
+T18_VA_FT_balc1234_EFA_2JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T18_VA_FT_balc1234_EFA_2JP - Event Logs,Phase4_start,67.4007,T18
+T18_VA_FT_balc1234_EFA_2JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T18_VA_FT_balc1234_EFA_2JP - Event Logs,Phase4_stop,77.4,T18
+T17_VA_FT_1234balc_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T17_VA_FT_1234balc_SB - Event Logs,Phase1_start,5.77244,T17
+T17_VA_FT_1234balc_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T17_VA_FT_1234balc_SB - Event Logs,Phase1_stop,15.7825,T17
+T17_VA_FT_1234balc_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T17_VA_FT_1234balc_SB - Event Logs,Phase2_start,34.5012,T17
+T17_VA_FT_1234balc_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T17_VA_FT_1234balc_SB - Event Logs,Phase2_stop,44.5112,T17
+T17_VA_FT_1234balc_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T17_VA_FT_1234balc_SB - Event Logs,Phase3_start,89.4228,T17
+T17_VA_FT_1234balc_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T17_VA_FT_1234balc_SB - Event Logs,Phase3_stop,93.4935,T17
+T17_VA_FT_1234balc_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T17_VA_FT_1234balc_SB - Event Logs,Phase4_start,108.842,T17
+T17_VA_FT_1234balc_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T17_VA_FT_1234balc_SB - Event Logs,Phase4_stop,118.852,T17
+T19_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T19_VA_FT_balc1234_GB - Event Logs,Phase1_start,6.63997,T19
+T19_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T19_VA_FT_balc1234_GB - Event Logs,Phase1_stop,18.9857,T19
+T19_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T19_VA_FT_balc1234_GB - Event Logs,Phase2_start,28.1281,T19
+T19_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T19_VA_FT_balc1234_GB - Event Logs,Phase2_stop,38.5052,T19
+T19_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T19_VA_FT_balc1234_GB - Event Logs,Phase3_start,43.7771,T19
+T19_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T19_VA_FT_balc1234_GB - Event Logs,Phase3_stop,56.6567,T19
+T19_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T19_VA_FT_balc1234_GB - Event Logs,Phase4_start,65.9993,T19
+T19_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T19_VA_FT_balc1234_GB - Event Logs,Phase4_stop,77.711,T19
+T21_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T21_VA_FT_balc1234_JP - Event Logs,Phase1_start,5.20521,T21
+T21_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T21_VA_FT_balc1234_JP - Event Logs,Phase1_stop,15.21,T21
+T21_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T21_VA_FT_balc1234_JP - Event Logs,Phase2_start,21.9553,T21
+T21_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T21_VA_FT_balc1234_JP - Event Logs,Phase2_stop,31.96,T21
+T21_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T21_VA_FT_balc1234_JP - Event Logs,Phase3_start,42.1755,T21
+T21_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T21_VA_FT_balc1234_JP - Event Logs,Phase3_stop,52.18,T21
+T21_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T21_VA_FT_balc1234_JP - Event Logs,Phase4_start,57.8579,T21
+T21_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T21_VA_FT_balc1234_JP - Event Logs,Phase4_stop,67.86,T21
+T24_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T24_VA_FT_balc1234_JP - Event Logs,Phase1_start,5.23857,T24
+T24_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T24_VA_FT_balc1234_JP - Event Logs,Phase1_stop,15.24,T24
+T24_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T24_VA_FT_balc1234_JP - Event Logs,Phase2_start,22.6226,T24
+T24_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T24_VA_FT_balc1234_JP - Event Logs,Phase2_stop,32.62,T24
+T24_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T24_VA_FT_balc1234_JP - Event Logs,Phase3_start,42.042,T24
+T24_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T24_VA_FT_balc1234_JP - Event Logs,Phase3_stop,52.04,T24
+T24_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T24_VA_FT_balc1234_JP - Event Logs,Phase4_start,63.9306,T24
+T24_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T24_VA_FT_balc1234_JP - Event Logs,Phase4_stop,73.93,T24
+T20_VA_FT_balc1234_JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T20_VA_FT_balc1234_JB - Event Logs,Phase1_start,6.74007,T20
+T20_VA_FT_balc1234_JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T20_VA_FT_balc1234_JB - Event Logs,Phase1_stop,16.74,T20
+T20_VA_FT_balc1234_JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T20_VA_FT_balc1234_JB - Event Logs,Phase2_start,31.1645,T20
+T20_VA_FT_balc1234_JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T20_VA_FT_balc1234_JB - Event Logs,Phase2_stop,41.16,T20
+T20_VA_FT_balc1234_JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T20_VA_FT_balc1234_JB - Event Logs,Phase3_start,49.1491,T20
+T20_VA_FT_balc1234_JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T20_VA_FT_balc1234_JB - Event Logs,Phase3_stop,59.15,T20
+T20_VA_FT_balc1234_JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T20_VA_FT_balc1234_JB - Event Logs,Phase4_start,65.1985,T20
+T20_VA_FT_balc1234_JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T20_VA_FT_balc1234_JB - Event Logs,Phase4_stop,75.2,T20
+T23_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T23_VA_FT_balc1234_JP - Event Logs,Phase1_start,7.77444,T23
+T23_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T23_VA_FT_balc1234_JP - Event Logs,Phase1_stop,17.77,T23
+T23_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T23_VA_FT_balc1234_JP - Event Logs,Phase2_start,29.5963,T23
+T23_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T23_VA_FT_balc1234_JP - Event Logs,Phase2_stop,39.6,T23
+T23_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T23_VA_FT_balc1234_JP - Event Logs,Phase3_start,51.4848,T23
+T23_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T23_VA_FT_balc1234_JP - Event Logs,Phase3_stop,61.48,T23
+T23_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T23_VA_FT_balc1234_JP - Event Logs,Phase4_start,81.5482,T23
+T23_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T23_VA_FT_balc1234_JP - Event Logs,Phase4_stop,91.55,T23
+T22_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T22_VA_FT_balc1234_GB - Event Logs,Phase1_start,6.07274,T22
+T22_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T22_VA_FT_balc1234_GB - Event Logs,Phase1_stop,16.0678,T22
+T22_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T22_VA_FT_balc1234_GB - Event Logs,Phase2_start,26.5317,T22
+T22_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T22_VA_FT_balc1234_GB - Event Logs,Phase2_stop,36.5184,T22
+T22_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T22_VA_FT_balc1234_GB - Event Logs,Phase3_start,42.28,T22
+T22_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T22_VA_FT_balc1234_GB - Event Logs,Phase3_stop,52.2742,T22
+T22_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T22_VA_FT_balc1234_GB - Event Logs,Phase4_start,62.2623,T22
+T22_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T22_VA_FT_balc1234_GB - Event Logs,Phase4_stop,72.2723,T22
+T27_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T27_VA_FT_balc1234_GB - Event Logs,Phase1_start,3.03637,T27
+T27_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T27_VA_FT_balc1234_GB - Event Logs,Phase1_stop,13.6136,T27
+T27_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T27_VA_FT_balc1234_GB - Event Logs,Phase2_start,32.7995,T27
+T27_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T27_VA_FT_balc1234_GB - Event Logs,Phase2_stop,43.31,T27
+T27_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T27_VA_FT_balc1234_GB - Event Logs,Phase3_start,53.4868,T27
+T27_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T27_VA_FT_balc1234_GB - Event Logs,Phase3_stop,63.8972,T27
+T27_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T27_VA_FT_balc1234_GB - Event Logs,Phase4_start,71.705,T27
+T27_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T27_VA_FT_balc1234_GB - Event Logs,Phase4_stop,82.2823,T27
+T26_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T26_VA_FT_balc1234_JP - Event Logs,Phase1_start,6.90691,T26
+T26_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T26_VA_FT_balc1234_JP - Event Logs,Phase1_stop,16.91,T26
+T26_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T26_VA_FT_balc1234_JP - Event Logs,Phase2_start,24.69,T26
+T26_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T26_VA_FT_balc1234_JP - Event Logs,Phase2_stop,24.6914,T26
+T26_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T26_VA_FT_balc1234_JP - Event Logs,Phase3_start,42.1755,T26
+T26_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T26_VA_FT_balc1234_JP - Event Logs,Phase3_stop,52.18,T26
+T26_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T26_VA_FT_balc1234_JP - Event Logs,Phase4_start,59.4261,T26
+T26_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T26_VA_FT_balc1234_JP - Event Logs,Phase4_stop,69.43,T26
+T25_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T25_VA_FT_balc1234_JP - Event Logs,Phase1_start,6.84017,T25
+T25_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T25_VA_FT_balc1234_JP - Event Logs,Phase1_stop,16.84,T25
+T25_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T25_VA_FT_balc1234_JP - Event Logs,Phase2_start,23.6236,T25
+T25_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T25_VA_FT_balc1234_JP - Event Logs,Phase2_stop,33.62,T25
+T25_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T25_VA_FT_balc1234_JP - Event Logs,Phase3_start,40.7407,T25
+T25_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T25_VA_FT_balc1234_JP - Event Logs,Phase3_stop,50.74,T25
+T25_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T25_VA_FT_balc1234_JP - Event Logs,Phase4_start,60.7608,T25
+T25_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T25_VA_FT_balc1234_JP - Event Logs,Phase4_stop,70.76,T25
+T28_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T28_VA_FT_balc1234_EFA - Event Logs,Phase1_start,11.3113,T28
+T28_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T28_VA_FT_balc1234_EFA - Event Logs,Phase1_stop,21.31,T28
+T28_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T28_VA_FT_balc1234_EFA - Event Logs,Phase2_start,30.8976,T28
+T28_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T28_VA_FT_balc1234_EFA - Event Logs,Phase2_stop,40.9,T28
+T28_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T28_VA_FT_balc1234_EFA - Event Logs,Phase3_start,51.1292,T28
+T28_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T28_VA_FT_balc1234_EFA - Event Logs,Phase3_stop,61.13,T28
+T28_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T28_VA_FT_balc1234_EFA - Event Logs,Phase4_start,69.0023,T28
+T28_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T28_VA_FT_balc1234_EFA - Event Logs,Phase4_stop,79.0,T28
+T28_VA_FT_balc1234_EFA_2GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T28_VA_FT_balc1234_EFA_2GB - Event Logs,Phase1_start,12.1788,T28
+T28_VA_FT_balc1234_EFA_2GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T28_VA_FT_balc1234_EFA_2GB - Event Logs,Phase1_stop,22.1889,T28
+T28_VA_FT_balc1234_EFA_2GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T28_VA_FT_balc1234_EFA_2GB - Event Logs,Phase2_start,31.298,T28
+T28_VA_FT_balc1234_EFA_2GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T28_VA_FT_balc1234_EFA_2GB - Event Logs,Phase2_stop,41.3413,T28
+T28_VA_FT_balc1234_EFA_2GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T28_VA_FT_balc1234_EFA_2GB - Event Logs,Phase3_start,51.3847,T28
+T28_VA_FT_balc1234_EFA_2GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T28_VA_FT_balc1234_EFA_2GB - Event Logs,Phase3_stop,61.3947,T28
+T28_VA_FT_balc1234_EFA_2GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T28_VA_FT_balc1234_EFA_2GB - Event Logs,Phase4_start,69.8031,T28
+T28_VA_FT_balc1234_EFA_2GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T28_VA_FT_balc1234_EFA_2GB - Event Logs,Phase4_stop,79.8132,T28
+T29_VA_FT_balc1234_JB_2JD ,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T29_VA_FT_balc1234_JB_2JD  - Event Logs,Phase1_start,5.77245,T29
+T29_VA_FT_balc1234_JB_2JD ,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T29_VA_FT_balc1234_JB_2JD  - Event Logs,Phase1_stop,17.7511,T29
+T29_VA_FT_balc1234_JB_2JD ,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T29_VA_FT_balc1234_JB_2JD  - Event Logs,Phase2_start,23.0564,T29
+T29_VA_FT_balc1234_JB_2JD ,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T29_VA_FT_balc1234_JB_2JD  - Event Logs,Phase2_stop,36.8368,T29
+T29_VA_FT_balc1234_JB_2JD ,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T29_VA_FT_balc1234_JB_2JD  - Event Logs,Phase3_start,57.6243,T29
+T29_VA_FT_balc1234_JB_2JD ,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T29_VA_FT_balc1234_JB_2JD  - Event Logs,Phase3_stop,59.0591,T29
+T29_VA_FT_balc1234_JB_2JD ,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T29_VA_FT_balc1234_JB_2JD  - Event Logs,Phase4_start,85.5189,T29
+T29_VA_FT_balc1234_JB_2JD ,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T29_VA_FT_balc1234_JB_2JD  - Event Logs,Phase4_stop,87.1872,T29
+T29_VA_FT_balc1234_JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T29_VA_FT_balc1234_JB - Event Logs,Phase1_start,5.77244,T29
+T29_VA_FT_balc1234_JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T29_VA_FT_balc1234_JB - Event Logs,Phase1_stop,15.77,T29
+T29_VA_FT_balc1234_JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T29_VA_FT_balc1234_JB - Event Logs,Phase2_start,22.8228,T29
+T29_VA_FT_balc1234_JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T29_VA_FT_balc1234_JB - Event Logs,Phase2_stop,32.82,T29
+T29_VA_FT_balc1234_JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T29_VA_FT_balc1234_JB - Event Logs,Phase3_start,57.4575,T29
+T29_VA_FT_balc1234_JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T29_VA_FT_balc1234_JB - Event Logs,Phase3_stop,58.9923,T29
+T29_VA_FT_balc1234_JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T29_VA_FT_balc1234_JB - Event Logs,Phase4_start,85.1518,T29
+T29_VA_FT_balc1234_JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T29_VA_FT_balc1234_JB - Event Logs,Phase4_stop,87.0871,T29
+T31_VA_FT_blac1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T31_VA_FT_blac1234_SB - Event Logs,Phase1_start,7.47414,T31
+T31_VA_FT_blac1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T31_VA_FT_blac1234_SB - Event Logs,Phase1_stop,17.4842,T31
+T31_VA_FT_blac1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T31_VA_FT_blac1234_SB - Event Logs,Phase2_start,26.5599,T31
+T31_VA_FT_blac1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T31_VA_FT_blac1234_SB - Event Logs,Phase2_stop,36.5699,T31
+T31_VA_FT_blac1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T31_VA_FT_blac1234_SB - Event Logs,Phase3_start,48.7487,T31
+T31_VA_FT_blac1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T31_VA_FT_blac1234_SB - Event Logs,Phase3_stop,58.7588,T31
+T31_VA_FT_blac1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T31_VA_FT_blac1234_SB - Event Logs,Phase4_start,65.6657,T31
+T31_VA_FT_blac1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T31_VA_FT_blac1234_SB - Event Logs,Phase4_stop,74.7748,T31
+T32_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T32_VA_FT_balc1234_GB - Event Logs,Phase1_start,4.13748,T32
+T32_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T32_VA_FT_balc1234_GB - Event Logs,Phase1_stop,14.8815,T32
+T32_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T32_VA_FT_balc1234_GB - Event Logs,Phase2_start,21.4882,T32
+T32_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T32_VA_FT_balc1234_GB - Event Logs,Phase2_stop,32.2322,T32
+T32_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T32_VA_FT_balc1234_GB - Event Logs,Phase3_start,38.4384,T32
+T32_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T32_VA_FT_balc1234_GB - Event Logs,Phase3_stop,49.0157,T32
+T32_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T32_VA_FT_balc1234_GB - Event Logs,Phase4_start,56.2896,T32
+T32_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T32_VA_FT_balc1234_GB - Event Logs,Phase4_stop,67.6343,T32
+T36_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T36_VA_FT_balc1234_GB - Event Logs,Phase1_start,5.3053,T36
+T36_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T36_VA_FT_balc1234_GB - Event Logs,Phase1_stop,15.31,T36
+T36_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T36_VA_FT_balc1234_GB - Event Logs,Phase2_start,26.1595,T36
+T36_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T36_VA_FT_balc1234_GB - Event Logs,Phase2_stop,36.16,T36
+T36_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T36_VA_FT_balc1234_GB - Event Logs,Phase3_start,51.1512,T36
+T36_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T36_VA_FT_balc1234_GB - Event Logs,Phase3_stop,61.15,T36
+T36_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T36_VA_FT_balc1234_GB - Event Logs,Phase4_start,77.0103,T36
+T36_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T36_VA_FT_balc1234_GB - Event Logs,Phase4_stop,79.1458,T36
+T34_VA_FT_blac1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T34_VA_FT_blac1234_SB - Event Logs,Phase1_start,4.83817,T34
+T34_VA_FT_blac1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T34_VA_FT_blac1234_SB - Event Logs,Phase1_stop,14.8508,T34
+T34_VA_FT_blac1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T34_VA_FT_blac1234_SB - Event Logs,Phase2_start,33.033,T34
+T34_VA_FT_blac1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T34_VA_FT_blac1234_SB - Event Logs,Phase2_stop,43.0431,T34
+T34_VA_FT_blac1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T34_VA_FT_blac1234_SB - Event Logs,Phase3_start,51.0511,T34
+T34_VA_FT_blac1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T34_VA_FT_blac1234_SB - Event Logs,Phase3_stop,61.0611,T34
+T34_VA_FT_blac1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T34_VA_FT_blac1234_SB - Event Logs,Phase4_start,66.8001,T34
+T34_VA_FT_blac1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T34_VA_FT_blac1234_SB - Event Logs,Phase4_stop,76.8102,T34
+T36_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T36_VA_FT_balc1234_NP - Event Logs,Phase1_start,4.07317,T36
+T36_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T36_VA_FT_balc1234_NP - Event Logs,Phase1_stop,14.0808,T36
+T36_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T36_VA_FT_balc1234_NP - Event Logs,Phase2_start,22.4892,T36
+T36_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T36_VA_FT_balc1234_NP - Event Logs,Phase2_stop,32.4992,T36
+T36_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T36_VA_FT_balc1234_NP - Event Logs,Phase3_start,44.1108,T36
+T36_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T36_VA_FT_balc1234_NP - Event Logs,Phase3_stop,54.1208,T36
+T36_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T36_VA_FT_balc1234_NP - Event Logs,Phase4_start,67.1004,T36
+T36_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T36_VA_FT_balc1234_NP - Event Logs,Phase4_stop,77.1104,T36
+T35_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T35_VA_FT_balc1234_JP - Event Logs,Phase1_start,5.67234,T35
+T35_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T35_VA_FT_balc1234_JP - Event Logs,Phase1_stop,15.67,T35
+T35_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T35_VA_FT_balc1234_JP - Event Logs,Phase2_start,22.1889,T35
+T35_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T35_VA_FT_balc1234_JP - Event Logs,Phase2_stop,32.19,T35
+T35_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T35_VA_FT_balc1234_JP - Event Logs,Phase3_start,38.8722,T35
+T35_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T35_VA_FT_balc1234_JP - Event Logs,Phase3_stop,48.87,T35
+T35_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T35_VA_FT_balc1234_JP - Event Logs,Phase4_start,56.2229,T35
+T35_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T35_VA_FT_balc1234_JP - Event Logs,Phase4_stop,66.22,T35
+T40_VA_FT_balc1234_JD_2JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T40_VA_FT_balc1234_JD_2JP - Event Logs,Phase1_start,12.1121,T40
+T40_VA_FT_balc1234_JD_2JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T40_VA_FT_balc1234_JD_2JP - Event Logs,Phase1_stop,22.11,T40
+T40_VA_FT_balc1234_JD_2JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T40_VA_FT_balc1234_JD_2JP - Event Logs,Phase2_start,29.6964,T40
+T40_VA_FT_balc1234_JD_2JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T40_VA_FT_balc1234_JD_2JP - Event Logs,Phase2_stop,39.7,T40
+T40_VA_FT_balc1234_JD_2JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T40_VA_FT_balc1234_JD_2JP - Event Logs,Phase3_start,47.6143,T40
+T40_VA_FT_balc1234_JD_2JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T40_VA_FT_balc1234_JD_2JP - Event Logs,Phase3_stop,57.61,T40
+T40_VA_FT_balc1234_JD_2JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T40_VA_FT_balc1234_JD_2JP - Event Logs,Phase4_start,64.7648,T40
+T40_VA_FT_balc1234_JD_2JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T40_VA_FT_balc1234_JD_2JP - Event Logs,Phase4_stop,74.76,T40
+T38_VA_FT_balc1234_GS_2EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T38_VA_FT_balc1234_GS_2EFA - Event Logs,Phase1_start,7.42,T38
+T38_VA_FT_balc1234_GS_2EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T38_VA_FT_balc1234_GS_2EFA - Event Logs,Phase1_stop,17.4174,T38
+T38_VA_FT_balc1234_GS_2EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T38_VA_FT_balc1234_GS_2EFA - Event Logs,Phase2_start,22.5893,T38
+T38_VA_FT_balc1234_GS_2EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T38_VA_FT_balc1234_GS_2EFA - Event Logs,Phase2_stop,32.9663,T38
+T38_VA_FT_balc1234_GS_2EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T38_VA_FT_balc1234_GS_2EFA - Event Logs,Phase3_start,38.3717,T38
+T38_VA_FT_balc1234_GS_2EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T38_VA_FT_balc1234_GS_2EFA - Event Logs,Phase3_stop,49.5829,T38
+T38_VA_FT_balc1234_GS_2EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T38_VA_FT_balc1234_GS_2EFA - Event Logs,Phase4_start,54.4878,T38
+T38_VA_FT_balc1234_GS_2EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T38_VA_FT_balc1234_GS_2EFA - Event Logs,Phase4_stop,64.8649,T38
+T40_VA_FT_balc1234_JD ,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T40_VA_FT_balc1234_JD  - Event Logs,Phase1_start,12.1455,T40
+T40_VA_FT_balc1234_JD ,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T40_VA_FT_balc1234_JD  - Event Logs,Phase1_stop,22.15,T40
+T40_VA_FT_balc1234_JD ,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T40_VA_FT_balc1234_JD  - Event Logs,Phase2_start,29.3293,T40
+T40_VA_FT_balc1234_JD ,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T40_VA_FT_balc1234_JD  - Event Logs,Phase2_stop,39.33,T40
+T40_VA_FT_balc1234_JD ,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T40_VA_FT_balc1234_JD  - Event Logs,Phase3_start,47.8145,T40
+T40_VA_FT_balc1234_JD ,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T40_VA_FT_balc1234_JD  - Event Logs,Phase3_stop,57.81,T40
+T40_VA_FT_balc1234_JD ,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T40_VA_FT_balc1234_JD  - Event Logs,Phase4_start,64.0307,T40
+T40_VA_FT_balc1234_JD ,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T40_VA_FT_balc1234_JD  - Event Logs,Phase4_stop,74.03,T40
+T38_VA_FT_balc1234_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T38_VA_FT_balc1234_GS - Event Logs,Phase1_start,6.72,T38
+T38_VA_FT_balc1234_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T38_VA_FT_balc1234_GS - Event Logs,Phase1_stop,16.72,T38
+T38_VA_FT_balc1234_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T38_VA_FT_balc1234_GS - Event Logs,Phase2_start,22.4224,T38
+T38_VA_FT_balc1234_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T38_VA_FT_balc1234_GS - Event Logs,Phase2_stop,32.42,T38
+T38_VA_FT_balc1234_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T38_VA_FT_balc1234_GS - Event Logs,Phase3_start,38.2382,T38
+T38_VA_FT_balc1234_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T38_VA_FT_balc1234_GS - Event Logs,Phase3_stop,48.24,T38
+T38_VA_FT_balc1234_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T38_VA_FT_balc1234_GS - Event Logs,Phase4_start,54.3544,T38
+T38_VA_FT_balc1234_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T38_VA_FT_balc1234_GS - Event Logs,Phase4_stop,64.35,T38
+T41_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T41_VA_FT_balc1234_GB - Event Logs,Phase1_start,15.7824,T41
+T41_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T41_VA_FT_balc1234_GB - Event Logs,Phase1_stop,25.659,T41
+T41_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T41_VA_FT_balc1234_GB - Event Logs,Phase2_start,45.2119,T41
+T41_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T41_VA_FT_balc1234_GB - Event Logs,Phase2_stop,55.7558,T41
+T41_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T41_VA_FT_balc1234_GB - Event Logs,Phase3_start,70.8375,T41
+T41_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T41_VA_FT_balc1234_GB - Event Logs,Phase3_stop,81.0143,T41
+T43_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T43_VA_FT_balc1234_JP - Event Logs,Phase1_start,11.9453,T43
+T43_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T43_VA_FT_balc1234_JP - Event Logs,Phase1_stop,21.95,T43
+T43_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T43_VA_FT_balc1234_JP - Event Logs,Phase2_start,30.3303,T43
+T43_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T43_VA_FT_balc1234_JP - Event Logs,Phase2_stop,40.33,T43
+T43_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T43_VA_FT_balc1234_JP - Event Logs,Phase3_start,49.4161,T43
+T43_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T43_VA_FT_balc1234_JP - Event Logs,Phase3_stop,59.42,T43
+T43_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T43_VA_FT_balc1234_JP - Event Logs,Phase4_start,76.343,T43
+T43_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T43_VA_FT_balc1234_JP - Event Logs,Phase4_stop,86.34,T43
+T42_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T42_VA_FT_balc1234_SB - Event Logs,Phase1_start,10.1435,T42
+T42_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T42_VA_FT_balc1234_SB - Event Logs,Phase1_stop,20.14,T42
+T42_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T42_VA_FT_balc1234_SB - Event Logs,Phase2_start,30.7641,T42
+T42_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T42_VA_FT_balc1234_SB - Event Logs,Phase2_stop,40.76,T42
+T42_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T42_VA_FT_balc1234_SB - Event Logs,Phase3_start,51.2513,T42
+T42_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T42_VA_FT_balc1234_SB - Event Logs,Phase3_stop,61.25,T42
+T42_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T42_VA_FT_balc1234_SB - Event Logs,Phase4_start,70.7374,T42
+T42_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T42_VA_FT_balc1234_SB - Event Logs,Phase4_stop,80.74,T42
+T59_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T59_VA_FT_balc1234_GB - Event Logs,Phase1_start,11.5782,T59
+T59_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T59_VA_FT_balc1234_GB - Event Logs,Phase1_stop,24.3243,T59
+T59_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T59_VA_FT_balc1234_GB - Event Logs,Phase2_start,37.671,T59
+T59_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T59_VA_FT_balc1234_GB - Event Logs,Phase2_stop,48.8822,T59
+T59_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T59_VA_FT_balc1234_GB - Event Logs,Phase3_start,54.7214,T59
+T59_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T59_VA_FT_balc1234_GB - Event Logs,Phase3_stop,69.97,T59
+T59_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T59_VA_FT_balc1234_GB - Event Logs,Phase4_start,76.4765,T59
+T59_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T59_VA_FT_balc1234_GB - Event Logs,Phase4_stop,90.9576,T59
+T35_VA_FT_balc1234_JP_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T35_VA_FT_balc1234_JP_2JB - Event Logs,Phase1_start,5.27195,T35
+T35_VA_FT_balc1234_JP_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T35_VA_FT_balc1234_JP_2JB - Event Logs,Phase1_stop,16.3163,T35
+T35_VA_FT_balc1234_JP_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T35_VA_FT_balc1234_JP_2JB - Event Logs,Phase2_start,21.8886,T35
+T35_VA_FT_balc1234_JP_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T35_VA_FT_balc1234_JP_2JB - Event Logs,Phase2_stop,34.1341,T35
+T35_VA_FT_balc1234_JP_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T35_VA_FT_balc1234_JP_2JB - Event Logs,Phase3_start,38.6053,T35
+T35_VA_FT_balc1234_JP_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T35_VA_FT_balc1234_JP_2JB - Event Logs,Phase3_stop,49.5829,T35
+T35_VA_FT_balc1234_JP_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T35_VA_FT_balc1234_JP_2JB - Event Logs,Phase4_start,56.0894,T35
+T35_VA_FT_balc1234_JP_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T35_VA_FT_balc1234_JP_2JB - Event Logs,Phase4_stop,67.1004,T35
+T43_VA_FT_balc1234_JP_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T43_VA_FT_balc1234_JP_2JB - Event Logs,Phase1_start,11.9453,T43
+T43_VA_FT_balc1234_JP_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T43_VA_FT_balc1234_JP_2JB - Event Logs,Phase1_stop,22.022,T43
+T43_VA_FT_balc1234_JP_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T43_VA_FT_balc1234_JP_2JB - Event Logs,Phase2_start,30.2636,T43
+T43_VA_FT_balc1234_JP_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T43_VA_FT_balc1234_JP_2JB - Event Logs,Phase2_stop,40.8742,T43
+T43_VA_FT_balc1234_JP_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T43_VA_FT_balc1234_JP_2JB - Event Logs,Phase3_start,49.3494,T43
+T43_VA_FT_balc1234_JP_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T43_VA_FT_balc1234_JP_2JB - Event Logs,Phase3_stop,60.6607,T43
+T43_VA_FT_balc1234_JP_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T43_VA_FT_balc1234_JP_2JB - Event Logs,Phase4_start,76.5098,T43
+T43_VA_FT_balc1234_JP_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T43_VA_FT_balc1234_JP_2JB - Event Logs,Phase4_stop,86.9203,T43
+T46_VA_FT_balc123_EF_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T46_VA_FT_balc123_EF_2JB - Event Logs,Phase1_start,6.57325,T46
+T46_VA_FT_balc123_EF_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T46_VA_FT_balc123_EF_2JB - Event Logs,Phase1_stop,17.3841,T46
+T46_VA_FT_balc123_EF_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T46_VA_FT_balc123_EF_2JB - Event Logs,Phase2_start,28.0614,T46
+T46_VA_FT_balc123_EF_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T46_VA_FT_balc123_EF_2JB - Event Logs,Phase2_stop,38.2716,T46
+T46_VA_FT_balc123_EF_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T46_VA_FT_balc123_EF_2JB - Event Logs,Phase3_start,53.8539,T46
+T46_VA_FT_balc123_EF_2JB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T46_VA_FT_balc123_EF_2JB - Event Logs,Phase3_stop,56.0227,T46
+T55_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T55_VA_FT_balc1234_JP - Event Logs,Phase1_start,10.1768,T55
+T55_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T55_VA_FT_balc1234_JP - Event Logs,Phase1_stop,20.18,T55
+T55_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T55_VA_FT_balc1234_JP - Event Logs,Phase2_start,33.2666,T55
+T55_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T55_VA_FT_balc1234_JP - Event Logs,Phase2_stop,43.27,T55
+T55_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T55_VA_FT_balc1234_JP - Event Logs,Phase3_start,57.591,T55
+T55_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T55_VA_FT_balc1234_JP - Event Logs,Phase3_stop,59.4928,T55
+T55_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T55_VA_FT_balc1234_JP - Event Logs,Phase4_start,85.7858,T55
+T55_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T55_VA_FT_balc1234_JP - Event Logs,Phase4_stop,88.1548,T55
+T56_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T56_VA_FT_balc1234_NP - Event Logs,Phase1_start,8.87553,T56
+T56_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T56_VA_FT_balc1234_NP - Event Logs,Phase1_stop,18.8855,T56
+T56_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T56_VA_FT_balc1234_NP - Event Logs,Phase2_start,23.9907,T56
+T56_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T56_VA_FT_balc1234_NP - Event Logs,Phase2_stop,34.0007,T56
+T56_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T56_VA_FT_balc1234_NP - Event Logs,Phase3_start,48.1481,T56
+T56_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T56_VA_FT_balc1234_NP - Event Logs,Phase3_stop,58.1385,T56
+T56_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T56_VA_FT_balc1234_NP - Event Logs,Phase4_start,67.8011,T56
+T56_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T56_VA_FT_balc1234_NP - Event Logs,Phase4_stop,77.8111,T56
+T57_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T57_VA_FT_balc1234_EFA - Event Logs,Phase1_start,13.7805,T57
+T57_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T57_VA_FT_balc1234_EFA - Event Logs,Phase1_stop,23.9907,T57
+T57_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T57_VA_FT_balc1234_EFA - Event Logs,Phase2_start,39.0724,T57
+T57_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T57_VA_FT_balc1234_EFA - Event Logs,Phase2_stop,49.6496,T57
+T57_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T57_VA_FT_balc1234_EFA - Event Logs,Phase3_start,76.7434,T57
+T57_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T57_VA_FT_balc1234_EFA - Event Logs,Phase3_stop,77.1037,T57
+T57_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T57_VA_FT_balc1234_EFA - Event Logs,Phase3_start,79.6972,T57
+T57_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T57_VA_FT_balc1234_EFA - Event Logs,Phase3_stop,80.1639,T57
+T57_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T57_VA_FT_balc1234_EFA - Event Logs,Phase3_start,83.9753,T57
+T57_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T57_VA_FT_balc1234_EFA - Event Logs,Phase3_stop,84.2588,T57
+T57_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T57_VA_FT_balc1234_EFA - Event Logs,Phase4_start,103.139,T57
+T57_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T57_VA_FT_balc1234_EFA - Event Logs,Phase4_stop,103.764,T57
+T57_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T57_VA_FT_balc1234_EFA - Event Logs,Phase4_start,104.948,T57
+T57_VA_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T57_VA_FT_balc1234_EFA - Event Logs,Phase4_stop,105.715,T57
+T44_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T44_VA_FT_balc1234_SB - Event Logs,Phase1_start,12.8795,T44
+T44_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T44_VA_FT_balc1234_SB - Event Logs,Phase1_stop,22.8896,T44
+T44_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T44_VA_FT_balc1234_SB - Event Logs,Phase2_start,37.5709,T44
+T44_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T44_VA_FT_balc1234_SB - Event Logs,Phase2_stop,47.5809,T44
+T44_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T44_VA_FT_balc1234_SB - Event Logs,Phase3_start,56.9236,T44
+T44_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T44_VA_FT_balc1234_SB - Event Logs,Phase3_stop,66.9336,T44
+T44_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T44_VA_FT_balc1234_SB - Event Logs,Phase4_start,77.2439,T44
+T44_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T44_VA_FT_balc1234_SB - Event Logs,Phase4_stop,87.2539,T44
+T44_VA_FT_balc1234_SB_2GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T44_VA_FT_balc1234_SB_2GB - Event Logs,Phase1_start,14.221,T44
+T44_VA_FT_balc1234_SB_2GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T44_VA_FT_balc1234_SB_2GB - Event Logs,Phase1_stop,24.2242,T44
+T44_VA_FT_balc1234_SB_2GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T44_VA_FT_balc1234_SB_2GB - Event Logs,Phase2_start,37.2706,T44
+T44_VA_FT_balc1234_SB_2GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T44_VA_FT_balc1234_SB_2GB - Event Logs,Phase2_stop,47.2806,T44
+T44_VA_FT_balc1234_SB_2GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T44_VA_FT_balc1234_SB_2GB - Event Logs,Phase3_start,56.7234,T44
+T44_VA_FT_balc1234_SB_2GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T44_VA_FT_balc1234_SB_2GB - Event Logs,Phase3_stop,67.4675,T44
+T44_VA_FT_balc1234_SB_2GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T44_VA_FT_balc1234_SB_2GB - Event Logs,Phase4_start,77.0437,T44
+T44_VA_FT_balc1234_SB_2GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T44_VA_FT_balc1234_SB_2GB - Event Logs,Phase4_stop,87.0537,T44
+T52_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T52_VA_FT_balc1234_NP - Event Logs,Phase1_start,5.80581,T52
+T52_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T52_VA_FT_balc1234_NP - Event Logs,Phase1_stop,15.8158,T52
+T52_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T52_VA_FT_balc1234_NP - Event Logs,Phase2_start,27.7277,T52
+T52_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T52_VA_FT_balc1234_NP - Event Logs,Phase2_stop,37.7378,T52
+T52_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T52_VA_FT_balc1234_NP - Event Logs,Phase3_start,54.0874,T52
+T52_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T52_VA_FT_balc1234_NP - Event Logs,Phase3_stop,55.1382,T52
+T52_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T52_VA_FT_balc1234_NP - Event Logs,Phase4_start,70.0701,T52
+T52_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T52_VA_FT_balc1234_NP - Event Logs,Phase4_stop,70.3704,T52
+T52_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T52_VA_FT_balc1234_NP - Event Logs,Phase4_start,75.7424,T52
+T52_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T52_VA_FT_balc1234_NP - Event Logs,Phase4_stop,76.5432,T52
+T53_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T53_VA_FT_balc1234_GB - Event Logs,Phase1_start,6.77344,T53
+T53_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T53_VA_FT_balc1234_GB - Event Logs,Phase1_stop,16.77,T53
+T53_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T53_VA_FT_balc1234_GB - Event Logs,Phase2_start,39.0724,T53
+T53_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T53_VA_FT_balc1234_GB - Event Logs,Phase2_stop,49.07,T53
+T53_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T53_VA_FT_balc1234_GB - Event Logs,Phase3_start,71.6049,T53
+T53_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T53_VA_FT_balc1234_GB - Event Logs,Phase3_stop,73.707,T53
+T54_VA_FT_balc1234_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T54_VA_FT_balc1234_JD - Event Logs,Phase1_start,7.17385,T54
+T54_VA_FT_balc1234_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T54_VA_FT_balc1234_JD - Event Logs,Phase1_stop,17.17,T54
+T54_VA_FT_balc1234_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T54_VA_FT_balc1234_JD - Event Logs,Phase2_start,26.3597,T54
+T54_VA_FT_balc1234_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T54_VA_FT_balc1234_JD - Event Logs,Phase2_stop,36.36,T54
+T54_VA_FT_balc1234_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T54_VA_FT_balc1234_JD - Event Logs,Phase3_start,55.9226,T54
+T54_VA_FT_balc1234_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T54_VA_FT_balc1234_JD - Event Logs,Phase3_stop,65.92,T54
+T54_VA_FT_balc1234_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T54_VA_FT_balc1234_JD - Event Logs,Phase4_start,78.1115,T54
+T54_VA_FT_balc1234_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T54_VA_FT_balc1234_JD - Event Logs,Phase4_stop,88.11,T54
+T45_VA_FT_balc123_GS_2NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc123_GS_2NP - Event Logs,Phase1_start,4.97161,T45
+T45_VA_FT_balc123_GS_2NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc123_GS_2NP - Event Logs,Phase1_stop,14.9709,T45
+T45_VA_FT_balc123_GS_2NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc123_GS_2NP - Event Logs,Phase2_start,39.0724,T45
+T45_VA_FT_balc123_GS_2NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc123_GS_2NP - Event Logs,Phase2_stop,49.0676,T45
+T45_VA_FT_balc123_GS_2NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc123_GS_2NP - Event Logs,Phase3_start,79.3126,T45
+T45_VA_FT_balc123_GS_2NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc123_GS_2NP - Event Logs,Phase3_stop,80.0801,T45
+T45_VA_FT_balc123_GS_2NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc123_GS_2NP - Event Logs,Phase3_start,80.614,T45
+T45_VA_FT_balc123_GS_2NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc123_GS_2NP - Event Logs,Phase3_stop,81.7818,T45
+T45_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc1234_NP - Event Logs,Phase1_start,4.90491,T45
+T45_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc1234_NP - Event Logs,Phase1_stop,14.9149,T45
+T45_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc1234_NP - Event Logs,Phase2_start,39.1058,T45
+T45_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc1234_NP - Event Logs,Phase2_stop,49.8165,T45
+T45_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc1234_NP - Event Logs,Phase3_start,79.346,T45
+T45_VA_FT_balc1234_NP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc1234_NP - Event Logs,Phase3_stop,80.0801,T45
+T03_VA_FT_balc1_SB,/files/pathml/aim2/raw_labels/VA/Clinical Test (4) - T03_VA_FT_balc1_SB - Event Logs,Phase1_start,0.0,T03
+T03_VA_FT_balc1_SB,/files/pathml/aim2/raw_labels/VA/Clinical Test (4) - T03_VA_FT_balc1_SB - Event Logs,Phase1_stop,9.99999,T03
+T03_VA_FT_balc2_SB,/files/pathml/aim2/raw_labels/VA/Clinical Test (4) - T03_VA_FT_balc2_SB - Event Logs,Phase2_start,0.033339,T03
+T03_VA_FT_balc2_SB,/files/pathml/aim2/raw_labels/VA/Clinical Test (4) - T03_VA_FT_balc2_SB - Event Logs,Phase2_stop,10.0333,T03
+T03_VA_FT_balc3_SB,/files/pathml/aim2/raw_labels/VA/Clinical Test (4) - T03_VA_FT_balc3_SB - Event Logs,Phase3_start,0.0,T03
+T03_VA_FT_balc3_SB,/files/pathml/aim2/raw_labels/VA/Clinical Test (4) - T03_VA_FT_balc3_SB - Event Logs,Phase3_stop,2.23333,T03
+T03_VA_FT_balc4_SB,/files/pathml/aim2/raw_labels/VA/Clinical Test (4) - T03_VA_FT_balc4_SB - Event Logs,Phase4_start,5.9,T03
+T03_VA_FT_balc4_SB,/files/pathml/aim2/raw_labels/VA/Clinical Test (4) - T03_VA_FT_balc4_SB - Event Logs,Phase4_stop,8.29999,T03
+T16_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/Clinical Test (4) - T16_VA_FT_balc1234_SB - Event Logs,Phase1_start,7.93642,T16
+T16_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/Clinical Test (4) - T16_VA_FT_balc1234_SB - Event Logs,Phase1_stop,17.9513,T16
+T16_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/Clinical Test (4) - T16_VA_FT_balc1234_SB - Event Logs,Phase2_start,28.6587,T16
+T16_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/Clinical Test (4) - T16_VA_FT_balc1234_SB - Event Logs,Phase2_stop,38.672,T16
+T16_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/Clinical Test (4) - T16_VA_FT_balc1234_SB - Event Logs,Phase3_start,45.7791,T16
+T16_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/Clinical Test (4) - T16_VA_FT_balc1234_SB - Event Logs,Phase3_stop,55.7926,T16
+T16_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/Clinical Test (4) - T16_VA_FT_balc1234_SB - Event Logs,Phase4_start,65.0651,T16
+T16_VA_FT_balc1234_SB,/files/pathml/aim2/raw_labels/VA/Clinical Test (4) - T16_VA_FT_balc1234_SB - Event Logs,Phase4_stop,75.0751,T16
+T41_VA_FT_balc1234_GB_2GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T41_VA_FT_balc1234_GB_2GS - Event Logs,Phase1_start,15.4155,T41
+T41_VA_FT_balc1234_GB_2GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T41_VA_FT_balc1234_GB_2GS - Event Logs,Phase1_stop,25.42,T41
+T41_VA_FT_balc1234_GB_2GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T41_VA_FT_balc1234_GB_2GS - Event Logs,Phase2_start,45.045,T41
+T41_VA_FT_balc1234_GB_2GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T41_VA_FT_balc1234_GB_2GS - Event Logs,Phase2_stop,55.05,T41
+T41_VA_FT_balc1234_GB_2GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T41_VA_FT_balc1234_GB_2GS - Event Logs,Phase3_start,70.2035,T41
+T41_VA_FT_balc1234_GB_2GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T41_VA_FT_balc1234_GB_2GS - Event Logs,Phase3_stop,80.2,T41
+T41_VA_FT_balc1234_GB_2GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T41_VA_FT_balc1234_GB_2GS - Event Logs,Phase4_start,124.224,T41
+T41_VA_FT_balc1234_GB_2GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T41_VA_FT_balc1234_GB_2GS - Event Logs,Phase4_stop,126.193,T41
+T51_VA_FT_balc1234_GB_2GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T51_VA_FT_balc1234_GB_2GS - Event Logs,Phase1_start,11.3447,T51
+T51_VA_FT_balc1234_GB_2GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T51_VA_FT_balc1234_GB_2GS - Event Logs,Phase1_stop,21.34,T51
+T51_VA_FT_balc1234_GB_2GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T51_VA_FT_balc1234_GB_2GS - Event Logs,Phase2_start,39.039,T51
+T51_VA_FT_balc1234_GB_2GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T51_VA_FT_balc1234_GB_2GS - Event Logs,Phase2_stop,49.04,T51
+T51_VA_FT_balc1234_GB_2GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T51_VA_FT_balc1234_GB_2GS - Event Logs,Phase3_start,84.6513,T51
+T51_VA_FT_balc1234_GB_2GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T51_VA_FT_balc1234_GB_2GS - Event Logs,Phase3_stop,94.65,T51
+T51_VA_FT_balc1234_GB_2GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T51_VA_FT_balc1234_GB_2GS - Event Logs,Phase4_start,123.857,T51
+T51_VA_FT_balc1234_GB_2GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T51_VA_FT_balc1234_GB_2GS - Event Logs,Phase4_stop,133.86,T51
+T47_VA_FT_balc1234_JD _2EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T47_VA_FT_balc1234_JD _2EFA - Event Logs,Phase1_start,7.07375,T47
+T47_VA_FT_balc1234_JD _2EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T47_VA_FT_balc1234_JD _2EFA - Event Logs,Phase1_stop,17.5509,T47
+T47_VA_FT_balc1234_JD _2EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T47_VA_FT_balc1234_JD _2EFA - Event Logs,Phase2_start,26.1261,T47
+T47_VA_FT_balc1234_JD _2EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T47_VA_FT_balc1234_JD _2EFA - Event Logs,Phase2_stop,36.5365,T47
+T47_VA_FT_balc1234_JD _2EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T47_VA_FT_balc1234_JD _2EFA - Event Logs,Phase3_start,46.1795,T47
+T47_VA_FT_balc1234_JD _2EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T47_VA_FT_balc1234_JD _2EFA - Event Logs,Phase3_stop,57.2239,T47
+T47_VA_FT_balc1234_JD _2EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T47_VA_FT_balc1234_JD _2EFA - Event Logs,Phase4_start,67.2005,T47
+T47_VA_FT_balc1234_JD _2EFA,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T47_VA_FT_balc1234_JD _2EFA - Event Logs,Phase4_stop,77.8779,T47
+T49_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T49_VA_FT_balc1234_GB - Event Logs,Phase1_start,6.80681,T49
+T49_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T49_VA_FT_balc1234_GB - Event Logs,Phase1_stop,17.017,T49
+T49_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T49_VA_FT_balc1234_GB - Event Logs,Phase2_start,23.657,T49
+T49_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T49_VA_FT_balc1234_GB - Event Logs,Phase2_stop,34.5012,T49
+T49_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T49_VA_FT_balc1234_GB - Event Logs,Phase3_start,43.7437,T49
+T49_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T49_VA_FT_balc1234_GB - Event Logs,Phase3_stop,54.4878,T49
+T49_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T49_VA_FT_balc1234_GB - Event Logs,Phase4_start,59.4928,T49
+T49_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T49_VA_FT_balc1234_GB - Event Logs,Phase4_stop,72.0721,T49
+T51_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T51_VA_FT_balc1234_GB - Event Logs,Phase1_start,10.7774,T51
+T51_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T51_VA_FT_balc1234_GB - Event Logs,Phase1_stop,22.022,T51
+T51_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T51_VA_FT_balc1234_GB - Event Logs,Phase2_start,39.0057,T51
+T51_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T51_VA_FT_balc1234_GB - Event Logs,Phase2_stop,50.05,T51
+T51_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T51_VA_FT_balc1234_GB - Event Logs,Phase3_start,84.8849,T51
+T51_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T51_VA_FT_balc1234_GB - Event Logs,Phase3_stop,95.8959,T51
+T51_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T51_VA_FT_balc1234_GB - Event Logs,Phase4_start,124.291,T51
+T51_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T51_VA_FT_balc1234_GB - Event Logs,Phase4_stop,134.247,T51
+T46_VA_FT_balc123_EF,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T46_VA_FT_balc123_EF - Event Logs,Phase1_start,8.00913,T46
+T46_VA_FT_balc123_EF,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T46_VA_FT_balc123_EF - Event Logs,Phase1_stop,18.2255,T46
+T46_VA_FT_balc123_EF,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T46_VA_FT_balc123_EF - Event Logs,Phase2_start,28.568,T46
+T46_VA_FT_balc123_EF,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T46_VA_FT_balc123_EF - Event Logs,Phase2_stop,38.7844,T46
+T46_VA_FT_balc123_EF,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T46_VA_FT_balc123_EF - Event Logs,Phase3_start,52.686,T46
+T46_VA_FT_balc123_EF,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T46_VA_FT_balc123_EF - Event Logs,Phase3_stop,56.2229,T46
+T45_VA_FT_balc123_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc123_GS - Event Logs,Phase1_start,4.97164,T45
+T45_VA_FT_balc123_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc123_GS - Event Logs,Phase1_stop,14.97,T45
+T45_VA_FT_balc123_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc123_GS - Event Logs,Phase2_start,41.7084,T45
+T45_VA_FT_balc123_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc123_GS - Event Logs,Phase2_stop,51.71,T45
+T45_VA_FT_balc123_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc123_GS - Event Logs,Phase3_start,79.5462,T45
+T45_VA_FT_balc123_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc123_GS - Event Logs,Phase3_stop,80.1802,T45
+T45_VA_FT_balc123_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc123_GS - Event Logs,Phase3_start,80.7474,T45
+T45_VA_FT_balc123_GS,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T45_VA_FT_balc123_GS - Event Logs,Phase3_stop,82.0153,T45
+T47_VA_FT_balc1234_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T47_VA_FT_balc1234_JD  - Event Logs,Phase1_start,7.47414,T47
+T47_VA_FT_balc1234_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T47_VA_FT_balc1234_JD  - Event Logs,Phase1_stop,17.47,T47
+T47_VA_FT_balc1234_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T47_VA_FT_balc1234_JD  - Event Logs,Phase2_start,26.3931,T47
+T47_VA_FT_balc1234_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T47_VA_FT_balc1234_JD  - Event Logs,Phase2_stop,36.39,T47
+T47_VA_FT_balc1234_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T47_VA_FT_balc1234_JD  - Event Logs,Phase3_start,46.5132,T47
+T47_VA_FT_balc1234_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T47_VA_FT_balc1234_JD  - Event Logs,Phase3_stop,56.51,T47
+T47_VA_FT_balc1234_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T47_VA_FT_balc1234_JD  - Event Logs,Phase4_start,67.7678,T47
+T47_VA_FT_balc1234_JD,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T47_VA_FT_balc1234_JD  - Event Logs,Phase4_stop,77.77,T47
+T39_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T39_VA_FT_balc1234_JP - Event Logs,Phase1_start,5.03837,T39
+T39_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T39_VA_FT_balc1234_JP - Event Logs,Phase1_stop,15.04,T39
+T39_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T39_VA_FT_balc1234_JP - Event Logs,Phase2_start,28.5285,T39
+T39_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T39_VA_FT_balc1234_JP - Event Logs,Phase2_stop,38.53,T39
+T39_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T39_VA_FT_balc1234_JP - Event Logs,Phase3_start,50.1168,T39
+T39_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T39_VA_FT_balc1234_JP - Event Logs,Phase3_stop,58.9536,T39
+T39_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T39_VA_FT_balc1234_JP - Event Logs,Phase4_start,71.0043,T39
+T39_VA_FT_balc1234_JP,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project - T39_VA_FT_balc1234_JP - Event Logs,Phase4_stop,72.9396,T39
+T60_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T60_VA_FT_balc1234_GB - Event Logs,Phase1_start,8.54188,T60
+T60_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T60_VA_FT_balc1234_GB - Event Logs,Phase1_stop,18.54,T60
+T60_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T60_VA_FT_balc1234_GB - Event Logs,Phase2_start,28.2282,T60
+T60_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T60_VA_FT_balc1234_GB - Event Logs,Phase2_stop,38.23,T60
+T60_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T60_VA_FT_balc1234_GB - Event Logs,Phase3_start,49.4828,T60
+T60_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T60_VA_FT_balc1234_GB - Event Logs,Phase3_stop,59.48,T60
+T60_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T60_VA_FT_balc1234_GB - Event Logs,Phase4_start,72.0053,T60
+T60_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T60_VA_FT_balc1234_GB - Event Logs,Phase4_stop,82.01,T60
+T50_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T50_VA_FT_balc1234_GB - Event Logs,Phase1_start,11.1445,T50
+T50_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T50_VA_FT_balc1234_GB - Event Logs,Phase1_stop,21.14,T50
+T50_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T50_VA_FT_balc1234_GB - Event Logs,Phase2_start,30.7641,T50
+T50_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T50_VA_FT_balc1234_GB - Event Logs,Phase2_stop,40.76,T50
+T50_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T50_VA_FT_balc1234_GB - Event Logs,Phase3_start,68.1014,T50
+T50_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T50_VA_FT_balc1234_GB - Event Logs,Phase3_stop,78.1,T50
+T50_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T50_VA_FT_balc1234_GB - Event Logs,Phase4_start,97.998,T50
+T50_VA_FT_balc1234_GB,/files/pathml/aim2/raw_labels/VA/FINAL FT Coding Project 2 - T50_VA_FT_balc1234_GB - Event Logs,Phase4_stop,98.4651,T50

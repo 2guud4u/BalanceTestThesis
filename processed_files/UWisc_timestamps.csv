@@ -1,0 +1,213 @@
+Observation,file_path,Behavior,Time_Relative_sf,id
+1042_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1042_UWisc_FT_Balc123_GB - Event Logs,Phase1_start,5.56666,1042
+1042_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1042_UWisc_FT_Balc123_GB - Event Logs,Phase1_stop,15.57,1042
+1042_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1042_UWisc_FT_Balc123_GB - Event Logs,Phase2_start,55.6999,1042
+1042_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1042_UWisc_FT_Balc123_GB - Event Logs,Phase2_stop,65.7,1042
+1042_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1042_UWisc_FT_Balc123_GB - Event Logs,Phase3_start,93.0999,1042
+1042_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1042_UWisc_FT_Balc123_GB - Event Logs,Phase3_stop,103.1,1042
+1052_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1052_UWisc_FT_Balc123_JP - Event Logs,Phase1_start,1.76843,1052
+1052_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1052_UWisc_FT_Balc123_JP - Event Logs,Phase1_stop,10.77,1052
+1052_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1052_UWisc_FT_Balc123_JP - Event Logs,Phase2_start,51.2845,1052
+1052_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1052_UWisc_FT_Balc123_JP - Event Logs,Phase2_stop,61.28,1052
+1052_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1052_UWisc_FT_Balc123_JP - Event Logs,Phase3_start,82.3488,1052
+1052_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1052_UWisc_FT_Balc123_JP - Event Logs,Phase3_stop,92.35,1052
+1068_UWisc_FT_balc123_EF,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1068_UWisc_FT_balc123_EF - Event Logs,Phase1_start,3.83333,1068
+1068_UWisc_FT_balc123_EF,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1068_UWisc_FT_balc123_EF - Event Logs,Phase1_stop,14.0667,1068
+1068_UWisc_FT_balc123_EF,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1068_UWisc_FT_balc123_EF - Event Logs,Phase2_start,40.6666,1068
+1068_UWisc_FT_balc123_EF,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1068_UWisc_FT_balc123_EF - Event Logs,Phase2_stop,50.9666,1068
+1068_UWisc_FT_balc123_EF,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1068_UWisc_FT_balc123_EF - Event Logs,Phase3_start,79.6666,1068
+1068_UWisc_FT_balc123_EF,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1068_UWisc_FT_balc123_EF - Event Logs,Phase3_stop,84.8999,1068
+1074_UWisc_FT_balc123_GS,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1074_UWisc_FT_balc123_GS - Event Logs,Phase1_start,16.8667,1074
+1074_UWisc_FT_balc123_GS,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1074_UWisc_FT_balc123_GS - Event Logs,Phase1_stop,26.87,1074
+1074_UWisc_FT_balc123_GS,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1074_UWisc_FT_balc123_GS - Event Logs,Phase2_stop,81.84,1074
+1074_UWisc_FT_balc123_GS,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1074_UWisc_FT_balc123_GS - Event Logs,Phase2_start,81.8448,1074
+1074_UWisc_FT_balc123_GS,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1074_UWisc_FT_balc123_GS - Event Logs,Phase3_start,123.9,1074
+1074_UWisc_FT_balc123_GS,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1074_UWisc_FT_balc123_GS - Event Logs,Phase3_stop,133.9,1074
+1100_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1100_UWisc_FT_balc123_SB - Event Logs,Phase1_start,5.09999,1100
+1100_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1100_UWisc_FT_balc123_SB - Event Logs,Phase1_stop,15.1,1100
+1100_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1100_UWisc_FT_balc123_SB - Event Logs,Phase2_start,58.6999,1100
+1100_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1100_UWisc_FT_balc123_SB - Event Logs,Phase2_stop,68.6999,1100
+1100_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1100_UWisc_FT_balc123_SB - Event Logs,Phase3_start,85.4666,1100
+1100_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1100_UWisc_FT_balc123_SB - Event Logs,Phase3_stop,86.8332,1100
+1100_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1100_UWisc_FT_balc123_SB - Event Logs,Phase3_start,100.467,1100
+1100_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1100_UWisc_FT_balc123_SB - Event Logs,Phase3_stop,110.467,1100
+1122_UWisc_FT_balc123_JD,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1122_UWisc_FT_balc123_JD - Event Logs,Phase1_start,4.83333,1122
+1122_UWisc_FT_balc123_JD,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1122_UWisc_FT_balc123_JD - Event Logs,Phase1_stop,14.3333,1122
+1122_UWisc_FT_balc123_JD,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1122_UWisc_FT_balc123_JD - Event Logs,Phase2_start,62.2333,1122
+1122_UWisc_FT_balc123_JD,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1122_UWisc_FT_balc123_JD - Event Logs,Phase2_stop,72.1,1122
+1122_UWisc_FT_balc123_JD,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1122_UWisc_FT_balc123_JD - Event Logs,Phase3_start,112.167,1122
+1122_UWisc_FT_balc123_JD,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1122_UWisc_FT_balc123_JD - Event Logs,Phase3_stop,122.17,1122
+1127_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1127_UWisc_FT_Balc123_GB - Event Logs,Phase1_start,5.99999,1127
+1127_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1127_UWisc_FT_Balc123_GB - Event Logs,Phase1_stop,16.0,1127
+1127_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1127_UWisc_FT_Balc123_GB - Event Logs,Phase2_start,42.7333,1127
+1127_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1127_UWisc_FT_Balc123_GB - Event Logs,Phase2_stop,52.73,1127
+1127_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1127_UWisc_FT_Balc123_GB - Event Logs,Phase3_start,81.3333,1127
+1127_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1127_UWisc_FT_Balc123_GB - Event Logs,Phase3_stop,91.33,1127
+1160_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1160_UWisc_FT_Balc123_JP - Event Logs,Phase1_start,4.23333,1160
+1160_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1160_UWisc_FT_Balc123_JP - Event Logs,Phase1_stop,14.23,1160
+1160_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1160_UWisc_FT_Balc123_JP - Event Logs,Phase2_start,44.2,1160
+1160_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1160_UWisc_FT_Balc123_JP - Event Logs,Phase2_stop,54.2,1160
+1160_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1160_UWisc_FT_Balc123_JP - Event Logs,Phase3_start,194.566,1160
+1160_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1160_UWisc_FT_Balc123_JP - Event Logs,Phase3_stop,204.57,1160
+1162_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1162_UWisc_FT_balc123_SB - Event Logs,Phase1_start,10.9333,1162
+1162_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1162_UWisc_FT_balc123_SB - Event Logs,Phase1_stop,20.9333,1162
+1162_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1162_UWisc_FT_balc123_SB - Event Logs,Phase2_start,30.0333,1162
+1162_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1162_UWisc_FT_balc123_SB - Event Logs,Phase2_stop,40.0333,1162
+1162_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1162_UWisc_FT_balc123_SB - Event Logs,Phase3_start,50.7,1162
+1162_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1162_UWisc_FT_balc123_SB - Event Logs,Phase3_stop,60.6999,1162
+1183_UWisc_FT_balc123_GS,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1183_UWisc_FT_balc123_GS - Event Logs,Phase1_start,48.9651,1183
+1183_UWisc_FT_balc123_GS,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1183_UWisc_FT_balc123_GS - Event Logs,Phase1_stop,58.97,1183
+1183_UWisc_FT_balc123_GS,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1183_UWisc_FT_balc123_GS - Event Logs,Phase2_start,107.133,1183
+1183_UWisc_FT_balc123_GS,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1183_UWisc_FT_balc123_GS - Event Logs,Phase2_stop,117.13,1183
+1183_UWisc_FT_balc123_GS,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1183_UWisc_FT_balc123_GS - Event Logs,Phase3_start,178.866,1183
+1183_UWisc_FT_balc123_GS,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1183_UWisc_FT_balc123_GS - Event Logs,Phase3_stop,184.733,1183
+2139_UWisc_FT_balc123_EF,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 2139_UWisc_FT_balc123_EF - Event Logs,Phase1_start,10.5,2139
+2139_UWisc_FT_balc123_EF,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 2139_UWisc_FT_balc123_EF - Event Logs,Phase1_stop,20.7666,2139
+2139_UWisc_FT_balc123_EF,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 2139_UWisc_FT_balc123_EF - Event Logs,Phase2_start,92.8332,2139
+2139_UWisc_FT_balc123_EF,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 2139_UWisc_FT_balc123_EF - Event Logs,Phase2_stop,103.267,2139
+2139_UWisc_FT_balc123_EF,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 2139_UWisc_FT_balc123_EF - Event Logs,Phase3_start,156.1,2139
+2139_UWisc_FT_balc123_EF,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 2139_UWisc_FT_balc123_EF - Event Logs,Phase3_stop,166.3,2139
+4019_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4019_UWisc_FT_balc123_SB - Event Logs,Phase1_start,11.0333,4019
+4019_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4019_UWisc_FT_balc123_SB - Event Logs,Phase1_stop,21.0333,4019
+4019_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4019_UWisc_FT_balc123_SB - Event Logs,Phase2_start,49.6333,4019
+4019_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4019_UWisc_FT_balc123_SB - Event Logs,Phase2_stop,59.6333,4019
+4019_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4019_UWisc_FT_balc123_SB - Event Logs,Phase3_start,83.0666,4019
+4019_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4019_UWisc_FT_balc123_SB - Event Logs,Phase3_stop,93.0666,4019
+4051_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4051_UWisc_FT_balc123_SB - Event Logs,Phase1_start,12.2667,4051
+4051_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4051_UWisc_FT_balc123_SB - Event Logs,Phase1_stop,22.2666,4051
+4051_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4051_UWisc_FT_balc123_SB - Event Logs,Phase2_start,54.5999,4051
+4051_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4051_UWisc_FT_balc123_SB - Event Logs,Phase2_stop,64.5999,4051
+4051_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4051_UWisc_FT_balc123_SB - Event Logs,Phase3_start,102.333,4051
+4051_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4051_UWisc_FT_balc123_SB - Event Logs,Phase3_stop,110.133,4051
+4054_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4054_UWisc_FT_balc123_SB - Event Logs,Phase1_start,0.543832,4054
+4054_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4054_UWisc_FT_balc123_SB - Event Logs,Phase1_stop,10.5333,4054
+4054_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4054_UWisc_FT_balc123_SB - Event Logs,Phase2_start,47.4333,4054
+4054_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4054_UWisc_FT_balc123_SB - Event Logs,Phase2_stop,57.4333,4054
+4054_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4054_UWisc_FT_balc123_SB - Event Logs,Phase3_start,69.1999,4054
+4054_UWisc_FT_balc123_SB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4054_UWisc_FT_balc123_SB - Event Logs,Phase3_stop,79.1999,4054
+1048_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1048_UWisc_FT_Balc123_JP - Event Logs,Phase1_start,2.43576,1048
+1048_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1048_UWisc_FT_Balc123_JP - Event Logs,Phase1_stop,12.44,1048
+1048_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1048_UWisc_FT_Balc123_JP - Event Logs,Phase2_start,54.4543,1048
+1048_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1048_UWisc_FT_Balc123_JP - Event Logs,Phase2_stop,64.45,1048
+1048_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1048_UWisc_FT_Balc123_JP - Event Logs,Phase3_start,93.4598,1048
+1048_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1048_UWisc_FT_Balc123_JP - Event Logs,Phase3_stop,103.46,1048
+1211_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1211_UWisc_FT_balc123_EFA - Event Logs,Phase1_start,2.93,1211
+1211_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1211_UWisc_FT_balc123_EFA - Event Logs,Phase1_stop,12.9333,1211
+1211_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1211_UWisc_FT_balc123_EFA - Event Logs,Phase2_start,28.8333,1211
+1211_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1211_UWisc_FT_balc123_EFA - Event Logs,Phase2_stop,38.83,1211
+1211_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1211_UWisc_FT_balc123_EFA - Event Logs,Phase3_start,49.1333,1211
+1211_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 1211_UWisc_FT_balc123_EFA - Event Logs,Phase3_stop,59.13,1211
+3207_UWisc_FT_balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 3207_UWisc_FT_balc123_JP - Event Logs,Phase1_start,3.40339,3207
+3207_UWisc_FT_balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 3207_UWisc_FT_balc123_JP - Event Logs,Phase1_stop,13.4,3207
+3207_UWisc_FT_balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 3207_UWisc_FT_balc123_JP - Event Logs,Phase2_start,64.6645,3207
+3207_UWisc_FT_balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 3207_UWisc_FT_balc123_JP - Event Logs,Phase2_stop,74.66,3207
+3207_UWisc_FT_balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 3207_UWisc_FT_balc123_JP - Event Logs,Phase3_start,102.402,3207
+3207_UWisc_FT_balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 3207_UWisc_FT_balc123_JP - Event Logs,Phase3_stop,112.4,3207
+3210_UWisc_FT_balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 3210_UWisc_FT_balc123_GB - Event Logs,Phase1_start,2.86666,3210
+3210_UWisc_FT_balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 3210_UWisc_FT_balc123_GB - Event Logs,Phase1_stop,12.87,3210
+3210_UWisc_FT_balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 3210_UWisc_FT_balc123_GB - Event Logs,Phase2_start,42.9,3210
+3210_UWisc_FT_balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 3210_UWisc_FT_balc123_GB - Event Logs,Phase2_stop,52.9,3210
+3210_UWisc_FT_balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 3210_UWisc_FT_balc123_GB - Event Logs,Phase3_start,82.4333,3210
+3210_UWisc_FT_balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 3210_UWisc_FT_balc123_GB - Event Logs,Phase3_stop,92.43,3210
+4055_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4055_UWisc_FT_Balc123_JP - Event Logs,Phase1_start,2.46666,4055
+4055_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4055_UWisc_FT_Balc123_JP - Event Logs,Phase1_stop,12.47,4055
+4055_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4055_UWisc_FT_Balc123_JP - Event Logs,Phase2_start,63.1999,4055
+4055_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4055_UWisc_FT_Balc123_JP - Event Logs,Phase2_stop,73.2,4055
+4055_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4055_UWisc_FT_Balc123_JP - Event Logs,Phase3_start,97.8332,4055
+4055_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4055_UWisc_FT_Balc123_JP - Event Logs,Phase3_stop,107.5,4055
+4219_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4219_UWisc_FT_Balc123_GB - Event Logs,Phase1_start,2.5,4219
+4219_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4219_UWisc_FT_Balc123_GB - Event Logs,Phase1_stop,12.0,4219
+4219_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4219_UWisc_FT_Balc123_GB - Event Logs,Phase2_start,52.4333,4219
+4219_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4219_UWisc_FT_Balc123_GB - Event Logs,Phase2_stop,62.43,4219
+4219_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4219_UWisc_FT_Balc123_GB - Event Logs,Phase3_start,85.6332,4219
+4219_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 4219_UWisc_FT_Balc123_GB - Event Logs,Phase3_stop,95.63,4219
+5025_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 5025_UWisc_FT_Balc123_JP - Event Logs,Phase1_start,3.06973,5025
+5025_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 5025_UWisc_FT_Balc123_JP - Event Logs,Phase1_stop,13.07,5025
+5025_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 5025_UWisc_FT_Balc123_JP - Event Logs,Phase2_start,57.4573,5025
+5025_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 5025_UWisc_FT_Balc123_JP - Event Logs,Phase2_stop,67.46,5025
+5025_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 5025_UWisc_FT_Balc123_JP - Event Logs,Phase3_start,101.368,5025
+5025_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 5025_UWisc_FT_Balc123_JP - Event Logs,Phase3_stop,110.977,5025
+5033_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 5033_UWisc_FT_Balc123_JP - Event Logs,Phase1_start,3.13646,5033
+5033_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 5033_UWisc_FT_Balc123_JP - Event Logs,Phase1_stop,13.14,5033
+5033_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 5033_UWisc_FT_Balc123_JP - Event Logs,Phase2_stop,73.67,5033
+5033_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 5033_UWisc_FT_Balc123_JP - Event Logs,Phase2_start,73.6735,5033
+5033_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 5033_UWisc_FT_Balc123_JP - Event Logs,Phase3_start,161.428,5033
+5033_UWisc_FT_Balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 5033_UWisc_FT_Balc123_JP - Event Logs,Phase3_stop,161.43,5033
+7111_UWisc_FT_balc123_NP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 7111_UWisc_FT_balc123_NP - Event Logs,Phase1_start,8.29999,7111
+7111_UWisc_FT_balc123_NP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 7111_UWisc_FT_balc123_NP - Event Logs,Phase1_stop,18.3,7111
+7111_UWisc_FT_balc123_NP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 7111_UWisc_FT_balc123_NP - Event Logs,Phase2_start,52.0666,7111
+7111_UWisc_FT_balc123_NP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 7111_UWisc_FT_balc123_NP - Event Logs,Phase2_stop,62.07,7111
+7111_UWisc_FT_balc123_NP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 7111_UWisc_FT_balc123_NP - Event Logs,Phase3_start,96.4332,7111
+7111_UWisc_FT_balc123_NP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 7111_UWisc_FT_balc123_NP - Event Logs,Phase3_stop,106.43,7111
+7174_UWisc_FT_balc123_NP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 7174_UWisc_FT_balc123_NP - Event Logs,Phase1_start,4.06667,7174
+7174_UWisc_FT_balc123_NP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 7174_UWisc_FT_balc123_NP - Event Logs,Phase1_stop,14.0667,7174
+7174_UWisc_FT_balc123_NP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 7174_UWisc_FT_balc123_NP - Event Logs,Phase2_start,54.3999,7174
+7174_UWisc_FT_balc123_NP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 7174_UWisc_FT_balc123_NP - Event Logs,Phase2_stop,64.3999,7174
+7174_UWisc_FT_balc123_NP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 7174_UWisc_FT_balc123_NP - Event Logs,Phase3_start,82.4333,7174
+7174_UWisc_FT_balc123_NP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 7174_UWisc_FT_balc123_NP - Event Logs,Phase3_stop,92.4332,7174
+1085_UWisc_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1085_UWisc_FT_balc1234_EFA - Event Logs,Phase1_start,10.6667,1085
+1085_UWisc_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1085_UWisc_FT_balc1234_EFA - Event Logs,Phase1_stop,20.67,1085
+1085_UWisc_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1085_UWisc_FT_balc1234_EFA - Event Logs,Phase2_start,48.6666,1085
+1085_UWisc_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1085_UWisc_FT_balc1234_EFA - Event Logs,Phase2_stop,58.67,1085
+1085_UWisc_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1085_UWisc_FT_balc1234_EFA - Event Logs,Phase3_start,84.2666,1085
+1085_UWisc_FT_balc1234_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1085_UWisc_FT_balc1234_EFA - Event Logs,Phase3_stop,94.27,1085
+1200_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1200_UWisc_FT_balc123_EFA - Event Logs,Phase1_start,2.36903,1200
+1200_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1200_UWisc_FT_balc123_EFA - Event Logs,Phase1_stop,12.2455,1200
+1200_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1200_UWisc_FT_balc123_EFA - Event Logs,Phase2_start,80.3468,1200
+1200_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1200_UWisc_FT_balc123_EFA - Event Logs,Phase2_stop,90.5236,1200
+1200_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1200_UWisc_FT_balc123_EFA - Event Logs,Phase3_start,121.087,1200
+1200_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1200_UWisc_FT_balc123_EFA - Event Logs,Phase3_stop,131.097,1200
+3218_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 3218_UWisc_FT_balc123_EFA - Event Logs,Phase1_start,1.03436,3218
+3218_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 3218_UWisc_FT_balc123_EFA - Event Logs,Phase1_stop,11.03,3218
+3218_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 3218_UWisc_FT_balc123_EFA - Event Logs,Phase2_start,79.1172,3218
+3218_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 3218_UWisc_FT_balc123_EFA - Event Logs,Phase2_stop,89.12,3218
+3218_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 3218_UWisc_FT_balc123_EFA - Event Logs,Phase3_start,145.211,3218
+3218_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 3218_UWisc_FT_balc123_EFA - Event Logs,Phase3_stop,155.21,3218
+5049_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5049_UWisc_FT_balc123_EFA - Event Logs,Phase1_start,4.0,5049
+5049_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5049_UWisc_FT_balc123_EFA - Event Logs,Phase1_stop,14.0,5049
+5049_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5049_UWisc_FT_balc123_EFA - Event Logs,Phase2_start,56.8333,5049
+5049_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5049_UWisc_FT_balc123_EFA - Event Logs,Phase2_stop,66.83,5049
+5049_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5049_UWisc_FT_balc123_EFA - Event Logs,Phase3_start,96.0999,5049
+5049_UWisc_FT_balc123_EFA,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5049_UWisc_FT_balc123_EFA - Event Logs,Phase3_stop,106.1,5049
+3208_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 3208_UWisc_FT_balc123_JB - Event Logs,Phase1_start,2.06874,3208
+3208_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 3208_UWisc_FT_balc123_JB - Event Logs,Phase1_stop,12.07,3208
+3208_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 3208_UWisc_FT_balc123_JB - Event Logs,Phase2_start,61.2611,3208
+3208_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 3208_UWisc_FT_balc123_JB - Event Logs,Phase2_stop,71.26,3208
+3208_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 3208_UWisc_FT_balc123_JB - Event Logs,Phase3_start,110.377,3208
+3208_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 3208_UWisc_FT_balc123_JB - Event Logs,Phase3_stop,120.38,3208
+5082_UWisc_FT_balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5082_UWisc_FT_balc123_JP - Event Logs,Phase1_start,2.43333,5082
+5082_UWisc_FT_balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5082_UWisc_FT_balc123_JP - Event Logs,Phase1_stop,12.43,5082
+5082_UWisc_FT_balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5082_UWisc_FT_balc123_JP - Event Logs,Phase2_start,72.7333,5082
+5082_UWisc_FT_balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5082_UWisc_FT_balc123_JP - Event Logs,Phase2_stop,82.73,5082
+5082_UWisc_FT_balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5082_UWisc_FT_balc123_JP - Event Logs,Phase3_start,149.967,5082
+5082_UWisc_FT_balc123_JP,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5082_UWisc_FT_balc123_JP - Event Logs,Phase3_stop,153.267,5082
+5036_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5036_UWisc_FT_balc123_GB - Event Logs,Phase1_start,2.46667,5036
+5036_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5036_UWisc_FT_balc123_GB - Event Logs,Phase1_stop,12.47,5036
+5036_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5036_UWisc_FT_balc123_GB - Event Logs,Phase2_start,50.8333,5036
+5036_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5036_UWisc_FT_balc123_GB - Event Logs,Phase2_stop,60.83,5036
+5036_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5036_UWisc_FT_balc123_GB - Event Logs,Phase3_start,117.6,5036
+5036_UWisc_FT_Balc123_GB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5036_UWisc_FT_balc123_GB - Event Logs,Phase3_stop,127.6,5036
+5045_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5045_UWisc_FT_balc123_JB - Event Logs,Phase1_start,13.2333,5045
+5045_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5045_UWisc_FT_balc123_JB - Event Logs,Phase1_stop,23.23,5045
+5045_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5045_UWisc_FT_balc123_JB - Event Logs,Phase2_start,67.0666,5045
+5045_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5045_UWisc_FT_balc123_JB - Event Logs,Phase2_stop,77.07,5045
+5045_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5045_UWisc_FT_balc123_JB - Event Logs,Phase3_start,142.8,5045
+5045_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 5045_UWisc_FT_balc123_JB - Event Logs,Phase3_stop,152.8,5045
+2144_UWisc_FT_balc123_JD,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 2144_UWisc_FT_balc123_JD - Event Logs,Phase1_start,2.93333,2144
+2144_UWisc_FT_balc123_JD,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 2144_UWisc_FT_balc123_JD - Event Logs,Phase1_stop,13.3667,2144
+2144_UWisc_FT_balc123_JD,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 2144_UWisc_FT_balc123_JD - Event Logs,Phase2_start,71.1666,2144
+2144_UWisc_FT_balc123_JD,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 2144_UWisc_FT_balc123_JD - Event Logs,Phase2_stop,81.4333,2144
+2144_UWisc_FT_balc123_JD,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 2144_UWisc_FT_balc123_JD - Event Logs,Phase3_start,108.067,2144
+2144_UWisc_FT_balc123_JD,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project - 2144_UWisc_FT_balc123_JD - Event Logs,Phase3_stop,118.0,2144
+1221_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1221_UWisc_FT_balc123_JB - Event Logs,Phase1_start,4.63333,1221
+1221_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1221_UWisc_FT_balc123_JB - Event Logs,Phase1_stop,14.63,1221
+1221_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1221_UWisc_FT_balc123_JB - Event Logs,Phase2_start,51.2333,1221
+1221_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1221_UWisc_FT_balc123_JB - Event Logs,Phase2_stop,61.23,1221
+1221_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1221_UWisc_FT_balc123_JB - Event Logs,Phase3_start,79.6999,1221
+1221_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1221_UWisc_FT_balc123_JB - Event Logs,Phase3_stop,89.7,1221
+1095_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1095_UWisc_FT_Balc123_JB - Event Logs,Phase1_start,63.5999,1095
+1095_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1095_UWisc_FT_Balc123_JB - Event Logs,Phase1_stop,73.6,1095
+1095_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1095_UWisc_FT_Balc123_JB - Event Logs,Phase2_start,100.367,1095
+1095_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1095_UWisc_FT_Balc123_JB - Event Logs,Phase2_stop,110.37,1095
+1095_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1095_UWisc_FT_Balc123_JB - Event Logs,Phase3_start,153.1,1095
+1095_UWisc_FT_balc123_JB,/files/pathml/aim2/raw_labels/UWisc/FINAL FT Coding Project 2 - 1095_UWisc_FT_Balc123_JB - Event Logs,Phase3_stop,163.1,1095
