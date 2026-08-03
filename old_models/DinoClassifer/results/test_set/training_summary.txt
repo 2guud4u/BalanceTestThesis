@@ -1,0 +1,4 @@
+Training completed in 36.26 seconds
+Best validation accuracy: 0.2504
+Total epochs: 2
+Best model saved to: /code/jjiang23/pathml/aim2_balance/models/DinoClassifer/results/test_set/best_model.ckpt

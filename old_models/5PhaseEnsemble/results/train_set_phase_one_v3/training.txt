@@ -1,0 +1,4 @@
+Training completed in 847.34 seconds
+Best validation accuracy: 84.71%
+Best train accuracy: 97.81%
+Total epochs: 24

@@ -1,0 +1,4 @@
+Average KL Divergence: 0.888182
+Hard accuracy: 66.76%
+Best validation loss: 0.888184
+Final validation accuracy: 62.09%
